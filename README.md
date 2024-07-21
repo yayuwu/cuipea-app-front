@@ -24,7 +24,7 @@ cd back
 npm install
 ```
 
-## Crear rama
+## Cmandos principales
 Estaremos trabajando cada una en una rama diferente, la rama main no se toca, y la rama develop sirve para unificar el desarrollo de todas (ya sea durante o al final, nos vamos organizando).
 
 ### Crear rama
