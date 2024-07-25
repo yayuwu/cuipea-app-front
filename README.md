@@ -33,7 +33,7 @@ git branch feature/nombre_de_la_rama
 ```
 ### Cambiarse de rama
 ```
-git checkout feature/nombre_de_la_rama
+git switch feature/nombre_de_la_rama
 ```
 Siempre asegurarse en qué rama vas a estar trabajando. El nombre de la rama lo pueden inventar ustedes, como "feature/header" o "feature/login".
 ### Agregar cambios y actualizar la repo con la nueva rama
