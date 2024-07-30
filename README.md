@@ -50,6 +50,13 @@ Siempre vamos a estar modificando código, así que vamos a tener que traer esos
 git pull
 ``` 
 
+## Comandos para usar en el front
+### Arrancar SCSS
+```
+npm run sass
+```
+Para deternerlo solo usamos el `Ctrl + C`
+
 ## Mensaje final
 
 No tengan miedo en romper algo, siempre se aprende de esa manera (así aprendí yo u.u), cualquier cosa siempre estoy para enseñarles y ayudarlas <3
