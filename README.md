@@ -7,17 +7,6 @@ Somos un equipo de mujeres comprometidas con el desarrollo de proyectos innovado
 git clone https://github.com/yayuwu/cuipea-app.git
 ```
 
-## Front y Back
-
-Para trabajar en la parte del front escribir en la terminal:
-```
-cd front
-```
- o para trabajar en el back:
-```
-cd back
-```
-
 ### Instalar dependencias
 
 ```
@@ -36,6 +25,7 @@ git branch feature/nombre_de_la_rama
 git switch feature/nombre_de_la_rama
 ```
 Siempre asegurarse en qué rama vas a estar trabajando. El nombre de la rama lo pueden inventar ustedes, como "feature/header" o "feature/login".
+
 ### Agregar cambios y actualizar la repo con la nueva rama
 Estos 3 comandos lo van a usar siempre, así que es lo primero que van a aprender rápido por el hábito.
 ```
@@ -48,6 +38,12 @@ git push origin feature/nombre_de_la_rama
 Siempre vamos a estar modificando código, así que vamos a tener que traer esos cambios. Igualmente siempre nos vamos a comunicar cada vez que subimos cambios a la repo.
 ```
 git pull
+``` 
+
+## Arrancar SASS
+
+```
+npm run sass
 ``` 
 
 ## Mensaje final
