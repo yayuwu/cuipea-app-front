@@ -1,5 +1,6 @@
-@import 'base/colors';
+@import 'base/colors';  // Acá importaríamos todos los estilos scss que usaríamos en la aplicación
 
 h1 {
-    color: $pink-dark-color;
+    color: $main-color;
+    font-size: 40px;
 }
