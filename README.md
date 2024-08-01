@@ -40,7 +40,6 @@ Siempre vamos a estar modificando código, así que vamos a tener que traer esos
 git pull
 ``` 
 
-## Comandos para usar en el front
 ### Arrancar SCSS
 ```
 npm run sass
