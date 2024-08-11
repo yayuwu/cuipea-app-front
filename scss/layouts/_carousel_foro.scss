@@ -1,0 +1,51 @@
+@import '../components/card_foro';
+@import '../base/breakpoints';
+
+#carousel_foro {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    position: relative; /* Necesario para posicionar los botones de navegación */
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+        z-index: 10;
+    }
+    span:first-child {
+        left: 0px;
+    }
+    span:last-child {
+        right: 0px;
+    }
+    .card_item {
+        flex: 0 0 33.3333%; /* Mostrar 3 elementos a la vez */
+        display: flex;
+        justify-content: center;
+        transition: transform 0.5s ease-in-out;
+        transform: scale(1); 
+    }
+    .card_item:nth-child(2) {
+        z-index: 20;
+        transform: scale(1.2); 
+    }
+    .carousel_cards_cointainer {
+        padding: 0 5px;
+        display: flex;
+        justify-content: center;
+        padding: 50px 30px;
+        overflow: hidden; 
+        position: relative;
+        transition: transform 0.5s ease-in-out;   
+    }
+    // Responsive
+    @include breakpoint(sm){
+        span {
+            font-size: 2rem;
+        }
+    }
+}

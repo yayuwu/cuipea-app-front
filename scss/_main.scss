@@ -1,1 +1,8 @@
+@import 'base/typography';
 @import 'pages/home';
+
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
