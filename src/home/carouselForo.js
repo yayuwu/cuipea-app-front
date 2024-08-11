@@ -6,10 +6,6 @@ export const nextSlide = () => {
     
     // Reordenar las tarjetas
     container.appendChild(slides[0]);
-
-    // Actualizar el índice central
-    currentIndex = (currentIndex + 1) % slides.length;
-
 }
 
 export const prevSlide = () => {
@@ -18,9 +14,6 @@ export const prevSlide = () => {
     
     // Reordenar las tarjetas
     container.insertBefore(slides[slides.length - 1], slides[0]);
-
-    // Actualizar el índice central
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
 }
 
 
