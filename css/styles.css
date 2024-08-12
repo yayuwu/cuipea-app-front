@@ -109,11 +109,6 @@
   justify-content: center;
   transform: scale(1);
 }
-#carousel_foro .card_item:nth-child(2) {
-  z-index: 20;
-  transform: scale(1.2);
-  transition: transform 0.9s ease;
-}
 #carousel_foro .carousel_cards_cointainer {
   padding: 0 5px;
   display: flex;
@@ -121,6 +116,17 @@
   padding: 50px 30px;
   overflow: hidden;
   position: relative;
+}
+#carousel_foro .card_item:nth-child(1) {
+  transform: translateX(20%);
+}
+#carousel_foro .card_item:nth-child(2) {
+  transform: translateX(0%);
+  z-index: 20;
+  transform: scale(1.2);
+}
+#carousel_foro .card_item:nth-child(3) {
+  transform: translateX(-20%);
 }
 @media (min-width: 576px) {
   #carousel_foro span {

@@ -28,11 +28,6 @@
         justify-content: center;
         transform: scale(1); 
     }
-    .card_item:nth-child(2) {
-        z-index: 20;
-        transform: scale(1.2); 
-        transition: transform .9s ease;
-    }
     .carousel_cards_cointainer {
         padding: 0 5px;
         display: flex;
@@ -40,6 +35,22 @@
         padding: 50px 30px;
         overflow: hidden; 
         position: relative;
+    }
+
+    .card_item:nth-child(1) {
+        transform: translateX(20%);
+    }
+    
+        
+    .card_item:nth-child(2) {
+        transform: translateX(0%);
+        z-index: 20;
+        transform: scale(1.2);
+        // transition: .8s ease;
+    }
+    
+    .card_item:nth-child(3) {
+        transform: translateX(-20%);
     }
     
     // Responsive
