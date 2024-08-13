@@ -40,11 +40,11 @@ Siempre vamos a estar modificando código, así que vamos a tener que traer esos
 git pull
 ``` 
 
-## Arrancar SASS
-
+### Arrancar SCSS
 ```
 npm run sass
-``` 
+```
+Para deternerlo solo usamos el `Ctrl + C`
 
 ## Mensaje final
 
