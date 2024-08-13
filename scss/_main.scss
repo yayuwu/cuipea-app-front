@@ -1,5 +1,6 @@
 @import 'base/colors';
-
+@import url( https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap
+);
 h1 {
     color: $pink-dark-color;
 }
@@ -7,4 +8,8 @@ h1 {
 h2 {
     background-color: aqua;
     color: red;
+}
+
+body {
+    font-family:  "Plus Jakarta Sans", sans-serif;
 }
