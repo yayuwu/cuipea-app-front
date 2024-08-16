@@ -1,4 +1,24 @@
 @import '../base/colors';
+@import '../layouts/carousel_foro';
 
 // Estilos del Home
+#bienvenida,
+#nosotros,
+#encontrar_en_cuipea,
+#foro,
+#info,
+#header,
+#footer {
+    padding: 0 15px;
+}
 
+
+// SECCIÓN FORO
+#foro {
+    background-color: #DEABCA;
+    h2 {
+        font-size: 24px;
+        color: $main-color;
+        padding: 15px 0;
+    }
+}

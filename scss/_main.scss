@@ -1,9 +1,10 @@
-@import 'base/colors';
-@import url( https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap
-);
+@import 'base/typography';
+@import 'pages/home';
 
-body {
-    font-family:  "Plus Jakarta Sans", sans-serif;
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 
@@ -119,4 +120,5 @@ footer {
       }
     }
   }
+
 

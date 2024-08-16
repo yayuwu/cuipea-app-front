@@ -1,5 +1,5 @@
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//      <h1>CUIPEA</h1>
-//   </div>
-// `
+import { nextSlide, prevSlide } from './home/carouselForo';
+
+// Funciones del CAROUSEL del FORO (HOME)
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
