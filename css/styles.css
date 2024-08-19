@@ -261,3 +261,140 @@ footer .footer-bottom p a {
   color: white;
   text-decoration: underline;
 }
+
+/* DONACIONES */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%; 
+  background-color: #D9D9D9;
+  padding: 50px 0 30px;
+  margin: 0;
+}
+.donation-box{
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 3px solid #737DB1;
+  position: absolute;    
+  width: 150px;
+  height: 250px;
+  padding: 20px 0;
+  border-radius: 18px;
+  left: 5%;
+}
+
+.donation-box h3 {
+  color: #7A85C0;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.donation-box span {
+  color: #27325A;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.donation-box p {
+  padding: 0px 20px 0px 20px;
+  color: #27325A;
+  font-size: 14px;
+
+}
+
+.btn-donar {
+  color: white;
+  border-radius: 50px;
+  border: 2px solid #7A85C0;
+  background-color: #7A85C0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.donaciones-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center;
+  text-align: center; */
+}
+
+.donaciones-box h2 {
+  font-size: 50px;
+  color: #7A85C0;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 0 130px;
+}
+
+.donaciones-box p { 
+  color: #27325A;
+  font-size: 18px;
+  padding: 0 0 0 140px;
+}
+
+@media (min-width: 576px) {
+  .donation-box {
+      width: 150px;
+      height: 250px;
+  }
+  .donation-box h3, .donation-box p, .btn-donar {
+      font-size: 14px;
+  }
+  .donation-box span {
+      font-size: 30px;
+  }
+  .donaciones-box h2 {
+      font-size: 50px;
+  }
+  .donaciones-box p{
+      font-size: 18px; 
+  }
+}
+
+@media (min-width: 768px) {
+  .donation-box {
+      width: 200px;
+      height: 300px;
+      padding: 25px 0;
+  }
+  .donation-box h3, .donation-box p, .btn-donar {
+      font-size: 18px;
+  }
+  .donation-box span {
+      font-size: 35px;
+  }
+  .donaciones-box h2 {
+      font-size: 55px;
+  }
+  .donaciones-box p{
+      font-size: 20px; 
+  }
+}
+
+@media (min-width: 992px) {
+
+  .container {
+      padding-top: 50px;
+  }
+  .donation-box {
+      width: 250px;
+      height: 350px;
+  }
+  .donation-box h3, .donation-box p, .btn-donar {
+      font-size: 20px;
+  }
+  .donation-box span {
+      font-size: 40px;
+  }
+  .donaciones-box h2 {
+      font-size: 70px;
+  }
+  .donaciones-box p{
+      font-size: 25px; 
+  }
+
+}  
