@@ -1,15 +1,67 @@
 @import 'base/colors';
 @import url( https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap
 );
-h1 {
-    color: $pink-dark-color;
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+  margin:0;
 }
 
-h2 {
-    background-color: aqua;
-    color: red;
+
+// Carrousel Informacion
+
+#info {
+  background-color: #5cb2bf2d;
+  padding: 30px 30px;
+  width: 100%;
+  display: flex; /* Utiliza Flexbox */
+  flex-direction: column; /* Por defecto, coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+
 }
 
-body {
-    font-family:  "Plus Jakarta Sans", sans-serif;
+.encabezado-info {
+  margin: 0 20px 0 20px;
+  h2 {
+    color: $blue-color;
+    font-weight: bolder;
+  }
+  p {
+    color: $main-color;
+  }
 }
+
+@media (min-width: 768px) {
+  #info {
+    flex-direction: row; /* Coloca los elementos en fila */
+    justify-content: center; /* Centra los elementos en la fila */
+  }
+
+  .encabezado-info, 
+  #carousel-informacion {
+    flex: 1; /* los dos elementos del mismo ancho disponible */
+    margin: 0 100px 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
+  }
+  
+  #carousel-informacion {
+    max-width: 100%; 
+  }
+}
+
+.encabezado-info {
+  text-align: start; 
+}
+
+.carousel-inner img {
+  width: 100%; 
+  height: auto;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+  margin-top: 10px; /* Ajusta el margen de los botones */
+}
+
+
+

@@ -1,8 +1,57 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap);
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
 
+#info {
+  background-color: rgba(92, 178, 191, 0.1764705882);
+  padding: 30px 30px;
+  width: 100%;
+  display: flex; /* Utiliza Flexbox */
+  flex-direction: column; /* Por defecto, coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+}
 
-h2 {
-  background-color: aqua;
-  color: red;
+.encabezado-info {
+  margin: 0 20px 0 20px;
+}
+.encabezado-info h2 {
+  color: #5DB3C1;
+  font-weight: bolder;
+}
+.encabezado-info p {
+  color: #28325A;
+}
+
+@media (min-width: 768px) {
+  #info {
+    flex-direction: row; /* Coloca los elementos en fila */
+    justify-content: center; /* Centra los elementos en la fila */
+  }
+  .encabezado-info,
+  #carousel-informacion {
+    flex: 1; /* Ambos elementos tomarán el mismo ancho disponible */
+    margin: 0 100px 0 50px; /* Espacio entre el encabezado y el carrusel */
+  }
+  #carousel-informacion {
+    max-width: 100%; /* Asegura que el carrusel no exceda el contenedor */
+  }
+}
+.encabezado-info {
+  text-align: start; /* Alinea el texto del encabezado al centro */
+}
+
+.carousel-inner img {
+  width: 100%; /* Asegura que las imágenes se ajusten al contenedor del carrusel */
+  height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  margin-top: 10px; /* Ajusta el margen de los botones */
 }
 
 /*# sourceMappingURL=styles.css.map */
