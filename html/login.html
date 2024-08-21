@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 
     <link rel="stylesheet" href="css/formstyle.css">
 </head>
+
 <body>
     <header>
         <!-- NAV -->
@@ -14,34 +16,39 @@
     </header>
     <main>
         <!-- FORMULARIO -->
-        <form class="form-login" action="/my-handling-form-page" method="post">
-            <h1>Ingresa a tu cuenta CUIPEA</h1>
+        <div class="container-general">
 
-            <div>
-                <label class="nombre" for="nombre">Mi usuario</label>
-                <input class="controls" type="text" name="usuario" value="" placeholder="Correo">
-            </div>
+            <form class="form-general" id="form-login" action="" method="post">
+                <h1>Ingresa a tu cuenta CUIPEA</h1>
+                <div>
+                    <label class="nombre" for="nombre">Mi usuario</label>
+                    <input class="controls" type="text" name="usuario" value="" placeholder="Correo">
+                </div>
 
-            <div>
-                <label for="nombre">Contraseña</label>
-                <input class="controls" type="password" name="contrasena" value="" placeholder="*****">
-            </div>
+                <div>
+                    <label for="nombre">Contraseña</label>
+                    <input class="controls" type="password" name="contrasena" value="" placeholder="*****">
+                </div>
 
-            <div>
-                <input class="btn btn-buttons" type="submit" name="" value="INGRESAR">
-            </div>
+                <div>
+                    <input class="btn btn-button" type="submit" name="" value="INGRESAR">
+                </div>
 
-            <div>
-                <p><a href="#">Olvidé mi contraseña</a></p>
-                <p>¿No tenés cuenta? <a href="register.html">Registrate</a></p>
-            </div>
+                <div>
+                    <p><a href="#">Olvidé mi contraseña</a></p>
+                    <p>¿No tenés cuenta? <a href="register.html">Registrate</a></p>
+                </div>
 
-        </form>
-    </main> 
+            </form>
+        </div>
+    </main>
+
+
     <footer>
         <!-- FOOTER -->
-    
+
     </footer>
     <script src="formulario.js"></script>
 </body>
+
 </html>
