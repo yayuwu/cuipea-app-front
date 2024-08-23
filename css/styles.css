@@ -422,17 +422,22 @@ section {
 
 /* ---------------------------------------------------------------------------------------------------------------*/
 #foro {
-  background-color: rgba(222, 171, 202, 0.1607843137);
+  background-color: rgba(222, 171, 202, 0.3568627451);
 }
 #foro h2 {
   font-size: 50px;
+  font-weight: bolder;
   color: #EF8090;
-  padding: 15px 80px;
+  padding: 15px 70px;
 }
 @media (min-width: 768px) {
   #foro h2 {
-    font-size: 30px;
+    font-size: 50px;
   }
+}
+#foro p {
+  color: #28325A;
+  padding: 2px 70px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/

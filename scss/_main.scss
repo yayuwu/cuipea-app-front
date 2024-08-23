@@ -310,14 +310,19 @@ background-color: #EF8090 ;
 /* ---------------------------------------------------------------------------------------------------------------*/
 // SECCIÓN FORO
 #foro {
-  background-color: #deabca29;
+  background-color: #deabca5b;
   h2 {
       font-size: 50px;
+      font-weight: bolder;
       color: $pink-dark-color;
-      padding: 15px 80px;
+      padding: 15px 70px;
       @include breakpoint(md) {
-          font-size: 30px;
+          font-size: 50px;
       }
+  }
+  p {
+    color: $main-color;
+    padding: 2px 70px;
   }
 }
 /* ---------------------------------------------------------------------------------------------------------------*/
