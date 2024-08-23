@@ -1,11 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-
-body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-
-/*Foro Padres*/
 .card_foro {
   display: flex;
   flex-direction: column;
@@ -165,9 +159,6 @@ body {
   margin: 0;
 }
 
-/*# sourceMappingURL=styles.css.map */
-
-/*FOOTER*/
 footer {
   background-color: #28325A;
   color: white;
@@ -220,6 +211,7 @@ footer .section-nosotras, footer .section-links {
 }
 footer .section-nosotras h4, footer .section-links h4 {
   font-size: 16px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 footer .section-nosotras .lista-links, footer .section-links .lista-links {
@@ -244,9 +236,10 @@ footer .contact-bar {
 }
 footer .contact-bar span {
   color: #28325A;
+  font-size: 14px;
 }
 footer .contact-bar span a {
-  color: #1a2a4f;
+  color: #28325A;
   text-decoration: underline;
 }
 footer .footer-bottom {
@@ -261,3 +254,5 @@ footer .footer-bottom p a {
   color: white;
   text-decoration: underline;
 }
+
+/*# sourceMappingURL=styles.css.map */
