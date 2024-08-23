@@ -9,7 +9,7 @@
   height: 200px;
   padding: 20px 0;
   border-radius: 18px;
-  box-shadow: -0.5px 4px 5px 1px rgba(78, 78, 78, 0.5);
+  box-shadow: -0.5px 4px 5px 1px rgba(173, 173, 173, 0.5);
 }
 .card_foro h3 {
   color: white;
@@ -43,8 +43,8 @@
 }
 @media (min-width: 768px) {
   .card_foro {
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
   }
   .card_foro h3 {
     font-size: 18px;
@@ -57,15 +57,15 @@
 }
 @media (min-width: 992px) {
   .card_foro {
-    width: 250px;
-    height: 300px;
+    width: 350px;
+    height: 400px;
   }
   .card_foro h3 {
-    font-size: 20px;
+    font-size: 26px;
     padding: 0 22px;
   }
   .card_foro h4, .card_foro p {
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px 22px;
   }
 }
@@ -90,6 +90,11 @@
     height: 400px;
   }
 }
+@media (min-width: 992px) {
+  .cards {
+    height: 550px;
+  }
+}
 .cards .card {
   position: absolute;
   width: 150px;
@@ -102,12 +107,12 @@
 }
 @media (min-width: 768px) {
   .cards .card {
-    width: 200px;
+    width: 250px;
   }
 }
 @media (min-width: 992px) {
   .cards .card {
-    width: 250px;
+    width: 350px;
   }
 }
 
@@ -195,23 +200,40 @@
   background-color: #7A87C2;
 }
 
+.subtitle {
+  font-size: 30px;
+}
+@media (min-width: 576px) {
+  .subtitle {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .p {
+    font-size: 20px;
+  }
+}
+
 #foro {
-  background-color: #DEABCA;
+  margin-left: 12px;
 }
 #foro h2 {
   font-weight: 700;
-  font-size: 24px;
-  color: #28325A;
+  color: #DEABCA;
   padding: 15px 0;
-}
-@media (min-width: 768px) {
-  #foro h2 {
-    font-size: 30px;
-  }
 }
 #foro h3,
 #foro h4 {
   font-weight: 700;
+}
+#foro p {
+  color: #28325A;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
@@ -339,7 +361,6 @@
 }
 
 .donaciones-box h2 {
-  font-size: 50px;
   color: #7A87C2;
   font-weight: bold;
   text-align: center;
@@ -368,7 +389,6 @@
 }
 /* ---------------------------------------------------------------------------------------------------------------*/
 #info {
-  background-color: rgba(92, 178, 191, 0.1764705882);
   padding: 30px 30px;
   width: 100%;
   display: flex;
@@ -377,12 +397,11 @@
 }
 
 .encabezado-info {
-  margin: 0 20px 0 20px;
+  margin: 0 15px 0 10px;
 }
 .encabezado-info h2 {
   color: #5DB3C1;
   font-weight: bolder;
-  font-size: 50px;
 }
 .encabezado-info p {
   color: #28325A;

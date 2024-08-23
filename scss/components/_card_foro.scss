@@ -9,7 +9,7 @@
     height: 200px;
     padding: 20px 0;
     border-radius: 18px;
-    box-shadow: -0.5px 4px 5px 1px rgba(78, 78, 78, 0.5);
+    box-shadow: -0.5px 4px 5px 1px rgba(173, 173, 173, 0.5);
     h3 {
         color: white;
         font-size: 14px;
@@ -44,8 +44,8 @@
     }
     // Estilos responsive
     @include breakpoint(md){
-        width: 200px;
-        height: 250px;
+        width: 250px;
+        height: 300px;
         h3 {
             font-size: 18px;
             padding: 0 15px;
@@ -56,14 +56,14 @@
         } 
     }
     @include breakpoint(lg){
-        width: 250px;
-        height: 300px;
+        width: 350px;
+        height: 400px;
         h3 {
-            font-size: 20px;
+            font-size: 26px;
             padding: 0 22px;
         }
         h4, p {
-            font-size: 16px;
+            font-size: 20px;
             padding: 5px 22px;
         } 
     }

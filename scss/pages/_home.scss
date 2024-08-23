@@ -3,21 +3,40 @@
 @import '../layouts/carousel_foro';
 @import '../components/nav';
 
+// Estilos globales
+
+// Estilos para los h2
+.subtitle {
+    font-size: 30px;
+    @include breakpoint(sm){
+        font-size: 40px;
+    }
+    @include breakpoint(md){
+        font-size: 50px;
+    }
+}
+
+// Estilos para los p
+.p {
+    @include breakpoint(md) {
+        font-size: 20px;
+    }
+}
+
 // SECCIÓN FORO
 #foro {
-    background-color: #DEABCA;
+    margin-left: 12px;
     h2 {
         font-weight: 700;
-        font-size: 24px;
-        color: $main-color;
+        color: $pink-dark-color;
         padding: 15px 0;
-        @include breakpoint(md) {
-            font-size: 30px;
-        }
     }
     h3,
     h4 {
         font-weight: 700;
+    }
+    p {
+        color: $main-color;
     }
 }
 
@@ -153,7 +172,6 @@
   }
   
   .donaciones-box h2 {
-    font-size: 50px;
     color: $violet-blue-color;
     font-weight: bold;
     text-align: center;
@@ -186,7 +204,6 @@
   // Carrousel Informacion
   
   #info {
-    background-color: #5cb2bf2d;
     padding: 30px 30px;
     width: 100%;
     display: flex; 
@@ -195,11 +212,10 @@
   }
   
   .encabezado-info {
-    margin: 0 20px 0 20px;
+    margin: 0 15px 0 10px;
     h2 {
       color: $blue-color;
       font-weight: bolder;
-      font-size: 50px;
     }
     p {
       color: $main-color;
