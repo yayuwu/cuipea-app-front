@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 body {
@@ -87,57 +86,72 @@ body {
   }
 }
 
-#carousel_foro {
+#item-1,
+#item-2,
+#item-3 {
+  display: none;
+}
+
+.cards {
   display: flex;
   justify-content: center;
-  padding: 20px 10px;
-  overflow: hidden; /* Oculta el contenido que se desborda */
-  position: relative; /* Necesario para posicionar los botones de navegación */
-}
-#carousel_foro span {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  z-index: 10;
-}
-#carousel_foro span:first-child {
-  left: 0px;
-}
-#carousel_foro span:last-child {
-  right: 0px;
-}
-#carousel_foro .card_item {
-  flex: 0 0 33.3333%; /* Mostrar 3 elementos a la vez */
-  display: flex;
-  justify-content: center;
-  transform: scale(1);
-}
-#carousel_foro .carousel_cards_cointainer {
-  padding: 0 5px;
-  display: flex;
-  justify-content: center;
-  padding: 50px 30px;
-  overflow: hidden;
+  align-items: center;
+  transform-style: preserve-3d;
   position: relative;
-}
-#carousel_foro .card_item:nth-child(1) {
-  transform: translateX(20%);
-}
-#carousel_foro .card_item:nth-child(2) {
-  transform: translateX(0%);
-  z-index: 20;
-  transform: scale(1.2);
-}
-#carousel_foro .card_item:nth-child(3) {
-  transform: translateX(-20%);
+  height: 200px;
 }
 @media (min-width: 576px) {
-  #carousel_foro span {
-    font-size: 2rem;
+  .cards {
+    height: 300px;
   }
+}
+@media (min-width: 768px) {
+  .cards {
+    height: 400px;
+  }
+}
+.cards .card {
+  position: absolute;
+  width: 100px;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .cards .card {
+    width: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .cards .card {
+    width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .cards .card {
+    width: 250px;
+  }
+}
+
+#item-1:checked ~ .cards #card-3, #item-2:checked ~ .cards #card-1, #item-3:checked ~ .cards #card-2 {
+  transform: translatex(-50%) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+
+#item-1:checked ~ .cards #card-2, #item-2:checked ~ .cards #card-3, #item-3:checked ~ .cards #card-1 {
+  transform: translatex(50%) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+
+#item-1:checked ~ .cards #card-1, #item-2:checked ~ .cards #card-2, #item-3:checked ~ .cards #card-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 2;
 }
 
 #bienvenida,
@@ -157,6 +171,11 @@ body {
   font-size: 24px;
   color: #28325A;
   padding: 15px 0;
+}
+@media (min-width: 768px) {
+  #foro h2 {
+    font-size: 30px;
+  }
 }
 
 * {

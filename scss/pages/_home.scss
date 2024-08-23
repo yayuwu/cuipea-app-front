@@ -1,4 +1,5 @@
 @import '../base/colors';
+@import '../base/breakpoints';
 @import '../layouts/carousel_foro';
 
 // Estilos del Home
@@ -20,5 +21,8 @@
         font-size: 24px;
         color: $main-color;
         padding: 15px 0;
+        @include breakpoint(md) {
+            font-size: 30px;
+        }
     }
 }
