@@ -1,5 +1,142 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap);
+.card_foro {
+  display: flex;
+  flex-direction: column;
+  background-color: #EEC5DD;
+  width: 150px;
+  height: 200px;
+  padding: 20px 0;
+  border-radius: 18px;
+  box-shadow: -0.5px 4px 5px 1px rgba(78, 78, 78, 0.5);
+}
+.card_foro h3 {
+  color: white;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.card_foro h4, .card_foro p {
+  color: #28325A;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.card_foro .gradient-image {
+  width: 50%;
+  position: relative;
+  align-self: center;
+}
+.card_foro .gradient-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #EEC5DD);
+}
+.card_foro .gradient-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .card_foro {
+    width: 200px;
+    height: 250px;
+  }
+  .card_foro h3 {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+  .card_foro h4, .card_foro p {
+    font-size: 13px;
+    padding: 5px 15px;
+  }
+}
+@media (min-width: 992px) {
+  .card_foro {
+    width: 250px;
+    height: 300px;
+  }
+  .card_foro h3 {
+    font-size: 20px;
+    padding: 0 22px;
+  }
+  .card_foro h4, .card_foro p {
+    font-size: 16px;
+    padding: 5px 22px;
+  }
+}
+
+#item-1,
+#item-2,
+#item-3 {
+  display: none;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  .cards {
+    height: 400px;
+  }
+}
+.cards .card {
+  position: absolute;
+  width: 150px;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .cards .card {
+    width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .cards .card {
+    width: 250px;
+  }
+}
+
+#item-1:checked ~ .cards #card-3, #item-2:checked ~ .cards #card-1, #item-3:checked ~ .cards #card-2 {
+  transform: translatex(-50%) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+
+#item-1:checked ~ .cards #card-2, #item-2:checked ~ .cards #card-3, #item-3:checked ~ .cards #card-1 {
+  transform: translatex(50%) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+
+#item-1:checked ~ .cards #card-1, #item-2:checked ~ .cards #card-2, #item-3:checked ~ .cards #card-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+#bienvenida,
+#nosotros,
+#encontrar_en_cuipea,
+#foro,
+#info,
+#header,
+#footer {
+  padding: 0 15px;
+}
+
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;
@@ -14,6 +151,11 @@
 #header,
 #footer {
   padding: 0 15px;
+}
+
+section {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
@@ -276,6 +418,21 @@
 .carousel-control-prev,
 .carousel-control-next {
   margin-top: 10px; /* Ajusta el margen de los botones */
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+#foro {
+  background-color: rgba(222, 171, 202, 0.1607843137);
+}
+#foro h2 {
+  font-size: 50px;
+  color: #EF8090;
+  padding: 15px 80px;
+}
+@media (min-width: 768px) {
+  #foro h2 {
+    font-size: 30px;
+  }
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
