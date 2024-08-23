@@ -1,28 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-
-body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-
-/*Foro Padres*/
 .card_foro {
   display: flex;
   flex-direction: column;
   background-color: #EEC5DD;
-  width: 100px;
-  height: 150px;
+  width: 150px;
+  height: 200px;
   padding: 20px 0;
   border-radius: 18px;
   box-shadow: -0.5px 4px 5px 1px rgba(78, 78, 78, 0.5);
 }
 .card_foro h3 {
   color: white;
-  font-size: 11px;
+  font-size: 14px;
   padding: 0 10px;
 }
 .card_foro h4, .card_foro p {
   color: #28325A;
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 600;
   padding: 5px 10px;
 }
@@ -44,18 +38,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-@media (min-width: 576px) {
-  .card_foro {
-    width: 150px;
-    height: 200px;
-  }
-  .card_foro h3 {
-    font-size: 14px;
-  }
-  .card_foro h4, .card_foro p {
-    font-size: 10px;
-  }
 }
 @media (min-width: 768px) {
   .card_foro {
@@ -98,12 +80,7 @@ body {
   align-items: center;
   transform-style: preserve-3d;
   position: relative;
-  height: 200px;
-}
-@media (min-width: 576px) {
-  .cards {
-    height: 300px;
-  }
+  height: 300px;
 }
 @media (min-width: 768px) {
   .cards {
@@ -112,18 +89,13 @@ body {
 }
 .cards .card {
   position: absolute;
-  width: 100px;
+  width: 150px;
   top: 10%;
   left: 0;
   right: 0;
   margin: auto;
   transition: transform 0.4s ease;
   cursor: pointer;
-}
-@media (min-width: 576px) {
-  .cards .card {
-    width: 150px;
-  }
 }
 @media (min-width: 768px) {
   .cards .card {
@@ -184,9 +156,6 @@ body {
   margin: 0;
 }
 
-/*# sourceMappingURL=styles.css.map */
-
-/*FOOTER*/
 footer {
   background-color: #28325A;
   color: white;
@@ -239,6 +208,7 @@ footer .section-nosotras, footer .section-links {
 }
 footer .section-nosotras h4, footer .section-links h4 {
   font-size: 16px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 footer .section-nosotras .lista-links, footer .section-links .lista-links {
@@ -263,9 +233,10 @@ footer .contact-bar {
 }
 footer .contact-bar span {
   color: #28325A;
+  font-size: 14px;
 }
 footer .contact-bar span a {
-  color: #1a2a4f;
+  color: #28325A;
   text-decoration: underline;
 }
 footer .footer-bottom {
@@ -280,3 +251,5 @@ footer .footer-bottom p a {
   color: white;
   text-decoration: underline;
 }
+
+/*# sourceMappingURL=styles.css.map */

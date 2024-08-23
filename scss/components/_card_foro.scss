@@ -5,19 +5,19 @@
     display: flex;
     flex-direction: column;
     background-color: $color;
-    width: 100px;
-    height: 150px;
+    width: 150px;
+    height: 200px;
     padding: 20px 0;
     border-radius: 18px;
     box-shadow: -0.5px 4px 5px 1px rgba(78, 78, 78, 0.5);
     h3 {
         color: white;
-        font-size: 11px;
+        font-size: 14px;
         padding: 0 10px;
     }
     h4, p {
         color: $main-color;
-        font-size: 7px;
+        font-size: 10px;
         font-weight: 600;
         padding: 5px 10px;
     }
@@ -43,16 +43,6 @@
         object-fit: cover;
     }
     // Estilos responsive
-    @include breakpoint(sm){
-        width: 150px;
-        height: 200px;
-        h3 {
-            font-size: 14px;
-        }
-        h4, p {
-            font-size: 10px;
-        } 
-    }
     @include breakpoint(md){
         width: 200px;
         height: 250px;
