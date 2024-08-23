@@ -9,6 +9,8 @@
     "vite": "^5.3.5"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "^5.1.1"
+    "@vitejs/plugin-vue": "^5.1.1",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3"
   }
 }
