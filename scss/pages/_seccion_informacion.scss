@@ -1,0 +1,110 @@
+@import '../base/colors';
+@import '../base/breakpoints';
+//@import '../layouts/carousel_foro';
+@import '../components/nav';
+@import '_home.scss';
+
+.subtitle.info, .info, .p {
+  padding-left: 15px;  
+}
+
+.imagen-encabezado {
+    margin-bottom: 6px;
+    //  position: relative;
+    //  width: 100%;
+    //  height: 100vh; 
+    //  max-height: 60vh;
+    //  overflow: hidden;
+ }
+
+.foto-encabezado {
+    width: 100%;
+    height: auto;
+    max-height: 50vh; 
+    object-fit: cover;
+}
+
+.subtitle.info {
+    color: $main-color;
+    font-weight: bolder;
+}
+
+.info {
+    color: $main-color;
+    font-weight: bold;
+}
+
+.p.info {
+    color: $main-color;
+}
+
+// Carouseles
+
+// h3 con titulos en colores
+.fondito1 {
+    background-color: $blue-color;
+    display: inline-block;
+    padding-right: 2%;
+    
+}
+.fondito2 {
+    background-color: $yellow-color;
+    display: inline-block;
+    padding-right: 2%;
+}
+.fondito3 {
+    background-color: $pink-dark-color;
+    display: inline-block;
+    padding-right: 2%;
+}
+
+// margenes de cada seccion, para mas espacio y prolijidad
+section.carousel {
+    margin: 40px 0px;
+}
+
+// tamaño de los carrouseles
+#carousel-desarrollo ,
+#carousel-enfermedades ,
+#carousel-cuidados {
+    max-width: 50%;
+}
+
+//ubicacion de las flechas
+.carousel-control-prev {
+    left: -20%;
+}
+.carousel-control-next {
+    right: -20%;
+}
+
+// Ubicacion del boton VER MAS y el h5 de cada imagen del carousel
+.carousel-caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    text-align: left;
+  }
+  
+.carousel-caption h5 {
+    margin-bottom: 10px; 
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+.carousel-caption a.btn {
+    background-color: #fff;
+    display: inline-block;
+    color: $main-color;
+    font-size: 15px; 
+    font-weight: bolder;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .carousel-caption a.btn:active {
+    box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+    background-color: $violet-blue-color;
+    }
