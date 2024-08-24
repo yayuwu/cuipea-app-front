@@ -3,17 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+
   <title>Cuipea</title>
 </head>
 <body>
 
   <header>
-    <!-- NAV -->
+    <!-- NAV HECHO TODO EN BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid py-4 px-3">
+
+       <!-- boton izquierdo, solo mobile -->
+          <button class="navbar-toggler-mobile d-lg-none p-0 m-0 bg-transparent border-0 " type="button" >
+              <a href="#"><img src="assets\icons\icon_ingreso_sesion.svg" class="navbar-toggler-icon" alt="Icono inicio sesion" style="width: 30px; height: 30px; object-fit: cover;"></a>
+            </button>
+
+        <!-- Logo Cuipea -->
+        <a class="navbar-brand m-0" href="#"><img src="assets\icons\Logo_CUIPEA.svg" alt="CUIPEA Logo" class="img-fluid"></a>
+
+        <!-- Botón de menú hamburguesa derecho -->
+        <button class="navbar-toggler p-0 ms-2 bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"> <img src="assets\icons\icon_menu_hamburguesa.svg" alt="Icono menu hamburguesa" style="width: 100%; height: 100%; object-fit: cover;"></span>
+        </button>
+
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">DONACIONES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FORO</a>
+            </li>
+            <li class="nav-item dropdown"> <!--Desplegable información-->
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                INFORMACIÓN
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item item-1 " href="#">Prevención de Enfermedades</a></li>
+                <li><a class="dropdown-item item-2 " href="#">Etapas del Desarrollo</a></li>
+                <li><a class="dropdown-item item-3 " href="#">Cuidados y Buenos Hábitos</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item item-4" href="#">Ver toda la sección </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ingreso" href="#">INGRESAR</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
   </header>
+
   <main>
-    <section id="bienvenida">
+    <section id="bienvenida_video">
       <!-- SECCIÓN BIENVENIDA -->
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="assets\video_inicio\video_inicio.mp4" type="video/mp4">
+            Tu navegador no soporta el video HTML5.
+        </video>
+        <div class="texto-video">
+            <h2 class="display-4">La Salud de tus hijos,</h2>
+            <h1 class="display-4">en tus manos.</h1>
+        </div>
+    </section>
 
     </section>
     <section id="nosotros">
@@ -24,52 +85,115 @@
       <!-- SECCIÓN QUÉ PODÉS ENCONTRAR EN CUIPEA -->
 
     </section>
+
     <section id="donaciones">
       <!-- SECCIÓN DONACIONES -->
+      <div class="cajavioleta">
+        <div class="donaciones-box">
+            <h2 class="subtitle">Donaciones</h2>
+            <p class="p">Ingresá y realizá tu donación.</p>
+            <p class="negrita p">Cada aporte suma</p>
+        </div>
+        <div class="donation-box">
+            <h3>Realizá <br>tu donación</h3>
+            <p>Como ya lo hicieron más de </p>
+            <span>2.034</span>
+            <p>PERSONAS</p>
+            <button class="btn-donar">DONAR</button>
+        </div>
+      </div>
 
     </section>
+    
     <section id="info">
       <!-- SECCIÓN INFO -->
 
-    </section>
-    <section id="foro">
-      <!-- SECCIÓN FORO -->
-       <h2>Comunidad para padres</h2>
-       <div id="carousel_foro">
-         <span onclick="nextSlide()">❮</span>
-          <div class="carousel_cards_cointainer">
-            <div class="card_item">
-              <div class="card_foro">
-                <div class="gradient-image">
-                  <img src="assets/img/general/foto_bebe.svg" alt="baby_img">
-                </div>
-                <h3>CANDELA</h3>
-                <h4>MAMÁ DE LAURA</h4>
-                <p>¿Me podrían responder mi duda?</p>
-              </div>
+      <div class="encabezado-info">
+    
+        <h2 class="subtitle">Información</h2>
+        <p class="p">Tené siempre a mano y en un solo lugar la información que necesitás para acompañar el crecimiento de tus hijos. Alimentación, prevención, desarrollo, cuidados, hábitos, y mucho más.</p>
+      </div>
+  
+        <div id="carousel-informacion" class="carousel slide w-75 mx-auto my-4">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-informacion" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel-informacion" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel-informacion" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carousel-informacion" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carousel-informacion" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="#"><img src="assets/img/info-carrusel/leche-materna.svg" class="d-block w-100" alt="extraer leche"></a>
             </div>
-            <div class="card_item">
-              <div class="card_foro">
-                <div class="gradient-image">
-                  <img src="assets/img/general/foto_bebe.svg" alt="baby_img">
-                </div>
-                <h3>CAMILA</h3>
-                <h4>MAMÁ DE FACUNDO</h4>
-                <p>¿Me podrían responder mi duda?</p>
-              </div>
+            <div class="carousel-item">
+              <a href="#"><img src="assets/img/info-carrusel/dengue.svg" class="d-block w-100" alt="dengue"></a>
             </div>
-            <div class="card_item">
-              <div class="card_foro">
-                <div class="gradient-image">
-                  <img src="assets/img/general/foto_bebe.svg" alt="baby_img">
-                </div>
-                <h3>MARÍA</h3>
-                <h4>MAMÁ DE ANA</h4>
-                <p>¿Me podrían responder mi duda?</p>
-              </div>
+            <div class="carousel-item">
+              <a href="#"><img src="assets/img/info-carrusel/salud-bucal.svg" class="d-block w-100" alt="salud bucal"></a>
+            </div>
+            <div class="carousel-item">
+              <a href="#"><img src="assets/img/info-carrusel/primer-mes.svg" class="d-block w-100" alt="primer mes de vida"></a>
+            </div>
+            <div class="carousel-item">
+              <a href="#"><img src="assets/img/info-carrusel/ver-mas.svg" class="d-block w-100" alt="ver más"></a>
             </div>
           </div>
-          <span onclick="prevSlide()">❯</span>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel-informacion" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel-informacion" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
+
+
+    <section id="foro">
+      <!-- SECCIÓN FORO -->
+       <h2 class="subtitle">Comunidad para padres</h2>
+       <p class="p">Descubrí nuestro foro donde podras ver dudas y compartir con una amplia comunidad de padres.</p>
+       <div id="carousel-foro">
+         <!-- <span onclick="nextSlide()">❮</span> -->
+         <input type="radio" name="slider" id="item-1" checked>
+         <input type="radio" name="slider" id="item-2">
+         <input type="radio" name="slider" id="item-3">
+         <div class="cards">
+          <label class="card" for="item-1" id="card-1">
+            <div class="card_foro">
+              <div class="gradient-image">
+                <img src="assets/img/general/foto_bebe.svg" alt="baby_img">
+              </div>
+              <h3>CAMILA</h3>
+              <h4>MAMÁ DE FACUNDO</h4>
+              <p>¿Me podrían responder mi duda?</p>
+            </div>
+          </label>
+          <label class="card" for="item-2" id="card-2">
+            <div class="card_foro">
+              <div class="gradient-image">
+                <img src="assets/img/general/foto_bebe.svg" alt="baby_img">
+              </div>
+              <h3>CAMILA</h3>
+              <h4>MAMÁ DE FACUNDO</h4>
+              <p>¿Me podrían responder mi duda?</p>
+            </div>
+          </label>
+          <label class="card" for="item-3" id="card-3">
+            <div class="card_foro">
+              <div class="gradient-image">
+                <img src="assets/img/general/foto_bebe.svg" alt="baby_img">
+              </div>
+              <h3>CAMILA</h3>
+              <h4>MAMÁ DE FACUNDO</h4>
+              <p>¿Me podrían responder mi duda?</p>
+            </div>
+          </label>
+        </div>
+          <!-- <span onclick="prevSlide()">❯</span> -->
        </div>
     </section>
   </main>
@@ -117,6 +241,10 @@
     </div>
   </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <script type="module" src="/src/main.js"></script>
+
 </body>
 </html>

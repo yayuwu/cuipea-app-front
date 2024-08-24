@@ -1,62 +1,70 @@
 @import '../components/card_foro';
 @import '../base/breakpoints';
+@import '../base//colors';
 
-#carousel_foro {
+
+#item-1,
+#item-2,
+#item-3 {
+    display: none;
+}
+
+.cards {
     display: flex;
     justify-content: center;
-    padding: 20px 10px;
-    overflow: hidden; /* Oculta el contenido que se desborda */
-    position: relative; /* Necesario para posicionar los botones de navegación */
-    span {
+    align-items: center;
+    transform-style: preserve-3d;
+    position: relative;
+    border-radius: 20px;
+    height: 300px; // la altura segun el tamaño de la pantalla también varía
+    @include breakpoint(md){
+        height: 400px; 
+    }
+    @include breakpoint(lg){
+        height: 550px; 
+    }
+    .card {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1rem;
-        color: white;
+        width: 150px; // esto medirá según el tamaño responsive de cada card
+        top: 10%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: transform .4s ease;
         cursor: pointer;
-        z-index: 10;
-    }
-    span:first-child {
-        left: 0px;
-    }
-    span:last-child {
-        right: 0px;
-    }
-    .card_item {
-        flex: 0 0 33.3333%; /* Mostrar 3 elementos a la vez */
-        display: flex;
-        justify-content: center;
-        transform: scale(1); 
-    }
-    .carousel_cards_cointainer {
-        padding: 0 5px;
-        display: flex;
-        justify-content: center;
-        padding: 50px 30px;
-        overflow: hidden; 
-        position: relative;
-    }
-
-    .card_item:nth-child(1) {
-        transform: translateX(20%);
-    }
-    
-        
-    .card_item:nth-child(2) {
-        transform: translateX(0%);
-        z-index: 20;
-        transform: scale(1.2);
-        // transition: .8s ease;
-    }
-    
-    .card_item:nth-child(3) {
-        transform: translateX(-20%);
-    }
-    
-    // Responsive
-    @include breakpoint(sm){
-        span {
-            font-size: 2rem;
+        @include breakpoint(md){
+            width: 250px; // esto medirá según el tamaño responsive de cada card
+        }
+        @include breakpoint(lg){
+            width: 350px; // esto medirá según el tamaño responsive de cada card
         }
     }
 }
+
+
+// Animación
+
+#item-1:checked ~ .cards #card-3, #item-2:checked ~ .cards #card-1, #item-3:checked ~ .cards #card-2 {
+    transform: translatex(-50%) scale(.8);
+    opacity: 1;
+    z-index: 1;
+    border-radius: 20px;
+    border-color: $pink-color;
+}
+  
+#item-1:checked ~ .cards #card-2, #item-2:checked ~ .cards #card-3, #item-3:checked ~ .cards #card-1 {
+    transform: translatex(50%) scale(.8);
+    opacity: 1;
+    z-index: 1;
+    border-radius: 20px;
+    border-color: $pink-color;
+}
+  
+#item-1:checked ~ .cards #card-1, #item-2:checked ~ .cards #card-2, #item-3:checked ~ .cards #card-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+    border-radius: 20px;
+    border-color: $pink-color;
+}
+
