@@ -1,15 +1,373 @@
 @import '../base/colors';
 @import '../base/breakpoints';
 @import '../layouts/carousel_foro';
+@import '../components/nav';
 
-// Estilos del Home
-#bienvenida,
-#nosotros,
-#encontrar_en_cuipea,
-#foro,
-#info,
-#header,
-#footer {
-    padding: 0 15px;
+// Estilos globales
+
+// Estilos para los h2
+.subtitle {
+    font-size: 30px;
+    @include breakpoint(sm){
+        font-size: 40px;
+    }
+    @include breakpoint(md){
+        font-size: 50px;
+    }
 }
 
+// Estilos para los p
+.p {
+    @include breakpoint(md) {
+        font-size: 20px;
+    }
+}
+
+// SECCIÓN FORO
+#foro {
+    margin-left: 12px;
+    h2 {
+        font-weight: 700;
+        color: $pink-dark-color;
+        padding: 15px 0;
+    }
+    h3,
+    h4 {
+        font-weight: 700;
+    }
+    p {
+        color: $main-color;
+    }
+}
+
+  /* ---------------------------------------------------------------------------------------------------------------*/
+  // Video inicio
+  
+  #bienvenida_video {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    max-height: 60vh;
+    overflow: hidden;
+  }
+  
+  #bienvenida video {
+    width: 100%;
+    height: auto;
+    max-height: 60vh; /* lo maximo que se vea el video en pantalla */
+    object-fit: cover; /* Cubrir sección manteniendo la relación de aspecto */
+  }
+  
+  .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    filter: brightness(60%); 
+    object-fit: cover; 
+  }
+  
+  .texto-video {
+    position: absolute;
+    z-index: 2 ;
+    text-align: start;
+    color: #ffff;
+    bottom: 20px;
+    left: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+  }
+  
+  .texto-video h1 {
+    font-style: italic;
+    font-weight: 500;
+  
+  }
+  .texto-video h2{
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .video-text {
+        font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .video-text {
+        font-size: 1.2rem;
+    }
+  }
+  /* ---------------------------------------------------------------------------------------------------------------*/
+  // Donaciones
+  
+  #donaciones {
+    padding: 70px 0px 90px 0;
+    // margin: 30px 0 40px 0;
+  }
+  .cajavioleta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 250px; 
+    background-color: #7a87c234;
+    padding: 50px 0 30px;
+    margin: 0;
+  }
+  .donation-box{
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 3px solid $violet-blue-color;
+    position: absolute;    
+    width: min-content;
+    height: auto;
+    padding: 20px 30px;
+    border-radius: 18px;
+    left: 5%;
+  }
+  
+  .donation-box h3 {
+    color: $violet-blue-color;
+    // font-size: 14px;
+    font-weight: bold;
+    padding: 0;
+  }
+  
+  .donation-box span {
+    color: $main-color;
+    font-weight: bolder;
+    font-size: 40px;
+  }
+  .donation-box p {
+    padding: 0px 20px 0px 20px;
+    color: $main-color;
+    // font-size: 14px;
+    margin: 0;
+  }
+  
+  .btn-donar {
+    color: white;
+    border-radius: 50px;
+    border: 10px solid $violet-blue-color;
+    background-color: $violet-blue-color;
+    // font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  
+  .donaciones-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;
+    text-align: center; */
+  }
+  
+  .donaciones-box h2 {
+    color: $violet-blue-color;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0 0 140px;
+  }
+  
+  .donaciones-box p { 
+    color: $violet-blue-color;
+    padding: 0 0 0 140px;
+    margin-bottom: 0;
+  }
+  
+  .negrita {
+    margin-top: 0;
+    font-style: italic ;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 575px) {
+    .donaciones-box {
+      display: none;
+    }
+    .donation-box {
+      left: auto;
+    }
+   
+  }
+  
+  /* ---------------------------------------------------------------------------------------------------------------*/
+  // Carrousel Informacion
+  
+  #info {
+    padding: 30px 30px;
+    width: 100%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .encabezado-info {
+    margin: 0 15px 0 10px;
+    h2 {
+      color: $blue-color;
+      font-weight: bolder;
+    }
+    p {
+      color: $main-color;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    #info {
+      flex-direction: row; /* Coloca los elementos en fila */
+      justify-content: center; /* Centra los elementos en la fila */
+    }
+  
+    .encabezado-info, 
+    #carousel-informacion {
+      flex: 1; /* los dos elementos del mismo ancho disponible */
+      margin: 0 100px 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
+    }
+    
+    #carousel-informacion {
+      max-width: 100%; 
+    }
+  }
+  
+  .encabezado-info {
+    text-align: start; 
+  }
+  
+  .carousel-inner img {
+    width: 100%; 
+    height: auto;
+  }
+  
+  .carousel-control-prev, 
+  .carousel-control-next {
+    margin-top: 10px; /* Ajusta el margen de los botones */
+  }
+  
+  /* ---------------------------------------------------------------------------------------------------------------*/
+  // Footer
+  
+  // FOOTER:
+  footer {
+      background-color: $main-color;
+      color: #ffff;
+          
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    
+        @media (min-width: 768px) {
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: start;
+        }
+      }
+    
+      .section-social {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        padding-top: 20px;
+    
+        @media (min-width: 768px) {
+          .footer-logo img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+          }
+        }
+    
+        .footer-logo img {
+          max-width: auto;
+        }
+    
+        .social-icons {
+          margin-top: 10px;
+          display: flex;
+          gap: 10px;
+    
+          a img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    
+      .section-nosotras, .section-links {
+        margin-bottom: 20px;
+    
+        @media (min-width: 768px) {
+          margin-bottom: 0;
+        }
+    
+        h4 {
+          font-size: 16px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+    
+        .lista-links {
+          list-style: none;
+          padding: 0;
+    
+          li {
+            margin-bottom: 5px;
+    
+            a {
+              color: #ffff;
+              text-decoration: none;
+              font-size: 14px;
+    
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    
+      .contact-bar {
+        background-color: $pink-color;
+        padding: 5px;
+        text-align: center;
+    
+        span {
+          color: $main-color;
+          font-size: 14px;
+    
+          a {
+            color: $main-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    
+      .footer-bottom {
+        text-align: center;
+        font-size: 12px;
+    
+        p {
+          margin: 5px ;
+          padding: 10px 0 10px;
+    
+          a {
+            color: #ffff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  
+  
+  

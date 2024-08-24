@@ -15,9 +15,13 @@
     align-items: center;
     transform-style: preserve-3d;
     position: relative;
+    border-radius: 20px;
     height: 300px; // la altura segun el tamaño de la pantalla también varía
     @include breakpoint(md){
         height: 400px; 
+    }
+    @include breakpoint(lg){
+        height: 550px; 
     }
     .card {
         position: absolute;
@@ -29,10 +33,10 @@
         transition: transform .4s ease;
         cursor: pointer;
         @include breakpoint(md){
-            width: 200px; // esto medirá según el tamaño responsive de cada card
+            width: 250px; // esto medirá según el tamaño responsive de cada card
         }
         @include breakpoint(lg){
-            width: 250px; // esto medirá según el tamaño responsive de cada card
+            width: 350px; // esto medirá según el tamaño responsive de cada card
         }
     }
 }
@@ -44,17 +48,23 @@
     transform: translatex(-50%) scale(.8);
     opacity: 1;
     z-index: 1;
-  }
+    border-radius: 20px;
+    border-color: $pink-color;
+}
   
 #item-1:checked ~ .cards #card-2, #item-2:checked ~ .cards #card-3, #item-3:checked ~ .cards #card-1 {
     transform: translatex(50%) scale(.8);
     opacity: 1;
     z-index: 1;
+    border-radius: 20px;
+    border-color: $pink-color;
 }
   
 #item-1:checked ~ .cards #card-1, #item-2:checked ~ .cards #card-2, #item-3:checked ~ .cards #card-3 {
     transform: translatex(0) scale(1);
     opacity: 1;
     z-index: 2;
+    border-radius: 20px;
+    border-color: $pink-color;
 }
 
