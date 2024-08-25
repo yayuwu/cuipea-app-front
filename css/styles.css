@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap);
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
 .card_foro {
   display: flex;
   flex-direction: column;
@@ -707,6 +708,116 @@ footer .footer-bottom p a {
 }
 .btn-agregar-salmon img {
   margin-right: 6px;
+}
+
+.clinic-dropdown .btn-collapse {
+  background-color: #EEC5DD;
+  border: 2px solid #DEABCA;
+  border-width: 2px 2px 1px 2px;
+  font-size: 12px;
+  width: 343px;
+  display: flex;
+  justify-content: space-between;
+  color: #28325A;
+  font-weight: 700;
+}
+.clinic-dropdown .btn-collapse:focus {
+  box-shadow: none;
+}
+.clinic-dropdown .card-clinic {
+  background-color: #EEC5DD;
+  border: 2px solid #DEABCA;
+  border-width: 1px 2px 2px 2px;
+  width: 343px;
+}
+.clinic-dropdown p {
+  font-size: 12px;
+  color: #28325A;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+.clinic-dropdown span {
+  padding: 0 7px;
+}
+@media (min-width: 576px) {
+  .clinic-dropdown .btn-collapse,
+  .clinic-dropdown p {
+    font-size: 15px;
+  }
+  .clinic-dropdown .btn-collapse,
+  .clinic-dropdown .card-clinic {
+    width: 460px;
+  }
+  .clinic-dropdown img {
+    width: 10px;
+  }
+  .clinic-dropdown .info_icon {
+    width: 20px;
+  }
+}
+@media (min-width: 576px) {
+  .clinic-dropdown .btn-collapse,
+  .clinic-dropdown p {
+    font-size: 16px;
+  }
+  .clinic-dropdown .btn-collapse,
+  .clinic-dropdown .card-clinic {
+    width: 560px;
+  }
+}
+@media (min-width: 768px) {
+  .clinic-dropdown .btn-collapse,
+  .clinic-dropdown .card-clinic {
+    width: 660px;
+  }
+}
+@media (min-width: 768px) {
+  .clinic-dropdown .btn-collapse,
+  .clinic-dropdown .card-clinic {
+    width: 860px;
+  }
+}
+
+.header-data-clinic {
+  background-color: #ED808E;
+  padding: 20px;
+  position: relative;
+  margin-top: 18px;
+}
+.header-data-clinic h1 {
+  font-weight: 800;
+  font-size: 26px;
+  color: #28325A;
+}
+.header-data-clinic img {
+  position: absolute;
+  right: 20px;
+  top: -30px;
+}
+
+#btn-complete-data {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+}
+#btn-complete-data a {
+  background-color: #27325A;
+  color: white;
+  width: 200px;
+  height: 72px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 10px 0;
+  margin-bottom: 40px;
+}
+
+#dropdowns-container {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
 }
 
 * {
