@@ -387,7 +387,24 @@
     left: auto;
   }
 }
+/* le agrego efectitos de hover y active a donaciones*/
+.donation-box:hover {
+  filter: brightness(110%);
+  box-shadow: 0 6px 10px #7A87C2;
+}
+
+.btn-donar:hover {
+  box-shadow: 0 6px 10px #7A87C2;
+  font-size: larger;
+}
+
+.btn-donar:active {
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
+  color: #28325A;
+}
+
 /* ---------------------------------------------------------------------------------------------------------------*/
+/* Seccion informacion */
 #info {
   padding: 30px 30px;
   width: 100%;
@@ -396,6 +413,7 @@
   align-items: center;
 }
 
+/*Textos de la seccion */
 .encabezado-info {
   margin: 0 15px 0 10px;
 }
@@ -407,22 +425,14 @@
   color: #28325A;
 }
 
-@media (min-width: 768px) {
-  #info {
-    flex-direction: row; /* Coloca los elementos en fila */
-    justify-content: center; /* Centra los elementos en la fila */
-  }
-  .encabezado-info,
-  #carousel-informacion {
-    flex: 1; /* los dos elementos del mismo ancho disponible */
-    margin: 0 100px 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
-  }
-  #carousel-informacion {
-    max-width: 100%;
-  }
-}
 .encabezado-info {
   text-align: start;
+}
+
+/* carrousel */
+#informacion-landing {
+  max-width: 50%;
+  padding: 10px;
 }
 
 .carousel-inner img {
@@ -430,11 +440,103 @@
   height: auto;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  margin-top: 10px; /* Ajusta el margen de los botones */
+.tarjeta {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 4px 6px rgba(72, 129, 235, 0.568);
+  margin-bottom: 15px;
+  border-color: #5DB3C1;
 }
 
+.tarjeta:hover {
+  filter: brightness(105%);
+}
+
+.tarjeta-img {
+  width: 100%;
+  height: auto;
+}
+
+/*texto dentro de cada tarjeta*/
+.tarjeta-body {
+  background-color: #5DB3C1;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tarjeta-body p {
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
+}
+
+/*Boton leer mas*/
+.btn-landing-info {
+  background-color: #27325A;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+}
+
+.btn-landing-info:hover {
+  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
+  font-size: larger;
+}
+
+.btn-landing-info:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #5DB3C1;
+}
+
+.carousel-inner.landing {
+  padding: 8px;
+}
+
+.carousel-inner.landing .carousel-item {
+  transition: transform 0.3s ease;
+}
+
+.carousel-control-prev.landing {
+  left: -10%;
+}
+
+.carousel-control-next.landing {
+  right: -10%;
+}
+
+/* Responsive de toda la seccion */
+@media (min-width: 768px) {
+  #info {
+    flex-direction: row; /* Coloca los elementos en fila */
+    justify-content: center; /* Centra los elementos en la fila */
+    padding: 0px 0px;
+  }
+  .encabezado-info,
+  #informacion-landing {
+    flex: content; /* los dos elementos del mismo ancho disponible */
+    margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
+  }
+  #informacion-landing {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-control-prev.landing,
+  .carousel-control-next.landing {
+    display: none;
+  }
+  .btn-landing-info {
+    max-width: fit-content;
+    padding: 2px;
+  }
+  .tarjeta-body p {
+    display: none;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 footer {
   background-color: #28325A;
@@ -978,7 +1080,24 @@ footer .footer-bottom p a {
     left: auto;
   }
 }
+/* le agrego efectitos de hover y active a donaciones*/
+.donation-box:hover {
+  filter: brightness(110%);
+  box-shadow: 0 6px 10px #7A87C2;
+}
+
+.btn-donar:hover {
+  box-shadow: 0 6px 10px #7A87C2;
+  font-size: larger;
+}
+
+.btn-donar:active {
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
+  color: #28325A;
+}
+
 /* ---------------------------------------------------------------------------------------------------------------*/
+/* Seccion informacion */
 #info {
   padding: 30px 30px;
   width: 100%;
@@ -987,6 +1106,7 @@ footer .footer-bottom p a {
   align-items: center;
 }
 
+/*Textos de la seccion */
 .encabezado-info {
   margin: 0 15px 0 10px;
 }
@@ -998,22 +1118,14 @@ footer .footer-bottom p a {
   color: #28325A;
 }
 
-@media (min-width: 768px) {
-  #info {
-    flex-direction: row; /* Coloca los elementos en fila */
-    justify-content: center; /* Centra los elementos en la fila */
-  }
-  .encabezado-info,
-  #carousel-informacion {
-    flex: 1; /* los dos elementos del mismo ancho disponible */
-    margin: 0 100px 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
-  }
-  #carousel-informacion {
-    max-width: 100%;
-  }
-}
 .encabezado-info {
   text-align: start;
+}
+
+/* carrousel */
+#informacion-landing {
+  max-width: 50%;
+  padding: 10px;
 }
 
 .carousel-inner img {
@@ -1021,11 +1133,103 @@ footer .footer-bottom p a {
   height: auto;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  margin-top: 10px; /* Ajusta el margen de los botones */
+.tarjeta {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 4px 6px rgba(72, 129, 235, 0.568);
+  margin-bottom: 15px;
+  border-color: #5DB3C1;
 }
 
+.tarjeta:hover {
+  filter: brightness(105%);
+}
+
+.tarjeta-img {
+  width: 100%;
+  height: auto;
+}
+
+/*texto dentro de cada tarjeta*/
+.tarjeta-body {
+  background-color: #5DB3C1;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tarjeta-body p {
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
+}
+
+/*Boton leer mas*/
+.btn-landing-info {
+  background-color: #27325A;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+}
+
+.btn-landing-info:hover {
+  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
+  font-size: larger;
+}
+
+.btn-landing-info:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #5DB3C1;
+}
+
+.carousel-inner.landing {
+  padding: 8px;
+}
+
+.carousel-inner.landing .carousel-item {
+  transition: transform 0.3s ease;
+}
+
+.carousel-control-prev.landing {
+  left: -10%;
+}
+
+.carousel-control-next.landing {
+  right: -10%;
+}
+
+/* Responsive de toda la seccion */
+@media (min-width: 768px) {
+  #info {
+    flex-direction: row; /* Coloca los elementos en fila */
+    justify-content: center; /* Centra los elementos en la fila */
+    padding: 0px 0px;
+  }
+  .encabezado-info,
+  #informacion-landing {
+    flex: content; /* los dos elementos del mismo ancho disponible */
+    margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
+  }
+  #informacion-landing {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-control-prev.landing,
+  .carousel-control-next.landing {
+    display: none;
+  }
+  .btn-landing-info {
+    max-width: fit-content;
+    padding: 2px;
+  }
+  .tarjeta-body p {
+    display: none;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 footer {
   background-color: #28325A;
@@ -1216,7 +1420,7 @@ section.carousel {
 
 .carousel-caption a.btn:active {
   box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #7A87C2;
+  background-color: #EEC5DD;
 }
 
 .carousel-item img:hover {

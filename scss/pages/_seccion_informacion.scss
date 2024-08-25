@@ -70,7 +70,7 @@ section.carousel {
     max-width: 40%;
 }
 
-//ubicacion de las flechas
+//ubicacion de las flechas, aplica para el de la landing tambien
 .carousel-control-prev {
     left: -20%;
 }
@@ -106,10 +106,10 @@ section.carousel {
   }
   .carousel-caption a.btn:active {
     box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-    background-color: $violet-blue-color;
+    background-color: $pink-color;
     }
 
-// Hover de las imagenes -> cambio de brillo
+// Hover de las imagenes -> cambio de brillo . aplica al de la landing tambien
 .carousel-item img:hover{
     filter: brightness(70%);
 }
