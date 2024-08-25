@@ -1177,7 +1177,7 @@ section.carousel {
 #carousel-desarrollo,
 #carousel-enfermedades,
 #carousel-cuidados {
-  max-width: 50%;
+  max-width: 40%;
 }
 
 .carousel-control-prev {
@@ -1217,6 +1217,10 @@ section.carousel {
 .carousel-caption a.btn:active {
   box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
   background-color: #7A87C2;
+}
+
+.carousel-item img:hover {
+  filter: brightness(70%);
 }
 
 * {
