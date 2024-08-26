@@ -450,7 +450,7 @@
 .tarjeta {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 2px 4px 6px rgba(72, 129, 235, 0.568);
+  box-shadow: 2px 4px 6px 4px rgba(10, 10, 12, 0.568);
   margin-bottom: 15px;
   border-color: #5DB3C1;
 }
@@ -1137,7 +1137,7 @@ footer .footer-bottom p a {
 .tarjeta {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 2px 4px 6px rgba(72, 129, 235, 0.568);
+  box-shadow: 2px 4px 6px 4px rgba(10, 10, 12, 0.568);
   margin-bottom: 15px;
   border-color: #5DB3C1;
 }
