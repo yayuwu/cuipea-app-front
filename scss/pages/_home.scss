@@ -226,8 +226,9 @@
   padding: 30px 30px;
   width: 100%;
   display: flex; 
-  flex-direction: column; 
+  flex-direction: row; 
   align-items: center; 
+  flex-wrap: wrap;
 }
 
 /*Textos de la seccion */
@@ -242,11 +243,6 @@
   }
 }
 
-// .encabezado-info h2:hover{
-//   filter: brightness(110%);
-//   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.61);
-// }
-
 .encabezado-info {
   text-align: start; 
 }
@@ -256,6 +252,12 @@
 #informacion-landing {
   max-width: 50%;
   padding: 10px;
+}
+
+.encabezado-info, 
+#informacion-landing {
+  flex: 1; /* los dos elementos del mismo ancho disponible */
+  margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
 }
 
 .carousel-inner img {
@@ -272,8 +274,9 @@
 }
 
 .tarjeta:hover{
-  filter: brightness(105%);
+  filter: brightness(110%);
 }
+
 
 .tarjeta-img {
   width: 100%;
@@ -295,11 +298,11 @@
   text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
 }
 
-/*Boton leer mas*/
+/*Boton ver mas*/
 .btn-landing-info {
   background-color: #27325A;
   color: white;
-  padding: 10px 20px;
+  padding: 5px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -334,47 +337,23 @@
 }
 
 /* Responsive de toda la seccion */
-// @media (max-width: 925px) {
-//   .btn-landing-info {
-//     max-width: fit-content;
-//     padding: 5px;
-//   }
-// }
-@media (min-width: 768px) {
-
-  #info {
-    flex-direction: row; /* Coloca los elementos en fila */
-    justify-content: center; /* Centra los elementos en la fila */
-    padding: 0px 0px;
-  }
-
-  .encabezado-info, 
-  #informacion-landing {
-    flex:content; /* los dos elementos del mismo ancho disponible */
-    margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
-  }
-  
-  #informacion-landing {
-    max-width: 100%; 
-  }
-  
-}
 
 @media (max-width: 768px) {
-
-  .carousel-control-prev.landing,
-  .carousel-control-next.landing {
+  #info {
+    flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
+  }
+  .encabezado-info, #informacion-landing {
+    flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+    margin: 10px 0; /* Añade un poco de margen superior e inferior */
+  }
+  .noseve {
     display: none;
   }
-
-  .btn-landing-info {
-    max-width: fit-content;
-    padding: 2px;
-  }
-  .tarjeta-body p {
+  .tarjeta-text {
     display: none;
   }
 }
+
   
   /* ---------------------------------------------------------------------------------------------------------------*/
   // Footer
@@ -491,6 +470,5 @@
         }
       }
     }
-  
   
   
