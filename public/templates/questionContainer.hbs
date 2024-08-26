@@ -1,5 +1,6 @@
 <div class="question-container">
                     <p><span>{{id}}. </span>{{question}} <span>*</span></p>
+                    <small id="error-message-{{id}}">* Es obligatorio responder</small>
                     <div>
                         <input type="radio" name="question-{{id}}" id="true-{{id}}">
                         <label for="true-{{id}}">Si</label>
@@ -12,5 +13,4 @@
                         <label for="details-{{id}}">Detalles: </label>
                         <textarea name="details-{{id}}" id="details-{{id}}"></textarea>
                     </div>
-                    <small id="error-message-{{id}}">* Es obligatorio responder</small>
 </div>

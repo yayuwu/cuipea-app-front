@@ -21,8 +21,8 @@
         display: none;
         color: rgb(255, 75, 75);
         font-weight: 600;
-        margin-top: 10px;
-        // margin: -10px 0 10px 0; 
+        // margin-top: 10px;
+        margin: -10px 0 10px 0; 
     }
     p {
         font-weight: 500;
@@ -30,6 +30,9 @@
     span {
         color: $pink-dark-color;
         font-weight: 700;
+    }
+    span:nth-child(2) {
+        color: rgb(255, 75, 75);
     }
     input[type="radio"] {
         appearance: none;
@@ -73,6 +76,11 @@
     flex-direction: column;
     align-items: center;
     margin-left: 10px;
+    .message {
+        color: rgb(255, 75, 75);
+        font-weight: 600;
+        margin-left: 10px;
+    }
     h2 {
         margin: 10px 10px;
         font-weight: 600;

@@ -842,7 +842,7 @@ footer .footer-bottom p a {
   display: none;
   color: rgb(255, 75, 75);
   font-weight: 600;
-  margin-top: 10px;
+  margin: -10px 0 10px 0;
 }
 .question-container p {
   font-weight: 500;
@@ -850,6 +850,9 @@ footer .footer-bottom p a {
 .question-container span {
   color: #DEABCA;
   font-weight: 700;
+}
+.question-container span:nth-child(2) {
+  color: rgb(255, 75, 75);
 }
 .question-container input[type=radio] {
   appearance: none;
@@ -895,6 +898,11 @@ footer .footer-bottom p a {
   align-items: center;
   margin-left: 10px;
 }
+#formDataClinic .message {
+  color: rgb(255, 75, 75);
+  font-weight: 600;
+  margin-left: 10px;
+}
 #formDataClinic h2 {
   margin: 10px 10px;
   font-weight: 600;
@@ -933,6 +941,7 @@ footer .footer-bottom p a {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;
   margin: 0;
+  color: #28325A;
 }
 
 #bienvenida,
