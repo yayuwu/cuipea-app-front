@@ -1,0 +1,105 @@
+@import '../base/breakpoints';
+
+#h1-form-data-clinic {
+    padding: 30px 20px;
+    font-weight: 700;
+    background-color: $pink-color;
+}
+
+#form-questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    small {
+        display: none;
+        color: rgb(255, 75, 75);
+        font-weight: 600;
+        margin-top: 10px;
+        // margin: -10px 0 10px 0; 
+    }
+    p {
+        font-weight: 500;
+    }
+    span {
+        color: $pink-dark-color;
+        font-weight: 700;
+    }
+    input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 13px;
+        height: 13px;
+        background-color: #f0f0f0;/* Color de fondo inicial */
+        border: 2px solid #ccc; 
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+    }
+    input[type="radio"]:checked {
+        border-color: $pink-dark-color; 
+        background-color: $pink-color;
+    }
+    .details-form-container {
+        display: none;
+        textarea {
+            border-radius: 6px;
+            border: 2px solid $pink-color;
+            padding: 3px;
+            margin-left: 10px;
+            min-width: 280px;
+            min-height: 100px;
+            font-size: 15px;
+            resize: none;
+            @include breakpoint(md) {
+                min-width: 500px;
+            }
+        }
+        textarea:focus {
+            outline: none;
+        }
+    }
+}
+
+#formDataClinic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    h2 {
+        margin: 10px 10px;
+        font-weight: 600;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 587px;
+    }
+    button{
+        background-color: $pink-color;
+        color: $main-color;
+        border: none;
+        border-radius: 6px;
+        text-align: center;
+        padding: 6px 16px;
+        font-weight: 500;
+        margin: 10px 10px 20px 0;
+        align-self: flex-end;
+        @include breakpoint(md){
+            margin-right: 0;
+        }
+    }
+    button:focus {
+        outline: none;
+    }
+    @include breakpoint(md) {
+        margin-left: 0;
+    }
+}    
