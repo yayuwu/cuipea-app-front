@@ -4,7 +4,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "sass": "npx sass --watch scss/_main.scss:css/styles.css",
-    "server": "json-server --watch data/db.json --port 8080"
+    "server": "json-server --watch data/db.json --port 3000"
   },
   "devDependencies": {
     "vite": "^5.3.5"

@@ -43,7 +43,7 @@ const getData = async (url) => {
     }
 }
 
-const url = 'http://localhost:8080/userQuestions/'
+const url = 'http://localhost:3000/userQuestions/'
 
 loadTemplate(dropdownUrl)
 .then(templateSource => {
