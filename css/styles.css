@@ -1369,7 +1369,7 @@ section.carousel {
 #carousel-desarrollo,
 #carousel-enfermedades,
 #carousel-cuidados {
-  max-width: 40%;
+  max-width: 60%;
 }
 
 .carousel-control-prev {
@@ -1390,7 +1390,7 @@ section.carousel {
 .carousel-caption h5 {
   margin-bottom: 10px;
   color: white;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bolder;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -1399,7 +1399,7 @@ section.carousel {
   background-color: #fff;
   display: inline-block;
   color: #28325A;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bolder;
   border: none;
   border-radius: 0;
@@ -1415,6 +1415,20 @@ section.carousel {
   filter: brightness(70%);
 }
 
+@media (max-width: 768px) {
+  .carousel-caption {
+    padding: 0;
+  }
+  .btn.btn-primary {
+    padding: 3px 6px;
+  }
+  .carousel-caption a.btn {
+    font-size: 10px;
+  }
+  .carousel-caption h5 {
+    font-size: 20px;
+  }
+}
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;
