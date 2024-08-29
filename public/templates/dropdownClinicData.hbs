@@ -1,0 +1,22 @@
+<div class="clinic-dropdown">
+    <a class="btn btn-collapse" data-bs-toggle="collapse" href="#collapseClinic-{{id}}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><img src="../public/assets/img/general/info_icon.svg" class="info_icon"><span>{{question}}</span><img src="../public/assets/img/general/arrow_dropdown.svg"></a>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="collapseClinic-{{id}}">
+                <div class="card card-body card-clinic">
+                    <p>
+                        {{#if response}}
+                        {{#if details}}
+                            {{details}}
+                        {{else}}
+                            Sí
+                        {{/if}}
+                        {{else}}
+                            No
+                    {{/if}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

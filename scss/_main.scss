@@ -4,13 +4,17 @@
 @import 'base/typography';
 @import 'pages/home';
 @import 'pages/seccion_informacion';
+@import 'components/box';
+@import 'components/btn_agregar';
+@import 'pages/data_clinic';
+@import 'pages/form_data_clinic';
 
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;
   margin:0;
+  color: $main-color;
 }
-
 
 #bienvenida,
 #nosotros,
