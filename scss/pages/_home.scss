@@ -285,6 +285,7 @@
 
 /*texto dentro de cada tarjeta*/
 .tarjeta-body {
+  font-weight: bold;
   background-color: #5DB3C1;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
@@ -296,6 +297,7 @@
 
 .tarjeta-body p {
   text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
+  color: #fff;
 }
 
 /*Boton ver mas*/
@@ -311,6 +313,9 @@
 
 .btn-landing-info:hover {
   box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
+  text-decoration: none;
+  background-color: #fff;
+  color: $main-color;
   // font-size: larger;
   }
 
