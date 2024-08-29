@@ -450,7 +450,7 @@
 .tarjeta {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 2px 4px 6px 4px rgba(10, 10, 12, 0.568);
+  box-shadow: 3px 2px 5px rgba(93, 180, 193, 0.6784313725);
   margin-bottom: 15px;
   border-color: #5DB3C1;
 }
@@ -468,6 +468,7 @@
 .tarjeta-body {
   background-color: #5DB3C1;
   color: #fff;
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
   padding: 15px;
   text-align: center;
   border-bottom-left-radius: 10px;
@@ -491,12 +492,11 @@
 
 .btn-landing-info:hover {
   box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
-  font-size: larger;
 }
 
 .btn-landing-info:active {
   box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #5DB3C1;
+  background-color: rgba(86, 169, 182, 0.2745098039);
 }
 
 .carousel-inner.landing {
@@ -1137,7 +1137,7 @@ footer .footer-bottom p a {
 .tarjeta {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 2px 4px 6px 4px rgba(10, 10, 12, 0.568);
+  box-shadow: 3px 2px 5px rgba(93, 180, 193, 0.6784313725);
   margin-bottom: 15px;
   border-color: #5DB3C1;
 }
@@ -1155,6 +1155,7 @@ footer .footer-bottom p a {
 .tarjeta-body {
   background-color: #5DB3C1;
   color: #fff;
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
   padding: 15px;
   text-align: center;
   border-bottom-left-radius: 10px;
@@ -1178,12 +1179,11 @@ footer .footer-bottom p a {
 
 .btn-landing-info:hover {
   box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
-  font-size: larger;
 }
 
 .btn-landing-info:active {
   box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #5DB3C1;
+  background-color: rgba(86, 169, 182, 0.2745098039);
 }
 
 .carousel-inner.landing {
