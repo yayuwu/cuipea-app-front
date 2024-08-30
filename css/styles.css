@@ -589,6 +589,7 @@ footer .section-nosotras, footer .section-links {
   }
 }
 footer .section-nosotras h4, footer .section-links h4 {
+  color: #fff;
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -616,6 +617,7 @@ footer .contact-bar {
 footer .contact-bar span {
   color: #28325A;
   font-size: 14px;
+  font-weight: bold;
 }
 footer .contact-bar span a {
   color: #28325A;
@@ -626,11 +628,12 @@ footer .footer-bottom {
   font-size: 12px;
 }
 footer .footer-bottom p {
+  color: #fff;
   margin: 5px;
   padding: 10px 0 10px;
 }
 footer .footer-bottom p a {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -1281,6 +1284,7 @@ footer .section-nosotras, footer .section-links {
   }
 }
 footer .section-nosotras h4, footer .section-links h4 {
+  color: #fff;
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -1308,6 +1312,7 @@ footer .contact-bar {
 footer .contact-bar span {
   color: #28325A;
   font-size: 14px;
+  font-weight: bold;
 }
 footer .contact-bar span a {
   color: #28325A;
@@ -1318,11 +1323,12 @@ footer .footer-bottom {
   font-size: 12px;
 }
 footer .footer-bottom p {
+  color: #fff;
   margin: 5px;
   padding: 10px 0 10px;
 }
 footer .footer-bottom p a {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 

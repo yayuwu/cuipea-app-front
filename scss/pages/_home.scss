@@ -419,6 +419,7 @@
         }
     
         h4 {
+          color: #fff;
           font-size: 16px;
           margin-top: 20px;
           margin-bottom: 10px;
@@ -452,6 +453,7 @@
         span {
           color: $main-color;
           font-size: 14px;
+          font-weight: bold;
     
           a {
             color: $main-color;
@@ -465,11 +467,12 @@
         font-size: 12px;
     
         p {
+          color: #fff;
           margin: 5px ;
           padding: 10px 0 10px;
     
           a {
-            color: #ffff;
+            color: #fff;
             text-decoration: underline;
           }
         }
