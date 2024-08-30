@@ -1,0 +1,22 @@
+// Definir variables para los breakpoints
+
+$breakpoint-sm: 576px; // Pequeños dispositivos, como teléfonos
+$breakpoint-md: 768px; // Dispositivos medianos, como tablets
+$breakpoint-lg: 992px; // Dispositivos grandes, como laptops
+$breakpoint-xl: 1200px; // Dispositivos extra grandes, como monitores grandes
+
+// Mixin para media queries
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "userQuestions": [
+    {
+      "question": "¿Ha sido hospitalizado alguna vez?",
+      "response": true,
+      "details": "Voluptate do omnis o",
+      "id": 1
+    },
+    {
+      "question": "¿Tiene alguna condición cardíaca diagnosticada? (Por ejemplo, insuficiencia cardíaca, arritmias)",
+      "response": true,
+      "details": "Iure numquam corpori",
+      "id": 2
+    },
+    {
+      "question": "¿Ha tenido alguna intervención quirúrgica?",
+      "response": true,
+      "details": "Recusandae Quaerat ",
+      "id": 3
+    },
+    {
+      "question": "¿Ha tenido alguna reacción alérgica significativa?",
+      "response": true,
+      "details": "Pariatur Et sunt in",
+      "id": 4
+    },
+    {
+      "question": "¿Tiene algún antecedente de enfermedades crónicas? (Por ejemplo, hipertensión, enfermedad renal)",
+      "response": true,
+      "details": "Ut odit ut commodi m",
+      "id": 5
+    },
+    {
+      "question": "¿Hay antecedentes familiares de enfermedades hereditarias? (Por ejemplo, fibrosis quística, distrofia muscular)",
+      "response": true,
+      "details": "Enim omnis deserunt ",
+      "id": 6
+    },
+    {
+      "question": "¿Ha tenido alguna reacción adversa a medicamentos? (Por ejemplo, erupciones, dificultad respiratoria)",
+      "response": true,
+      "details": "Consequat Officia t",
+      "id": 7
+    },
+    {
+      "question": "¿Está en tratamiento actualmente por alguna condición médica? (Incluye medicamentos recetados y terapias)",
+      "response": true,
+      "details": "Id excepturi ea veli",
+      "id": 8
+    },
+    {
+      "question": "¿Tiene alguna condición respiratoria diagnosticada? (Por ejemplo, asma, bronquitis crónica)",
+      "response": true,
+      "details": "Et repudiandae esse",
+      "id": 9
+    },
+    {
+      "question": "¿Tiene cáncer o es paciente oncológico?",
+      "response": false,
+      "details": "",
+      "id": 10
+    },
+    {
+      "question": "¿Nació por parto natural o cesárea?",
+      "response": true,
+      "details": "Cillum omnis perspic",
+      "id": 11
+    },
+    {
+      "question": "¿Tiene alguna enfermedad neurológica diagnosticada? (Por ejemplo, epilepsia, parálisis cerebral)",
+      "response": true,
+      "details": "Sint quod magnam co",
+      "id": 12
+    },
+    {
+      "question": "¿Tiene alguna discapacidad? (Por ejemplo, discapacidad física, visual o auditiva)",
+      "response": false,
+      "details": "",
+      "id": 13
+    },
+    {
+      "question": "¿Ha tenido alguna enfermedad infecciosa importante? (Por ejemplo, tuberculosis, hepatitis)",
+      "response": true,
+      "details": "Enim voluptas sapien",
+      "id": 14
+    },
+    {
+      "question": "¿Tiene trastornos del desarrollo o del estado de ánimo diagnosticados? (Por ejemplo, TGD, TDAH, trastorno bipolar)",
+      "response": true,
+      "details": "Error natus necessit",
+      "id": 15
+    },
+    {
+      "question": "¿Tiene diabetes? (Especificar tipo si es relevante: tipo 1, tipo 2)",
+      "response": true,
+      "details": "Dolores saepe ab vol",
+      "id": 16
+    },
+    {
+      "question": "¿Tiene médico de cabecera?",
+      "response": true,
+      "details": "Voluptate est id et",
+      "id": 17
+    },
+    {
+      "question": "¿Tiene alguna enfermedad congénita? (Por ejemplo, síndrome de Down, cardiopatías congénitas)",
+      "response": false,
+      "details": "",
+      "id": 18
+    }
+  ]
+}

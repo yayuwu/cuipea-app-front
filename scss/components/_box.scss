@@ -1,0 +1,48 @@
+@import '../base/colors';
+@import '../base/breakpoints';
+
+@mixin boxStyles($backgroundColor, $borderColor, $buttonColor) {
+    width: 146px;
+    background-color: $backgroundColor;
+    border: 2px solid $borderColor;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4,
+    p,
+    button {
+        color: $main-color;
+        font-weight: 700;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    button {
+        background-color: $buttonColor;
+        border: none;
+        border-radius: 5px;
+        padding: 2px 8px 4px 8px;
+        text-align: center;
+        font-weight: 800;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+    h4 {
+        margin-top: 15px;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.green-box {
+    @include boxStyles(rgb(169, 213, 182, .7), #9FC9AC, #9FC9AC)
+}
+
+.blue-box {
+    @include boxStyles(#9CD5DE, #419BAA, #5DB3C1)
+}
+
+.violet-box {
+    @include boxStyles(#BDC2DA, #737DB1, #9DA4C8)
+}

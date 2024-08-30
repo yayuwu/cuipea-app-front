@@ -1,1 +1,26 @@
+@import url( https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap
+);
+@import 'base/colors';
+@import 'base/typography';
 @import 'pages/home';
+@import 'components/box';
+@import 'components/btn_agregar';
+@import 'pages/data_clinic';
+@import 'pages/form_data_clinic';
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+  margin:0;
+  color: $main-color;
+}
+
+#bienvenida,
+#nosotros,
+#encontrar_en_cuipea,
+#foro,
+#info,
+#header,
+#footer {
+  padding: 0 15px;
+}
