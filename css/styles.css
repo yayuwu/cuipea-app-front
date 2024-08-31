@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap);
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 .card_foro {
   display: flex;
   flex-direction: column;
@@ -1055,6 +1056,75 @@ footer .footer-bottom p a {
   #formDataClinic {
     margin-left: 0;
   }
+}
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 10px 0px 20px 0px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* ------ Formulario Login ------*/
+.container-general {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-general {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid #A9D5B6;
+  background-color: #A9D5B6;
+  color: #28325A;
+  margin: auto;
+}
+
+.form-general label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-general div {
+  margin-bottom: 15px;
+}
+
+.controls {
+  padding: 7px 6px;
+  width: 300px;
+  border: 1px solid #A9D5B6;
+  box-shadow: 0 0 0 3px #EEF5F7;
+  margin: 5px 0;
+}
+
+.btn-button {
+  color: #EEF5F7;
+  border: solid #28325A;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #28325A;
+  padding: 5px;
+  width: 200px;
 }
 
 * {

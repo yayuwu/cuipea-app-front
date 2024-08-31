@@ -37,9 +37,9 @@ p {
     align-items: center;
     padding: 40px;
     border-radius: 15px;
-    border: 2px solid #9FC9AC;
-    background-color: #A8D3B5;
-    color: #28325A;
+    border: 2px solid $green-color;
+    background-color: $green-color;
+    color: $main-color;
     margin: auto;
 }
 
@@ -55,17 +55,17 @@ p {
 .controls {
     padding: 7px 6px;
     width: 300px;
-    border: 1px solid #9FC9AC;
+    border: 1px solid $green-color;
     box-shadow: 0 0 0 3px #EEF5F7;
     margin: 5px 0;
 }
 
 .btn-button {
     color: #EEF5F7;
-    border: solid #28325A;
+    border: solid $main-color;
     font-weight: bold;
     border-radius: 6px;
-    background-color: #28325A;
+    background-color: $main-color;
     padding: 5px;
     width: 200px;
 
