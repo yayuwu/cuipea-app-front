@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
 
   <title>Cuipea</title>
 </head>
@@ -68,54 +68,111 @@
         <img class="foto-encabezado" src="assets/img/general/informacion.svg" alt="encabezado">
     </div>
 
-    <h2>Comunidad Para Padres</h2>
-    <div class="subforo" style="display: flex; padding: 20px; flex-direction:row; justify-content: space-between;">
-      <button>Ingresar Consulta</button>
+    <h2 class="subtitle foro">Comunidad Para Padres</h2>
+
+    <p class="p foro">En Cuipea, creemos que el poder de la comunidad es fundamental para la <strong>construcción de infancias sanas y libres.</strong> <br> Por eso, hemos creado este foro donde podrás plantear <strong>dudas</strong>, realizar <strong>consultas</strong>, iniciar <strong>debates</strong> o simplemente <strong>buscar información útil</strong>.</p>
+
+
+    <div class="subforo">
+      <button class="boton-foro">Ingresar Consulta</button>
       <search>
         <form action="/buscar" method="GET">
         <input type="text" name="query" placeholder="Buscar en el foro de CUIPEA">
-        <button type="submit"><img src="public/assets/icons/icon_search.svg" alt=""></button>
+        <button class="buscador" type="submit"><img src="public/assets/icons/icon_search.svg" alt=""></button>
       </form>
       </search>
     </div>
-    <h4>MÁS VISTOS HOY</h4>
 
-    <section>
+    <section class="masvistos">
 
-      <div id="masvistoshoy" class="carousel slide" data-bs-ride="carousel masvistoshoy"> <!--carrousel masvistoshoy-->
+      <h4>MÁS VISTOS HOY</h4>
 
-        <div class="carousel-inner masvistos"> <!--Interior del carrousel-->
+      <!-- empieza Carousel foro -->
+<div id="foro-masvistos" class="carousel slide" data-bs-ride="carousel"> <!--carrousel foro-->
+  <div class="carousel-inner"> <!--Interior del carrousel-->
+      <!-- primera tanda -->
+      <div class="carousel-item active"> <!--Item primero  (2 elementos por vista)-->
+          <div class="row">
+              <div class="col-md-6"> <!--cartel 1-->
+                  <a href="#">
+                      <div class="cartel card">
+                          <div class="cartel-body card-body">
+                              <h5 class="cartel-title card-title">Sampullido</h5>
+                              <p class="cartel-text card-text">A mi hijo le salio una extraña reacción...</p>
+                              <!-- icono + nombre del usuario -->
+                              <div class="user-info">
+                                  <img src="public\assets\icons\icon_user_1.svg" alt="User Icon" class="user-icon">
+                                  <span>Facundo García</span>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-md-6"> <!--cartel 2-->
+                  <a href="#">
+                      <div class="cartel card">
+                          <div class="cartel-body card-body">
+                              <h5 class="cartel-title card-title">Hospital Italiano</h5>
+                              <p class="cartel-text card-text">Alguien sabe como sacar turno para pediatria...</p>
+                              <!-- icono + nombre del usuario -->
+                              <div class="user-info">
+                                  <img src="public\assets\icons\icon_user_2.svg" alt="User Icon" class="user-icon">
+                                  <span>Roberta Gonzalez</span>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+     <!-- segunda tanda -->
+      <div class="carousel-item"> <!--Item segundo  (2 elementos por vista)-->
+          <div class="row">
+              <div class="col-md-6"> <!--cartel 3-->
+                  <a href="#">
+                      <div class="cartel card">
+                          <div class="cartel-body card-body">
+                              <h5 class="cartel-title card-title">Placa de cadera</h5>
+                              <p class="cartel-text card-text">Alguien sabe donde hacen placas de cadera...</p>
+                              <!-- icono + nombre del usuario -->
+                              <div class="user-info">
+                                  <img src="public\assets\icons\icon_user_3.svg" alt="User Icon" class="user-icon">
+                                  <span>Agustina Dominguez</span>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-md-6"> <!--cartel 4-->
+                  <a href="#">
+                      <div class="cartel card">
+                          <div class="cartel-body card-body">
+                              <h5 class="cartel-title card-title">Dolor de encias</h5>
+                              <p class="cartel-text card-text">A mi hijo le salio un dientito...</p>
+                              <!-- icono + nombre del usuario -->
+                              <div class="user-info">
+                                  <img src="public\assets\icons\icon_user_4.svg" alt="User Icon" class="user-icon">
+                                  <span>Fabián Espinoza</span>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div> <!--termina el carrousel - empiezan los botones-->
 
-          <div class="carousel-item active"> <!--Item primero-->
-            <!-- Contenido del primer ítem (vacío) -->
-          </div>
-      
-          <div class="carousel-item"> <!--Item segundo-->
-            <!-- Contenido del segundo ítem (vacío) -->
-          </div>
-      
-          <div class="carousel-item"> <!--Item tercero-->
-            <!-- Contenido del tercer ítem (vacío) -->
-          </div>
-      
-          <div class="carousel-item"> <!--Item cuarto-->
-            <!-- Contenido del cuarto ítem (vacío) -->
-          </div>
-        </div> <!-- termina el carrousel - empiezan los botones-->
-        
-        <button class="carousel-control-prev landing" type="button" data-bs-target="#masvistoshoy" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true">
-            <img src="public/assets/vectores/VectorPrev-Azul.svg" alt="prev" style="width: 1em;">
-          </span>
-        </button>
-        
-        <button class="carousel-control-next landing" type="button" data-bs-target="#masvistoshoy" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true">
-            <img src="public/assets/vectores/VectorNext-Azul.svg" alt="next" style="width: 1em;">
-          </span>
-        </button>
-      
-      </div> <!-- fin del carrousel-->
+  <!-- Boton prev -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#foro-masvistos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"><img src="public\assets\vectores\VectorPrev-Azul.svg" alt="prev" style="width: 1em;"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <!--Boton next-->
+  <button class="carousel-control-next" type="button" data-bs-target="#foro-masvistos" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"><img src="\public\assets\vectores\VectorNext-Azul.svg" alt="next" style="width: 1em;"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div> <!-- fin del carrousel foro -->
     </section>
 
     <h4>DEBATES POPULARES</h4>
