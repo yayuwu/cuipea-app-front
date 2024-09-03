@@ -1,0 +1,73 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+@import '../base/breakpoints';
+
+.clinic-dropdown {
+    .btn-collapse {
+        background-color: $pink-color;
+        border: 2px solid #DEABCA;
+        border-width: 2px 2px 1px 2px;
+        font-size: 12px;
+        width: 343px;
+        display: flex;
+        justify-content: space-between;
+        color: $main-color;
+        font-weight: 700;
+    }
+    .btn-collapse:focus{
+        box-shadow: none;
+    }
+    .card-clinic {
+        background-color: $pink-color;
+        border: 2px solid #DEABCA;
+        border-width: 1px 2px 2px 2px;
+        width: 343px;
+    }
+    p {
+        font-size: 12px;
+        color: $main-color;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+    }
+    span {
+        padding: 0 7px;
+    }
+    @include breakpoint(sm){
+        .btn-collapse,
+        p {
+            font-size: 15px;
+        }
+        .btn-collapse,
+        .card-clinic {
+            width: 460px;
+        }
+        img {
+            width: 10px;
+        }
+        .info_icon {
+            width: 20px;
+        }
+    }
+    @include breakpoint(sm){
+        .btn-collapse,
+        p {
+            font-size: 16px;
+        }
+        .btn-collapse,
+        .card-clinic {
+            width: 560px;
+        }
+    }
+    @include breakpoint(md){
+        .btn-collapse,
+        .card-clinic {
+            width: 660px;
+        }
+    }
+    @include breakpoint(md){
+        .btn-collapse,
+        .card-clinic {
+            width: 860px;
+        }
+    }
+}

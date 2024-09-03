@@ -1,0 +1,51 @@
+@import '../components/dropdown_clinic';
+@import '../components/nav';
+
+// .navbar {
+//     position: relative;
+//     display: flex;
+//     flex-wrap: wrap; // allow us to do the line break for collapsing content
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+.header-data-clinic {
+    background-color: #ED808E;
+    padding: 20px;
+    position: relative;
+    margin-top: 18px;
+    h1 {
+        font-weight: 800;
+        font-size: 26px;
+        color: $main-color;
+    }
+    img {
+        position: absolute;
+        right: 20px;
+        top: -30px;
+    }
+}
+
+#btn-complete-data {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    a {
+        background-color: #27325A;
+        color: white;
+        width: 200px;
+        height: 72px;
+        font-weight: 700;
+        border-radius: 6px;
+        padding: 10px 0;
+        margin-bottom: 40px;
+    }
+}
+
+#dropdowns-container {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+    gap: 7px;
+}

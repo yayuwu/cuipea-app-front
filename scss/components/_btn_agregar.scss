@@ -1,0 +1,37 @@
+@import '../base/colors';
+@import '../base/breakpoints';
+
+@mixin btnAgregarStyle($btnColor){
+    background-color: $btnColor;
+    border: 2px solid $btnColor;
+    color: $main-color;
+    border-radius: 6px;
+    padding: 5px 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    img {
+        margin-right: 6px;
+    }
+}
+
+.btn-agregar-green {
+    @include btnAgregarStyle($green-color)
+}
+
+.btn-agregar-blue {
+    @include btnAgregarStyle(#5CB1BF)
+}
+
+.btn-agregar-violet {
+    @include btnAgregarStyle(#AAB0CE)
+}
+
+.btn-agregar-pink {
+    @include btnAgregarStyle($pink-color)
+}
+
+.btn-agregar-salmon {
+    @include btnAgregarStyle(#F6C8CE)
+}
