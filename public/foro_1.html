@@ -75,12 +75,14 @@
 
     <div class="subforo">
       <button class="boton-foro">Ingresar Consulta</button>
-      <search>
-        <form action="/buscar" method="GET">
-        <input type="text" name="query" placeholder="Buscar en el foro de CUIPEA">
-        <button class="buscador" type="submit"><img src="public/assets/icons/icon_search.svg" alt=""></button>
+      <form action="/buscar" method="GET">
+        <div class="search-container">
+          <input type="text" name="query" placeholder="Buscar en el foro de CUIPEA">
+          <button class="buscador" type="submit">
+            <img src="public/assets/icons/icon_search.svg" alt="">
+          </button>
+        </div>
       </form>
-      </search>
     </div>
 
     <section class="masvistos">

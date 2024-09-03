@@ -2697,7 +2697,7 @@ h4 {
 }
 
 .boton-foro {
-  background-color: #28325A;
+  background-color: #5DB3C1;
   color: #fff;
   padding: 8px;
   font-weight: bold;
@@ -2705,11 +2705,34 @@ h4 {
   border-radius: 5px;
 }
 
-.buscador {
-  border: none;
-  color: #fff;
-  box-shadow: 3px 3px rgb(146, 146, 146);
-  border-radius: 20%;
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+input[name=query] {
+  width: 100%; /* Asegura que el input ocupe todo el espacio disponible */
+  padding: 10px 50px 10px 15px; /* Añade espacio para el botón */
+  border: 2px solid #5DB3C1; /* Borde del input */
+  border-radius: 8px; /* Suaviza las esquinas */
+  font-size: 16px; /* Tamaño del texto */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+button.buscador {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajusta según el espacio que quieras dejar */
+  transform: translateY(-50%);
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor */
+  padding: 0; /* Elimina padding */
+}
+
+button.buscador img {
+  width: 20px; /* Ajusta el tamaño del icono */
 }
 
 /* Estilos base para el carrusel */
