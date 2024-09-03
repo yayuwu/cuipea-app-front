@@ -3,11 +3,13 @@
 @import 'base/colors';
 @import 'base/typography';
 @import 'pages/home';
+@import 'pages/seccion_informacion';
 @import 'components/box';
 @import 'components/btn_agregar';
 @import 'pages/data_clinic';
 @import 'pages/form_data_clinic';
 @import 'pages/login';
+@import 'pages/foro';
 
 * {
   font-family: "Plus Jakarta Sans", sans-serif;

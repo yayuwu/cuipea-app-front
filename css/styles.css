@@ -389,15 +389,34 @@
     left: auto;
   }
 }
+/* le agrego efectitos de hover y active a donaciones*/
+.donation-box:hover {
+  filter: brightness(110%);
+  box-shadow: 0 6px 10px #7A87C2;
+}
+
+.btn-donar:hover {
+  box-shadow: 0 6px 10px #7A87C2;
+  font-size: larger;
+}
+
+.btn-donar:active {
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
+  color: #28325A;
+}
+
 /* ---------------------------------------------------------------------------------------------------------------*/
+/* Seccion informacion */
 #info {
   padding: 30px 30px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 
+/*Textos de la seccion */
 .encabezado-info {
   margin: 0 15px 0 10px;
 }
@@ -409,22 +428,20 @@
   color: #28325A;
 }
 
-@media (min-width: 768px) {
-  #info {
-    flex-direction: row; /* Coloca los elementos en fila */
-    justify-content: center; /* Centra los elementos en la fila */
-  }
-  .encabezado-info,
-  #carousel-informacion {
-    flex: 1; /* los dos elementos del mismo ancho disponible */
-    margin: 0 100px 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
-  }
-  #carousel-informacion {
-    max-width: 100%;
-  }
-}
 .encabezado-info {
   text-align: start;
+}
+
+/* carrousel */
+#informacion-landing {
+  max-width: 50%;
+  padding: 10px;
+}
+
+.encabezado-info,
+#informacion-landing {
+  flex: 1; /* los dos elementos del mismo ancho disponible */
+  margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
 }
 
 .carousel-inner img {
@@ -432,11 +449,95 @@
   height: auto;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  margin-top: 10px; /* Ajusta el margen de los botones */
+.tarjeta {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 2px 5px rgba(93, 180, 193, 0.6784313725);
+  margin-bottom: 15px;
+  border-color: #5DB3C1;
 }
 
+.tarjeta:hover {
+  filter: brightness(110%);
+}
+
+.tarjeta-img {
+  width: 100%;
+  height: auto;
+}
+
+/*texto dentro de cada tarjeta*/
+.tarjeta-body {
+  font-weight: bold;
+  background-color: #5DB3C1;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
+  padding: 15px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tarjeta-body p {
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
+  color: #fff;
+}
+
+/*Boton ver mas*/
+.btn-landing-info {
+  background-color: #27325A;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+}
+
+.btn-landing-info:hover {
+  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
+  text-decoration: none;
+  background-color: #fff;
+  color: #28325A;
+}
+
+.btn-landing-info:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: rgba(86, 169, 182, 0.2745098039);
+}
+
+.carousel-inner.landing {
+  padding: 8px;
+}
+
+.carousel-inner.landing .carousel-item {
+  transition: transform 0.3s ease;
+}
+
+.carousel-control-prev.landing {
+  left: -10%;
+}
+
+.carousel-control-next.landing {
+  right: -10%;
+}
+
+/* Responsive de toda la seccion */
+@media (max-width: 768px) {
+  #info {
+    flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
+  }
+  .encabezado-info, #informacion-landing {
+    flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+    margin: 10px 0; /* Añade un poco de margen superior e inferior */
+  }
+  .noseve {
+    display: none;
+  }
+  .tarjeta-text {
+    display: none;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 footer {
   background-color: #28325A;
@@ -489,6 +590,7 @@ footer .section-nosotras, footer .section-links {
   }
 }
 footer .section-nosotras h4, footer .section-links h4 {
+  color: #fff;
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -516,6 +618,7 @@ footer .contact-bar {
 footer .contact-bar span {
   color: #28325A;
   font-size: 14px;
+  font-weight: bold;
 }
 footer .contact-bar span a {
   color: #28325A;
@@ -526,14 +629,824 @@ footer .footer-bottom {
   font-size: 12px;
 }
 footer .footer-bottom p {
+  color: #fff;
   margin: 5px;
   padding: 10px 0 10px;
 }
 footer .footer-bottom p a {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 
+/* ---------------------------------------------------------------------------------------------------------------*/
+.navbar-nav .nav-link {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  color: #28325A;
+}
+
+/* Efecto de hover en los elementos del navbar */
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #EF8090;
+  text-decoration-thickness: 3px; /* grosor del subrayado */
+}
+
+.navbar-nav .nav-link.ingreso:hover {
+  color: #fff;
+  background-color: #F6C95A;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link.ingreso:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #f5d177;
+}
+
+/* Efecto de click (active) en los elementos del navbar */
+.navbar-nav .nav-link:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #EF8090;
+}
+
+/* Menú desplegable */
+/* Estilo base para los elementos del dropdown */
+.dropdown-menu .dropdown-item {
+  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: #fff; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de hover para cada ítem específico: */
+.dropdown-menu .dropdown-item.item-1:hover {
+  background-color: #5DB3C1;
+}
+
+.dropdown-menu .dropdown-item.item-2:hover {
+  background-color: #F6C95A;
+}
+
+.dropdown-menu .dropdown-item.item-3:hover {
+  background-color: #A9D5B6;
+}
+
+.dropdown-menu .dropdown-item.item-4:hover {
+  background-color: #7A87C2;
+}
+
+.card_foro {
+  display: flex;
+  flex-direction: column;
+  background-color: #EEC5DD;
+  width: 150px;
+  height: 200px;
+  padding: 20px 0;
+  border-radius: 18px;
+  box-shadow: -0.5px 4px 5px 1px rgba(173, 173, 173, 0.5);
+}
+.card_foro h3 {
+  color: white;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.card_foro h4, .card_foro p {
+  color: #28325A;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.card_foro .gradient-image {
+  width: 50%;
+  position: relative;
+  align-self: center;
+}
+.card_foro .gradient-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #EEC5DD);
+}
+.card_foro .gradient-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .card_foro {
+    width: 250px;
+    height: 300px;
+  }
+  .card_foro h3 {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+  .card_foro h4, .card_foro p {
+    font-size: 13px;
+    padding: 5px 15px;
+  }
+}
+@media (min-width: 992px) {
+  .card_foro {
+    width: 350px;
+    height: 400px;
+  }
+  .card_foro h3 {
+    font-size: 26px;
+    padding: 0 22px;
+  }
+  .card_foro h4, .card_foro p {
+    font-size: 20px;
+    padding: 5px 22px;
+  }
+}
+
+#item-1,
+#item-2,
+#item-3 {
+  display: none;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 20px;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  .cards {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .cards {
+    height: 550px;
+  }
+}
+.cards .card {
+  position: absolute;
+  width: 150px;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .cards .card {
+    width: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .cards .card {
+    width: 350px;
+  }
+}
+
+#item-1:checked ~ .cards #card-3, #item-2:checked ~ .cards #card-1, #item-3:checked ~ .cards #card-2 {
+  transform: translatex(-50%) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+  border-radius: 20px;
+  border-color: #EEC5DD;
+}
+
+#item-1:checked ~ .cards #card-2, #item-2:checked ~ .cards #card-3, #item-3:checked ~ .cards #card-1 {
+  transform: translatex(50%) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+  border-radius: 20px;
+  border-color: #EEC5DD;
+}
+
+#item-1:checked ~ .cards #card-1, #item-2:checked ~ .cards #card-2, #item-3:checked ~ .cards #card-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+  border-radius: 20px;
+  border-color: #EEC5DD;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+.navbar-nav .nav-link {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  color: #28325A;
+}
+
+/* Efecto de hover en los elementos del navbar */
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #EF8090;
+  text-decoration-thickness: 3px; /* grosor del subrayado */
+}
+
+.navbar-nav .nav-link.ingreso:hover {
+  color: #fff;
+  background-color: #F6C95A;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link.ingreso:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #f5d177;
+}
+
+/* Efecto de click (active) en los elementos del navbar */
+.navbar-nav .nav-link:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #EF8090;
+}
+
+/* Menú desplegable */
+/* Estilo base para los elementos del dropdown */
+.dropdown-menu .dropdown-item {
+  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: #fff; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de hover para cada ítem específico: */
+.dropdown-menu .dropdown-item.item-1:hover {
+  background-color: #5DB3C1;
+}
+
+.dropdown-menu .dropdown-item.item-2:hover {
+  background-color: #F6C95A;
+}
+
+.dropdown-menu .dropdown-item.item-3:hover {
+  background-color: #A9D5B6;
+}
+
+.dropdown-menu .dropdown-item.item-4:hover {
+  background-color: #7A87C2;
+}
+
+.subtitle {
+  font-size: 30px;
+}
+@media (min-width: 576px) {
+  .subtitle {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .p {
+    font-size: 20px;
+  }
+}
+
+#foro {
+  margin-left: 12px;
+}
+#foro h2 {
+  font-weight: 700;
+  color: #DEABCA;
+  padding: 15px 0;
+}
+#foro h3,
+#foro h4 {
+  font-weight: 700;
+}
+#foro p {
+  color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+#bienvenida_video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 60vh;
+  overflow: hidden;
+}
+
+#bienvenida video {
+  width: 100%;
+  height: auto;
+  max-height: 60vh; /* lo maximo que se vea el video en pantalla */
+  object-fit: cover; /* Cubrir sección manteniendo la relación de aspecto */
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  filter: brightness(60%);
+  object-fit: cover;
+}
+
+.texto-video {
+  position: absolute;
+  z-index: 2;
+  text-align: start;
+  color: white;
+  bottom: 20px;
+  left: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+}
+
+.texto-video h1 {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.texto-video h2 {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .video-text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .video-text {
+    font-size: 1.2rem;
+  }
+}
+/* ---------------------------------------------------------------------------------------------------------------*/
+#donaciones {
+  padding: 70px 0px 90px 0;
+}
+
+.cajavioleta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(122, 135, 194, 0.2039215686);
+  padding: 50px 0 30px;
+  margin: 0;
+}
+
+.donation-box {
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 3px solid #7A87C2;
+  position: absolute;
+  width: min-content;
+  height: auto;
+  padding: 20px 30px;
+  border-radius: 18px;
+  left: 5%;
+}
+
+.donation-box h3 {
+  color: #7A87C2;
+  font-weight: bold;
+  padding: 0;
+}
+
+.donation-box span {
+  color: #28325A;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.donation-box p {
+  padding: 0px 20px 0px 20px;
+  color: #28325A;
+  margin: 0;
+}
+
+.btn-donar {
+  color: white;
+  border-radius: 50px;
+  border: 10px solid #7A87C2;
+  background-color: #7A87C2;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.donaciones-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center;
+  text-align: center; */
+}
+
+.donaciones-box h2 {
+  color: #7A87C2;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 0 140px;
+}
+
+.donaciones-box p {
+  color: #7A87C2;
+  padding: 0 0 0 140px;
+  margin-bottom: 0;
+}
+
+.negrita {
+  margin-top: 0;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .donaciones-box {
+    display: none;
+  }
+  .donation-box {
+    left: auto;
+  }
+}
+/* le agrego efectitos de hover y active a donaciones*/
+.donation-box:hover {
+  filter: brightness(110%);
+  box-shadow: 0 6px 10px #7A87C2;
+}
+
+.btn-donar:hover {
+  box-shadow: 0 6px 10px #7A87C2;
+  font-size: larger;
+}
+
+.btn-donar:active {
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
+  color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+/* Seccion informacion */
+#info {
+  padding: 30px 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*Textos de la seccion */
+.encabezado-info {
+  margin: 0 15px 0 10px;
+}
+.encabezado-info h2 {
+  color: #5DB3C1;
+  font-weight: bolder;
+}
+.encabezado-info p {
+  color: #28325A;
+}
+
+.encabezado-info {
+  text-align: start;
+}
+
+/* carrousel */
+#informacion-landing {
+  max-width: 50%;
+  padding: 10px;
+}
+
+.encabezado-info,
+#informacion-landing {
+  flex: 1; /* los dos elementos del mismo ancho disponible */
+  margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.tarjeta {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 2px 5px rgba(93, 180, 193, 0.6784313725);
+  margin-bottom: 15px;
+  border-color: #5DB3C1;
+}
+
+.tarjeta:hover {
+  filter: brightness(110%);
+}
+
+.tarjeta-img {
+  width: 100%;
+  height: auto;
+}
+
+/*texto dentro de cada tarjeta*/
+.tarjeta-body {
+  font-weight: bold;
+  background-color: #5DB3C1;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
+  padding: 15px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tarjeta-body p {
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
+  color: #fff;
+}
+
+/*Boton ver mas*/
+.btn-landing-info {
+  background-color: #27325A;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+}
+
+.btn-landing-info:hover {
+  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
+  text-decoration: none;
+  background-color: #fff;
+  color: #28325A;
+}
+
+.btn-landing-info:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: rgba(86, 169, 182, 0.2745098039);
+}
+
+.carousel-inner.landing {
+  padding: 8px;
+}
+
+.carousel-inner.landing .carousel-item {
+  transition: transform 0.3s ease;
+}
+
+.carousel-control-prev.landing {
+  left: -10%;
+}
+
+.carousel-control-next.landing {
+  right: -10%;
+}
+
+/* Responsive de toda la seccion */
+@media (max-width: 768px) {
+  #info {
+    flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
+  }
+  .encabezado-info, #informacion-landing {
+    flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+    margin: 10px 0; /* Añade un poco de margen superior e inferior */
+  }
+  .noseve {
+    display: none;
+  }
+  .tarjeta-text {
+    display: none;
+  }
+}
+/* ---------------------------------------------------------------------------------------------------------------*/
+footer {
+  background-color: #28325A;
+  color: white;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  footer .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+  }
+}
+footer .section-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  footer .section-social .footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+footer .section-social .footer-logo img {
+  max-width: auto;
+}
+footer .section-social .social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+footer .section-social .social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+footer .section-nosotras, footer .section-links {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  footer .section-nosotras, footer .section-links {
+    margin-bottom: 0;
+  }
+}
+footer .section-nosotras h4, footer .section-links h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .section-nosotras .lista-links, footer .section-links .lista-links {
+  list-style: none;
+  padding: 0;
+}
+footer .section-nosotras .lista-links li, footer .section-links .lista-links li {
+  margin-bottom: 5px;
+}
+footer .section-nosotras .lista-links li a, footer .section-links .lista-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+footer .section-nosotras .lista-links li a:hover, footer .section-links .lista-links li a:hover {
+  text-decoration: underline;
+}
+footer .contact-bar {
+  background-color: #EEC5DD;
+  padding: 5px;
+  text-align: center;
+}
+footer .contact-bar span {
+  color: #28325A;
+  font-size: 14px;
+  font-weight: bold;
+}
+footer .contact-bar span a {
+  color: #28325A;
+  text-decoration: underline;
+}
+footer .footer-bottom {
+  text-align: center;
+  font-size: 12px;
+}
+footer .footer-bottom p {
+  color: #fff;
+  margin: 5px;
+  padding: 10px 0 10px;
+}
+footer .footer-bottom p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.subtitle.info, .info, .p {
+  padding-left: 15px;
+}
+
+.imagen-encabezado {
+  margin-bottom: 6px;
+}
+
+.foto-encabezado {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+.subtitle.info {
+  color: #28325A;
+  font-weight: bolder;
+}
+
+.info {
+  color: #28325A;
+  font-weight: bold;
+}
+
+.p.info {
+  color: #28325A;
+}
+
+.fondito1 {
+  background-color: #5DB3C1;
+  display: inline-block;
+  padding-right: 2%;
+}
+
+.fondito2 {
+  background-color: #F6C95A;
+  display: inline-block;
+  padding-right: 2%;
+}
+
+.fondito3 {
+  background-color: #DEABCA;
+  display: inline-block;
+  padding-right: 2%;
+}
+
+section.carousel {
+  margin: 40px 0px;
+}
+
+#carousel-desarrollo,
+#carousel-enfermedades,
+#carousel-cuidados {
+  max-width: 60%;
+}
+
+.carousel-control-prev {
+  left: -20%;
+}
+
+.carousel-control-next {
+  right: -20%;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  text-align: left;
+}
+
+.carousel-caption h5 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption a.btn {
+  background-color: #fff;
+  display: inline-block;
+  color: #28325A;
+  font-size: 20px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-caption a.btn:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #EEC5DD;
+}
+
+.carousel-item img:hover {
+  filter: brightness(70%);
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    padding: 0;
+  }
+  .btn.btn-primary {
+    padding: 3px 6px;
+  }
+  .carousel-caption a.btn {
+    font-size: 10px;
+  }
+  .carousel-caption h5 {
+    font-size: 20px;
+  }
+}
 .green-box {
   width: 146px;
   background-color: rgba(169, 213, 182, 0.7);
@@ -1058,6 +1971,831 @@ footer .footer-bottom p a {
   }
 }
 
+/* ---------------------------------------------------------------------------------------------------------------*/
+.navbar-nav .nav-link {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  color: #28325A;
+}
+
+/* Efecto de hover en los elementos del navbar */
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #EF8090;
+  text-decoration-thickness: 3px; /* grosor del subrayado */
+}
+
+.navbar-nav .nav-link.ingreso:hover {
+  color: #fff;
+  background-color: #F6C95A;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link.ingreso:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #f5d177;
+}
+
+/* Efecto de click (active) en los elementos del navbar */
+.navbar-nav .nav-link:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #EF8090;
+}
+
+/* Menú desplegable */
+/* Estilo base para los elementos del dropdown */
+.dropdown-menu .dropdown-item {
+  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: #fff; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de hover para cada ítem específico: */
+.dropdown-menu .dropdown-item.item-1:hover {
+  background-color: #5DB3C1;
+}
+
+.dropdown-menu .dropdown-item.item-2:hover {
+  background-color: #F6C95A;
+}
+
+.dropdown-menu .dropdown-item.item-3:hover {
+  background-color: #A9D5B6;
+}
+
+.dropdown-menu .dropdown-item.item-4:hover {
+  background-color: #7A87C2;
+}
+
+.card_foro {
+  display: flex;
+  flex-direction: column;
+  background-color: #EEC5DD;
+  width: 150px;
+  height: 200px;
+  padding: 20px 0;
+  border-radius: 18px;
+  box-shadow: -0.5px 4px 5px 1px rgba(173, 173, 173, 0.5);
+}
+.card_foro h3 {
+  color: white;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.card_foro h4, .card_foro p {
+  color: #28325A;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.card_foro .gradient-image {
+  width: 50%;
+  position: relative;
+  align-self: center;
+}
+.card_foro .gradient-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #EEC5DD);
+}
+.card_foro .gradient-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .card_foro {
+    width: 250px;
+    height: 300px;
+  }
+  .card_foro h3 {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+  .card_foro h4, .card_foro p {
+    font-size: 13px;
+    padding: 5px 15px;
+  }
+}
+@media (min-width: 992px) {
+  .card_foro {
+    width: 350px;
+    height: 400px;
+  }
+  .card_foro h3 {
+    font-size: 26px;
+    padding: 0 22px;
+  }
+  .card_foro h4, .card_foro p {
+    font-size: 20px;
+    padding: 5px 22px;
+  }
+}
+
+#item-1,
+#item-2,
+#item-3 {
+  display: none;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 20px;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  .cards {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .cards {
+    height: 550px;
+  }
+}
+.cards .card {
+  position: absolute;
+  width: 150px;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .cards .card {
+    width: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .cards .card {
+    width: 350px;
+  }
+}
+
+#item-1:checked ~ .cards #card-3, #item-2:checked ~ .cards #card-1, #item-3:checked ~ .cards #card-2 {
+  transform: translatex(-50%) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+  border-radius: 20px;
+  border-color: #EEC5DD;
+}
+
+#item-1:checked ~ .cards #card-2, #item-2:checked ~ .cards #card-3, #item-3:checked ~ .cards #card-1 {
+  transform: translatex(50%) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+  border-radius: 20px;
+  border-color: #EEC5DD;
+}
+
+#item-1:checked ~ .cards #card-1, #item-2:checked ~ .cards #card-2, #item-3:checked ~ .cards #card-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+  border-radius: 20px;
+  border-color: #EEC5DD;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+.navbar-nav .nav-link {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  color: #28325A;
+}
+
+/* Efecto de hover en los elementos del navbar */
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #EF8090;
+  text-decoration-thickness: 3px; /* grosor del subrayado */
+}
+
+.navbar-nav .nav-link.ingreso:hover {
+  color: #fff;
+  background-color: #F6C95A;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link.ingreso:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #f5d177;
+}
+
+/* Efecto de click (active) en los elementos del navbar */
+.navbar-nav .nav-link:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #EF8090;
+}
+
+/* Menú desplegable */
+/* Estilo base para los elementos del dropdown */
+.dropdown-menu .dropdown-item {
+  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: #fff; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de hover para cada ítem específico: */
+.dropdown-menu .dropdown-item.item-1:hover {
+  background-color: #5DB3C1;
+}
+
+.dropdown-menu .dropdown-item.item-2:hover {
+  background-color: #F6C95A;
+}
+
+.dropdown-menu .dropdown-item.item-3:hover {
+  background-color: #A9D5B6;
+}
+
+.dropdown-menu .dropdown-item.item-4:hover {
+  background-color: #7A87C2;
+}
+
+.subtitle {
+  font-size: 30px;
+}
+@media (min-width: 576px) {
+  .subtitle {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .p {
+    font-size: 20px;
+  }
+}
+
+#foro {
+  margin-left: 12px;
+}
+#foro h2 {
+  font-weight: 700;
+  color: #DEABCA;
+  padding: 15px 0;
+}
+#foro h3,
+#foro h4 {
+  font-weight: 700;
+}
+#foro p {
+  color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+#bienvenida_video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 60vh;
+  overflow: hidden;
+}
+
+#bienvenida video {
+  width: 100%;
+  height: auto;
+  max-height: 60vh; /* lo maximo que se vea el video en pantalla */
+  object-fit: cover; /* Cubrir sección manteniendo la relación de aspecto */
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  filter: brightness(60%);
+  object-fit: cover;
+}
+
+.texto-video {
+  position: absolute;
+  z-index: 2;
+  text-align: start;
+  color: white;
+  bottom: 20px;
+  left: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+}
+
+.texto-video h1 {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.texto-video h2 {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .video-text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .video-text {
+    font-size: 1.2rem;
+  }
+}
+/* ---------------------------------------------------------------------------------------------------------------*/
+#donaciones {
+  padding: 70px 0px 90px 0;
+}
+
+.cajavioleta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(122, 135, 194, 0.2039215686);
+  padding: 50px 0 30px;
+  margin: 0;
+}
+
+.donation-box {
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 3px solid #7A87C2;
+  position: absolute;
+  width: min-content;
+  height: auto;
+  padding: 20px 30px;
+  border-radius: 18px;
+  left: 5%;
+}
+
+.donation-box h3 {
+  color: #7A87C2;
+  font-weight: bold;
+  padding: 0;
+}
+
+.donation-box span {
+  color: #28325A;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.donation-box p {
+  padding: 0px 20px 0px 20px;
+  color: #28325A;
+  margin: 0;
+}
+
+.btn-donar {
+  color: white;
+  border-radius: 50px;
+  border: 10px solid #7A87C2;
+  background-color: #7A87C2;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.donaciones-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center;
+  text-align: center; */
+}
+
+.donaciones-box h2 {
+  color: #7A87C2;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 0 140px;
+}
+
+.donaciones-box p {
+  color: #7A87C2;
+  padding: 0 0 0 140px;
+  margin-bottom: 0;
+}
+
+.negrita {
+  margin-top: 0;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .donaciones-box {
+    display: none;
+  }
+  .donation-box {
+    left: auto;
+  }
+}
+/* le agrego efectitos de hover y active a donaciones*/
+.donation-box:hover {
+  filter: brightness(110%);
+  box-shadow: 0 6px 10px #7A87C2;
+}
+
+.btn-donar:hover {
+  box-shadow: 0 6px 10px #7A87C2;
+  font-size: larger;
+}
+
+.btn-donar:active {
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
+  color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+/* Seccion informacion */
+#info {
+  padding: 30px 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*Textos de la seccion */
+.encabezado-info {
+  margin: 0 15px 0 10px;
+}
+.encabezado-info h2 {
+  color: #5DB3C1;
+  font-weight: bolder;
+}
+.encabezado-info p {
+  color: #28325A;
+}
+
+.encabezado-info {
+  text-align: start;
+}
+
+/* carrousel */
+#informacion-landing {
+  max-width: 50%;
+  padding: 10px;
+}
+
+.encabezado-info,
+#informacion-landing {
+  flex: 1; /* los dos elementos del mismo ancho disponible */
+  margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.tarjeta {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 2px 5px rgba(93, 180, 193, 0.6784313725);
+  margin-bottom: 15px;
+  border-color: #5DB3C1;
+}
+
+.tarjeta:hover {
+  filter: brightness(110%);
+}
+
+.tarjeta-img {
+  width: 100%;
+  height: auto;
+}
+
+/*texto dentro de cada tarjeta*/
+.tarjeta-body {
+  font-weight: bold;
+  background-color: #5DB3C1;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
+  padding: 15px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tarjeta-body p {
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
+  color: #fff;
+}
+
+/*Boton ver mas*/
+.btn-landing-info {
+  background-color: #27325A;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+}
+
+.btn-landing-info:hover {
+  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
+  text-decoration: none;
+  background-color: #fff;
+  color: #28325A;
+}
+
+.btn-landing-info:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: rgba(86, 169, 182, 0.2745098039);
+}
+
+.carousel-inner.landing {
+  padding: 8px;
+}
+
+.carousel-inner.landing .carousel-item {
+  transition: transform 0.3s ease;
+}
+
+.carousel-control-prev.landing {
+  left: -10%;
+}
+
+.carousel-control-next.landing {
+  right: -10%;
+}
+
+/* Responsive de toda la seccion */
+@media (max-width: 768px) {
+  #info {
+    flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
+  }
+  .encabezado-info, #informacion-landing {
+    flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+    margin: 10px 0; /* Añade un poco de margen superior e inferior */
+  }
+  .noseve {
+    display: none;
+  }
+  .tarjeta-text {
+    display: none;
+  }
+}
+/* ---------------------------------------------------------------------------------------------------------------*/
+footer {
+  background-color: #28325A;
+  color: white;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  footer .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+  }
+}
+footer .section-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  footer .section-social .footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+footer .section-social .footer-logo img {
+  max-width: auto;
+}
+footer .section-social .social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+footer .section-social .social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+footer .section-nosotras, footer .section-links {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  footer .section-nosotras, footer .section-links {
+    margin-bottom: 0;
+  }
+}
+footer .section-nosotras h4, footer .section-links h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+footer .section-nosotras .lista-links, footer .section-links .lista-links {
+  list-style: none;
+  padding: 0;
+}
+footer .section-nosotras .lista-links li, footer .section-links .lista-links li {
+  margin-bottom: 5px;
+}
+footer .section-nosotras .lista-links li a, footer .section-links .lista-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+footer .section-nosotras .lista-links li a:hover, footer .section-links .lista-links li a:hover {
+  text-decoration: underline;
+}
+footer .contact-bar {
+  background-color: #EEC5DD;
+  padding: 5px;
+  text-align: center;
+}
+footer .contact-bar span {
+  color: #28325A;
+  font-size: 14px;
+  font-weight: bold;
+}
+footer .contact-bar span a {
+  color: #28325A;
+  text-decoration: underline;
+}
+footer .footer-bottom {
+  text-align: center;
+  font-size: 12px;
+}
+footer .footer-bottom p {
+  color: #fff;
+  margin: 5px;
+  padding: 10px 0 10px;
+}
+footer .footer-bottom p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/*Estilos del boton y la barra de busqueda */
+.subforo {
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2.subtitle.foro {
+  padding-left: 15px;
+  font-weight: bolder;
+}
+
+p.p.foro {
+  color: #fff;
+  padding-left: 15px;
+  text-align: center;
+  background-color: #28325A;
+  padding: 10px;
+}
+
+strong {
+  color: #fff;
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: bolder;
+  padding-left: 20px;
+}
+
+.boton-foro {
+  background-color: #5DB3C1;
+  color: #fff;
+  padding: 8px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+input[name=query] {
+  width: 100%; /* Asegura que el input ocupe todo el espacio disponible */
+  padding: 10px 50px 10px 15px; /* Añade espacio para el botón */
+  border: 2px solid #5DB3C1; /* Borde del input */
+  border-radius: 8px; /* Suaviza las esquinas */
+  font-size: 16px; /* Tamaño del texto */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+button.buscador {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajusta según el espacio que quieras dejar */
+  transform: translateY(-50%);
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor */
+  padding: 0; /* Elimina padding */
+}
+
+button.buscador img {
+  width: 20px; /* Ajusta el tamaño del icono */
+}
+
+/* Estilos base para el carrusel */
+.carousel-inner {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.carousel-inner a {
+  text-decoration: none;
+}
+
+#foro-masvistos .carousel-inner .carousel-item .row {
+  margin: 0;
+  padding: 20px 0; /* Espaciado e/los elementos */
+}
+
+#foro-masvistos .carousel-inner .carousel-item .cartel {
+  background-color: #c2e3ea;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#foro-masvistos .carousel-inner .carousel-item .cartel-body .cartel-title {
+  font-size: 1.2em;
+  color: #002d62; /* Color del título */
+  font-weight: bold;
+}
+
+#foro-masvistos .carousel-inner .carousel-item .cartel-body .cartel-text {
+  color: #002d62;
+  font-size: 1em;
+}
+
+#foro-masvistos .carousel-inner .carousel-item .cartel-body .user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#foro-masvistos .carousel-inner .carousel-item .cartel-body .user-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+#foro-masvistos .carousel-control-prev {
+  left: -10px;
+}
+
+#foro-masvistos .carousel-control-next {
+  right: -10px;
+}
+
+/* Responsive: para que no se apilen las tarjetas en tamaños mas chicos */
+@media (max-width: 767px) {
+  #foro-masvistos .carousel-inner .carousel-item .col-md-6 {
+    flex: 0 0 50%; /* Cada columna ocupa el 50% del ancho */
+    max-width: 50%;
+  }
+}
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   margin: 0;
