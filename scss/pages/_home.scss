@@ -162,6 +162,7 @@
     margin-top: 10px;
   }
   
+ 
   
   .donaciones-box {
     display: flex;
@@ -170,7 +171,7 @@
     /* align-items: center;
     text-align: center; */
   }
-  
+
   .donaciones-box h2 {
     color: $violet-blue-color;
     font-weight: bold;
@@ -200,58 +201,164 @@
    
   }
   
+  /* le agrego efectitos de hover y active a donaciones*/
+
+  .donation-box:hover{
+    filter: brightness(110%);
+    box-shadow: 0 6px 10px $violet-blue-color;
+  }
+  .btn-donar:hover {
+    box-shadow: 0 6px 10px $violet-blue-color;
+    font-size: larger;
+    }
+  
+  .btn-donar:active {
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
+    color: $main-color;
+    }
+
+
   /* ---------------------------------------------------------------------------------------------------------------*/
   // Carrousel Informacion
   
+/* Seccion informacion */
+#info {
+  padding: 30px 30px;
+  width: 100%;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  flex-wrap: wrap;
+}
+
+/*Textos de la seccion */
+.encabezado-info {
+  margin: 0 15px 0 10px;
+  h2 {
+    color: $blue-color;
+    font-weight: bolder;
+  }
+  p {
+    color: $main-color;
+  }
+}
+
+.encabezado-info {
+  text-align: start; 
+}
+
+/* carrousel */
+
+#informacion-landing {
+  max-width: 50%;
+  padding: 10px;
+}
+
+.encabezado-info, 
+#informacion-landing {
+  flex: 1; /* los dos elementos del mismo ancho disponible */
+  margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
+}
+
+.carousel-inner img {
+  width: 100%; 
+  height: auto;
+}
+
+.tarjeta {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 2px 5px #5db4c1ad;
+  margin-bottom: 15px;
+  border-color: #5DB3C1;
+}
+
+.tarjeta:hover{
+  filter: brightness(110%);
+}
+
+
+.tarjeta-img {
+  width: 100%;
+  height: auto;
+}
+
+/*texto dentro de cada tarjeta*/
+.tarjeta-body {
+  font-weight: bold;
+  background-color: #5DB3C1;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
+  padding: 15px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tarjeta-body p {
+  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
+  color: #fff;
+}
+
+/*Boton ver mas*/
+.btn-landing-info {
+  background-color: #27325A;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+}
+
+.btn-landing-info:hover {
+  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
+  text-decoration: none;
+  background-color: #fff;
+  color: $main-color;
+  // font-size: larger;
+  }
+
+.btn-landing-info:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #56a9b646;
+  }
+
+
+.carousel-inner.landing {
+  padding: 8px;
+}
+
+.carousel-inner.landing .carousel-item {
+  transition: transform 0.3s ease;
+}
+
+// botones flecha ubicacion
+.carousel-control-prev.landing {
+  left: -10%;
+}
+.carousel-control-next.landing {
+  right: -10%;
+}
+
+/* Responsive de toda la seccion */
+
+@media (max-width: 768px) {
   #info {
-    padding: 30px 30px;
-    width: 100%;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
   }
-  
-  .encabezado-info {
-    margin: 0 15px 0 10px;
-    h2 {
-      color: $blue-color;
-      font-weight: bolder;
-    }
-    p {
-      color: $main-color;
-    }
+  .encabezado-info, #informacion-landing {
+    flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+    margin: 10px 0; /* Añade un poco de margen superior e inferior */
   }
-  
-  @media (min-width: 768px) {
-    #info {
-      flex-direction: row; /* Coloca los elementos en fila */
-      justify-content: center; /* Centra los elementos en la fila */
-    }
-  
-    .encabezado-info, 
-    #carousel-informacion {
-      flex: 1; /* los dos elementos del mismo ancho disponible */
-      margin: 0 100px 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
-    }
-    
-    #carousel-informacion {
-      max-width: 100%; 
-    }
+  .noseve {
+    display: none;
   }
-  
-  .encabezado-info {
-    text-align: start; 
+  .tarjeta-text {
+    display: none;
   }
-  
-  .carousel-inner img {
-    width: 100%; 
-    height: auto;
-  }
-  
-  .carousel-control-prev, 
-  .carousel-control-next {
-    margin-top: 10px; /* Ajusta el margen de los botones */
-  }
+}
+
   
   /* ---------------------------------------------------------------------------------------------------------------*/
   // Footer
@@ -312,6 +419,7 @@
         }
     
         h4 {
+          color: #fff;
           font-size: 16px;
           margin-top: 20px;
           margin-bottom: 10px;
@@ -345,6 +453,7 @@
         span {
           color: $main-color;
           font-size: 14px;
+          font-weight: bold;
     
           a {
             color: $main-color;
@@ -358,16 +467,16 @@
         font-size: 12px;
     
         p {
+          color: #fff;
           margin: 5px ;
           padding: 10px 0 10px;
     
           a {
-            color: #ffff;
+            color: #fff;
             text-decoration: underline;
           }
         }
       }
     }
-  
   
   

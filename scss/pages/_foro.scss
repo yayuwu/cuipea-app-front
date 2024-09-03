@@ -1,0 +1,134 @@
+@import '../base/colors';
+@import '../base/breakpoints';
+//@import '../layouts/carousel_foro';
+@import '../components/nav';
+@import '_home.scss';
+
+/*Estilos del boton y la barra de busqueda */
+.subforo {
+    display: flex; 
+    padding: 20px; 
+    flex-direction:row; 
+    justify-content: space-between;
+}
+
+h2.subtitle.foro {
+    padding-left: 15px;
+    font-weight: bolder;
+}
+p.p.foro {
+    color: #fff;
+    padding-left: 15px;
+    text-align: center;
+    background-color: $main-color;
+    padding: 10px;
+}
+strong {
+    color: #fff;
+    font-weight: bold;
+}
+h4 {
+  font-weight: bolder;
+  padding-left: 20px;
+}
+
+.boton-foro {
+    background-color: $blue-color;
+    color: #fff;
+    padding: 8px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-container {
+  position: relative;
+  width: 100%; 
+  max-width: 400px; 
+}
+
+input[name="query"] {
+  width: 100%; /* Asegura que el input ocupe todo el espacio disponible */
+  padding: 10px 50px 10px 15px; /* Añade espacio para el botón */
+  border: 2px solid $blue-color; /* Borde del input */
+  border-radius: 8px; /* Suaviza las esquinas */
+  font-size: 16px; /* Tamaño del texto */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+button.buscador {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajusta según el espacio que quieras dejar */
+  transform: translateY(-50%);
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor */
+  padding: 0; /* Elimina padding */
+}
+
+button.buscador img {
+  width: 20px; /* Ajusta el tamaño del icono */
+}
+
+/* Estilos base para el carrusel */
+.carousel-inner {
+    max-width: 80%; 
+    margin: 0 auto;   
+    a {
+        text-decoration: none;
+    }
+}
+
+#foro-masvistos .carousel-inner .carousel-item .row {
+    margin: 0;
+    padding: 20px 0; /* Espaciado e/los elementos */
+  }
+  
+  #foro-masvistos .carousel-inner .carousel-item .cartel {
+    background-color: #c2e3ea; 
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #foro-masvistos .carousel-inner .carousel-item .cartel-body .cartel-title {
+    font-size: 1.2em;
+    color: #002d62; /* Color del título */
+    font-weight: bold;
+  }
+  
+  #foro-masvistos .carousel-inner .carousel-item .cartel-body .cartel-text {
+    color: #002d62;
+    font-size: 1em;
+  }
+  
+  #foro-masvistos .carousel-inner .carousel-item .cartel-body .user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  #foro-masvistos .carousel-inner .carousel-item .cartel-body .user-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  #foro-masvistos .carousel-control-prev {
+    left: -10px; 
+  }
+
+  #foro-masvistos .carousel-control-next {
+    right: -10px;
+  }
+  
+  /* Responsive: para que no se apilen las tarjetas en tamaños mas chicos */
+  @media (max-width: 767px) {
+    #foro-masvistos .carousel-inner .carousel-item .col-md-6 {
+      flex: 0 0 50%; /* Cada columna ocupa el 50% del ancho */
+      max-width: 50%;
+    }
+  }
+  
