@@ -25,7 +25,7 @@ p {
 /* ------ Formulario Login ------*/
 
 .container-general {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -55,7 +55,7 @@ p {
 .controls {
     padding: 7px 6px;
     width: 300px;
-    border: 1px solid $green-color;
+    border: 2px solid $green-color;
     margin: 5px 0;
 }
 
