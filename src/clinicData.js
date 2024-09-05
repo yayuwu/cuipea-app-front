@@ -43,17 +43,19 @@ const getData = async (url) => {
     }
 }
 
-const url = 'http://localhost:3000/userQuestions/'
+const backUrl = 'http://localhost:8080/questions/'
+// const backUrl = `${import.meta.env.VITE_BACKEND_URL}/questions/`
 
 loadTemplate(dropdownUrl)
 .then(templateSource => {
     const dropdownTemplate = Handlebars.compile(templateSource);
     const btnCompleteClinicData = document.getElementById('btn-complete-data');
-
-    getData(url).then(questionsData => {
-        if (questionsData.length > 0) {
+    // console.log(dropdownTemplate())
+    getData(backUrl).then(questionsData => {
+        // console.log(questionsData.docs.length)
+        if (questionsData.docs.length > 0) {
             const container = document.getElementById('dropdowns-container');
-            const dropdownsHtml = questionsData.map(question => dropdownTemplate(question)).join('');
+            const dropdownsHtml = questionsData.docs.map(question => dropdownTemplate(question)).join('');
             container.innerHTML = dropdownsHtml;
             btnCompleteClinicData.style.display = 'none';
         } else {

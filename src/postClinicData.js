@@ -76,11 +76,12 @@ const form = document.querySelector('form')
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const url = 'http://localhost:3000/userQuestions/'
+    const backUrl = 'http://localhost:8080/questions/'
     let isValid = true
     let firstError = null
 
     const questionsContainer = document.querySelectorAll('.question-container')
-    questionsContainer.forEach(question => {
+    questionsContainer.forEach((question, index) => {
         const errorMessage = question.querySelector(`small[id^="error-message-"]`)
         const radioYes = question.querySelector(`input[id^="true-"]`)
         const radioNo = question.querySelector(`input[id^="false-"]`)
@@ -123,7 +124,7 @@ form.addEventListener('submit', (e) => {
                 response: response,
                 details: details
             }
-            postDataClinic(url, data)
+            postDataClinic(backUrl, data)
         }
     })
 
@@ -131,13 +132,6 @@ form.addEventListener('submit', (e) => {
 
     if(firstError){
         firstError.scrollIntoView({behavior: 'smooth', block: 'center'})
-    }
-
-    // Submit
-
-    if(isValid){
-        form.submit()
-        form.reset()
     }
 })
 
@@ -153,11 +147,11 @@ const postDataClinic = async (url, obj) => {
             'body': JSON.stringify(obj) 
         }
 
-        const res = await fetch(url, options)
-        if (!res.ok) {
-            throw new Error('No se pudieron obtener los datos', res.status)
+        const hola = await fetch(url, options)
+        if (!hola.ok) {
+            throw new Error('No se pudieron obtener los datos', hola.status)
         }
-        const data = await res.json()
+        const data = await hola.json()
         console.log('Datos enviados con éxito: ', data)
     } catch (error) {
         console.error('Error en la solicitud: ', error)
