@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <!-- action="/my-handling-form-page" method="post" -->
+        <div class="container-general">
+
+            
+            <form class="form-general" id="registro">
+
+                <!------ REGISTRO PADRES ------>
+
+                <h1>REGÍSTRATE</h1>
+
+                <h2>Datos de la madre, padre o tutor</h2>
+
+                <div class="container-registro">
+                    <div>
+                        <label for="nombre">Nombre/s:</label>
+                        <input class="controls" type="text" name="usuario" value="" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="apellido">Apellido/s:</label>
+                        <input class="controls" type="text" name="apellido" value="" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="numerodni">Número de DNI:</label>
+                        <input class="controls" type="text" name="numerodni" value="" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="sexo">Sexo:</label>
+                        <select class="controls">
+                            <option value="1">Femenino
+                            <option value="2">Masculino
+                            <option value="3">No informa
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="fecha">Fecha de nacimiento: </label>
+                        <input class="controls" type="date" id="Fecha">
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input class="controls" type="email" name="email" value="" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input class="controls" type="text" name="telefono" value="" placeholder="">
+                    </div>
+                </div>
+
+                <!------ REGISTRO INFANTE ------>
+
+
+                <h2>Datos del infante</h2>
+
+                <div class="container-registro">
+                    <div>
+                        <label for="nombre">Nombre/s:</label>
+                        <input class="controls" type="text" name="usuario" value="" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="apellido">Apellido/s:</label>
+                        <input class="controls" type="text" name="apellido" value="" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="numerodni">Numero de DNI:</label>
+                        <input class="controls" type="text" name="numerodni" value="" placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="sexo">Sexo:</label>
+                        <select class="controls" name="sexo">
+                            <option value="1">Femenino
+                            <option value="2">Masculino
+                            <option value="3">No informa
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="fecha">Fecha de nacimiento: </label>
+                        <input class="controls" type="date" id="Fecha">
+                    </div>
+                </div>
+
+                <div class="acuerdo">
+                    <input type="checkbox" name="aceptar" value="si"> Al continuar, aceptas nuestro <a href="#">Acuerdo
+                        del
+                        usuario </a>y confirmas que has entendido la <a href="#">Politica de Privacidad.</a>
+                </div>
+                <div class="btn-container">
+                    <input class="buttons" type="submit" name="" value="REGISTRARSE">
+                    <input class="buttons" type="button" onclick="history.back()" name="" value="VOLVER">
+                </div>
+
+            </form>
+        </div>
+        </section>
+    </main>
+</body>
+</html>
