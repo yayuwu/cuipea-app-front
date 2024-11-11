@@ -2795,6 +2795,10 @@ button.buscador img {
     max-width: 50%;
   }
 }
+#pageNotFound {
+  height: 50vh;
+}
+
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;

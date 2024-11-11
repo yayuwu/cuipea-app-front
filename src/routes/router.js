@@ -1,6 +1,19 @@
 import page from 'page';
 
- 
+// Manejo de autenticacion
+const isAuthenticated = () => {
+    return false
+}
+
+ // Rutas privadas
+ const protectRoute = (ctx, next) => {
+    if (isAuthenticated()) {
+        next()
+    } else {
+        page.redirect('/pagina-no-encontrada')
+    }
+ }
+
  // Cargar vista dinámica
  const loadView = async (view) => {
     try {
@@ -18,16 +31,22 @@ import page from 'page';
     }
 };
 
-// Rutas con Page.js
+// Rutas 
 page('/', () => {
-    loadView('home'); // Carga la vista de 'home'
+    loadView('home'); 
 });
 
 page('/foro', () => {
     loadView('foro_1');
 });
 
+page('/pagina-no-encontrada', () => {
+    loadView('pageNotFound')
+})
 
-// Inicia el enrutamiento de Page.js
+page('/datos-clinicos/post', protectRoute, () => {
+    loadView('formDataClinic')
+})
+
 page();
 
