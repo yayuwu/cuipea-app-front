@@ -1,4 +1,4 @@
-import { nextSlide, prevSlide } from './home/carouselForo';
+import { nextSlide, prevSlide } from './home/carouselForo.js';
 import './routes/router.js'
 import './controlNinoSano.js'
 import './clinicData.js'

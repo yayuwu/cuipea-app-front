@@ -3,7 +3,9 @@ const loadTemplate = async (url) => {
     return res.text()
 }
 
-const urlButtonAgregar = '/templates/buttonAgregar.hbs'
+console.log('Template Botón')
+
+const urlButtonAgregar = './templates/buttonAgregar.hbs'
 
 document.addEventListener('DOMContentLoaded', () => {
     loadTemplate(urlButtonAgregar)
