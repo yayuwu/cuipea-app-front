@@ -4,7 +4,10 @@ export default defineConfig({
   root: './',
   base: './', // Esto permite que las rutas de scripts sean relativas
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      input: '/index.html', // asegúrate de que la entrada sea la correcta
+    }
   },
   server: {
     port: 5173
