@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const containerRedirect = document.querySelector('.btn-nino-sano')
 
+        console.log(containerRedirect)
         if (containerRedirect) {
             containerRedirect.innerHTML = btnHtml
 
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const containerOnClick = document.querySelector('#btn-agregar-control')
 
+        console.log(containerOnClick)
         if (containerOnClick) {
             containerOnClick.innerHTML = btnHtml
 
