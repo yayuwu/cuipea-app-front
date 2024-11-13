@@ -64,6 +64,16 @@ page('/agregar-sintoma', protectRoute, () => {
     loadView('agregarRegistroSintoma')
 })
 
+// Rutas consulta por enfermedad 
+
+page('/consulta-enfermedad', protectRoute, () => {
+    loadView('consultaEnfermedad')
+})
+
+page('/agregar-consulta', protectRoute, () => {
+    loadView('agregarConsultaEnfermedad')
+})
+
 page('/datos-clinicos/post', protectRoute, () => {
     loadView('formDataClinic')
 })

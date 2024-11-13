@@ -2873,6 +2873,23 @@ button.buscador img {
   border-radius: 4px;
 }
 
+.consulta-enfermedad .bg-violet {
+  background-color: #7A87C2;
+  position: relative;
+}
+.consulta-enfermedad .bg-violet img {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+.consulta-enfermedad .bg-grey {
+  background-color: #F4F4F4;
+}
+.consulta-enfermedad form .input-consulta {
+  border: 2px solid #7A87C2;
+  border-radius: 4px;
+}
+
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;
