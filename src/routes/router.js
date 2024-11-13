@@ -44,7 +44,7 @@ page('/pagina-no-encontrada', () => {
     loadView('pageNotFound')
 })
 
-page('/control-nino-sano', () => {
+page('/control', () => {
     loadView('controlNinoSano')
 })
 
