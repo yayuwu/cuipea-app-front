@@ -44,6 +44,14 @@ page('/pagina-no-encontrada', () => {
     loadView('pageNotFound')
 })
 
+page('/control-nino-sano', () => {
+    loadView('controlNinoSano')
+})
+
+page('/agregar-control', () => {
+    loadView('agregarControl')
+})
+
 page('/datos-clinicos/post', protectRoute, () => {
     loadView('formDataClinic')
 })

@@ -1552,6 +1552,7 @@ section.carousel {
   background-color: #A9D5B6;
   border: 2px solid #A9D5B6;
   color: #28325A;
+  font-size: 13px;
   border-radius: 6px;
   padding: 5px 15px;
   font-weight: 700;
@@ -1567,6 +1568,7 @@ section.carousel {
   background-color: #5CB1BF;
   border: 2px solid #5CB1BF;
   color: #28325A;
+  font-size: 13px;
   border-radius: 6px;
   padding: 5px 15px;
   font-weight: 700;
@@ -1582,6 +1584,7 @@ section.carousel {
   background-color: #AAB0CE;
   border: 2px solid #AAB0CE;
   color: #28325A;
+  font-size: 13px;
   border-radius: 6px;
   padding: 5px 15px;
   font-weight: 700;
@@ -1597,6 +1600,7 @@ section.carousel {
   background-color: #EEC5DD;
   border: 2px solid #EEC5DD;
   color: #28325A;
+  font-size: 13px;
   border-radius: 6px;
   padding: 5px 15px;
   font-weight: 700;
@@ -1612,6 +1616,7 @@ section.carousel {
   background-color: #F6C8CE;
   border: 2px solid #F6C8CE;
   color: #28325A;
+  font-size: 13px;
   border-radius: 6px;
   padding: 5px 15px;
   font-weight: 700;
@@ -2797,6 +2802,55 @@ button.buscador img {
 }
 #pageNotFound {
   height: 50vh;
+}
+
+.nino-sano .bg-pink {
+  background-color: #EEC5DD;
+  position: relative;
+}
+.nino-sano .bg-pink img {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+.nino-sano table .table-main-color {
+  background-color: #EEC5DD !important;
+  color: #28325A;
+  border: none !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-right: 4px solid white !important;
+}
+.nino-sano table .first-item {
+  border-top-left-radius: 6px;
+}
+.nino-sano table .last-item {
+  border-top-right-radius: 6px;
+  border-left: 4px solid white !important;
+  border-right: none !important;
+}
+.nino-sano table .table-grey {
+  background-color: rgb(228, 228, 228);
+  text-align: center;
+  font-size: 13px;
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  min-height: 50px;
+}
+.nino-sano table tbody td:last-child {
+  border-right: none !important;
+}
+.nino-sano .bg-form-nino-sano {
+  background-color: #FBF4F8;
+}
+.nino-sano form .input-nino-sano {
+  border: 2px solid #EEC5DD;
+  border-radius: 4px;
+}
+.nino-sano form .input-nino-sano:focus {
+  border: 2px solid #EEC5DD;
+  outline: none;
 }
 
 * {
