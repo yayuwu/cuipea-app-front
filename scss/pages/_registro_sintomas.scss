@@ -1,0 +1,23 @@
+@import '../base/colors';
+
+.registro-sintomas {
+    .bg-green {
+        background-color: $green-color;
+        position: relative;
+        img {
+            position: absolute;
+            top: -30px;
+            right: 30px;
+        }
+    }
+    form {
+        .registro-form-bg {
+            background-color: #F1F8F3;
+        }
+        .input-sintoma {
+            border: 2px solid $green-color;
+            border-radius: 4px;
+        }
+    }
+
+}

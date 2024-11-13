@@ -1475,6 +1475,7 @@ section.carousel {
 }
 .green-box h4 {
   margin-top: 15px;
+  margin-left: -15px;
 }
 .green-box p {
   margin: 0;
@@ -1509,6 +1510,7 @@ section.carousel {
 }
 .blue-box h4 {
   margin-top: 15px;
+  margin-left: -15px;
 }
 .blue-box p {
   margin: 0;
@@ -1543,6 +1545,7 @@ section.carousel {
 }
 .violet-box h4 {
   margin-top: 15px;
+  margin-left: -15px;
 }
 .violet-box p {
   margin: 0;
@@ -2851,6 +2854,23 @@ button.buscador img {
 .nino-sano form .input-nino-sano:focus {
   border: 2px solid #EEC5DD;
   outline: none;
+}
+
+.registro-sintomas .bg-green {
+  background-color: #A9D5B6;
+  position: relative;
+}
+.registro-sintomas .bg-green img {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+.registro-sintomas form .registro-form-bg {
+  background-color: #F1F8F3;
+}
+.registro-sintomas form .input-sintoma {
+  border: 2px solid #A9D5B6;
+  border-radius: 4px;
 }
 
 * {

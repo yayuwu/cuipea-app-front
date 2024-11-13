@@ -1,0 +1,70 @@
+<main class="registro-sintomas">
+    <section class="bg-green mt-4">
+        <h1 class="h3 fw-bold ps-3 py-3">Registro síntomas</h1>
+        <img src="/assets/icons/_x31_.svg" alt="icon">
+    </section>
+    <section  class="p-2 my-4">
+        <form>
+            <div class="registro-form-bg ps-3 py-3 mb-3">
+                <p class="fw-semibold">¿Tiene una enfermedad diagnosticada?</p>
+                <div class="g-option">
+                    <input type="radio" name="g-option-1" id="true-1">
+                    <label for="true-1" class="ps-1">Si</label>
+                </div>
+                <div class="g-option">
+                    <input type="radio" name="g-option-1" id="false-1">
+                    <label for="false-1" class="ps-1">No</label>
+                </div>
+            </div>
+            <div class="registro-form-bg ps-3 py-3 mb-3">
+                <p class="fw-semibold">Tipo de síntoma</p>
+                <div class="g-option">
+                    <input type="radio" name="g-option-2" id="tos">
+                    <label for="tos" class="ps-1">Tos</label>
+                </div>
+                <div class="g-option">
+                    <input type="radio" name="g-option-2" id="fiebre">
+                    <label for="fiebre" class="ps-1">Fiebre</label>
+                </div>
+                <div class="g-option">
+                    <input type="radio" name="g-option-2" id="diarrea">
+                    <label for="diarrea" class="ps-1">Diarrea</label>
+                </div>
+                <div class="g-option">
+                    <input type="radio" name="g-option-2" id="vomitos">
+                    <label for="vomitos" class="ps-1">Vómitos</label>
+                </div>
+                <div class="g-option">
+                    <label for="otro">Otro: </label>
+                    <input type="text" name="" id="otro" class="input-sintoma ms-2">
+                </div>
+            </div>
+            <div class="registro-form-bg ps-3 py-3 mb-3">
+                <p class="fw-semibold">Intensidad</p>
+                <div class="g-option">
+                    <input type="radio" name="g-option-3" id="baja">
+                    <label for="baja" class="ps-1">Baja</label>
+                </div>
+                <div class="g-option">
+                    <input type="radio" name="g-option-3" id="media">
+                    <label for="media" class="ps-1">Media</label>
+                </div>
+                <div class="g-option">
+                    <input type="radio" name="g-option-3" id="alta">
+                    <label for="alta" class="ps-1">Alta</label>
+                </div>
+            </div>
+            <div class="registro-form-bg ps-3 py-3 mb-3">
+                <label for="fecha" class="fw-semibold">Fecha</label>
+                <br>
+                <input type="date" name="" id="fecha" class="input-sintoma">
+            </div>
+            <div class="registro-form-bg ps-3 py-3 mb-3">
+                <label for="detalles" class="fw-semibold">Observaciones</label>
+                <br>
+                <textarea name="" id="detalles" class="w-75 input-sintoma"></textarea>
+            </div>
+            <div id="agregar-sintoma-btn" class="d-flex justify-content-end"></div>
+        </form>
+    </section>
+</main>

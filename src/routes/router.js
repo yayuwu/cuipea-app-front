@@ -2,7 +2,7 @@ import page from 'page';
 
 // Manejo de autenticacion
 const isAuthenticated = () => {
-    return false
+    return true
 }
 
  // Rutas privadas
@@ -44,12 +44,24 @@ page('/pagina-no-encontrada', () => {
     loadView('pageNotFound')
 })
 
-page('/control', () => {
+// Rutas control de niño sano
+
+page('/control', protectRoute, () => {
     loadView('controlNinoSano')
 })
 
-page('/agregar-control', () => {
+page('/agregar-control', protectRoute, () => {
     loadView('agregarControl')
+})
+
+// Rutas registro de síntomas
+
+page('/registro-sintomas', protectRoute,  () => {
+    loadView('resgitroSintomas')
+})
+
+page('/agregar-sintoma', protectRoute, () => {
+    loadView('agregarRegistroSintoma')
 })
 
 page('/datos-clinicos/post', protectRoute, () => {
