@@ -2840,6 +2840,7 @@ button.buscador img {
   border-right: 4px solid white;
   border-top: 4px solid white;
   min-height: 50px;
+  color: #28325A;
 }
 .nino-sano table tbody td:last-child {
   border-right: none !important;
@@ -2937,6 +2938,7 @@ button.buscador img {
   border-right: 4px solid white;
   border-top: 4px solid white;
   min-height: 50px;
+  color: #28325A;
 }
 .libreta-vacunacion table tbody td:last-child {
   border-right: none !important;

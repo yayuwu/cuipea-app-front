@@ -4,22 +4,75 @@
         <img src="/assets/icons/icon_vacunación.svg" alt="icon">
     </section>
     <section  class="my-4">
-       <form action="">
+       <form id="vacuna-form">
          <div class="bg-form-salmon p-3">
             <label for="vacuna" class="fw-semibold">Vacuna</label>
-            <select name="" id="vacuna" class="d-block mb-3 w-100 input-salmon p-1">
+            <select name="vacuna" id="vacuna" class="d-block mb-3 w-100 input-salmon p-1">
                 <option value="" disabled selected>Elija una opción</option>
+                <option value="bcg">BCG</option>
+                <option value="hb">Hepatitis B</option>
+                <option value="neumococo">Neumococo</option>
+                <option value="dtp-hb-hib">DTP-HB-Hib</option>
+                <option value="ipv">IPV</option>
+                <option value="opv">OPV</option>
+                <option value="rotavirus">Rotavirus</option>
+                <option value="meningococo">Meningococo</option>
+                <option value="antigripal">Antigripal</option>
+                <option value="ha">Hepatitis A</option>
+                <option value="srp">SRP</option>
+                <option value="varicela">Varicela</option>
+                <option value="dtp-hib">DTP-Hib</option>
+                <option value="DTP">DTP</option>
+                <option value="dtpa">dTpa</option>
+                <option value="vph">VPH</option>
+                <option value="dt">dT</option>
+                <option value="sr">SR</option>
+                <option value="fa">FA</option>
+                <option value="fha">FHA</option>
             </select>
             <label for="dosis" class="fw-semibold">Dosis</label>
-            <select name="" id="dosis" class="d-block mb-3 w-100 input-salmon p-1">
+            <select name="dosis" id="dosis-vacuna" class="d-block mb-3 w-100 input-salmon p-1">
                 <option value="" disabled selected>Elija una opción</option>
+                <option value="dosis-unica">Única dosis</option>
+                <option value="dosis-1">1ª dosis</option>
+                <option value="dosis-2">2ª dosis</option>
+                <option value="dosis-3">3ª dosis</option>
+                <option value="refuerzo-1">1ª refuerzo</option>
+                <option value="refuerzo-2">2ª refuerzo</option>
             </select>
             <label for="edad" class="fw-semibold">Edad</label>
-            <select name="" id="edad" class="d-block mb-3 w-100 input-salmon p-1">
+            <select name="edad" id="edad-vacuna" class="d-block mb-3 w-100 input-salmon p-1">
                 <option value="" disabled selected>Elija una opción</option>
+                <option value="recien-nacido">Recién Nacido</option>
+                <option value="mes-1">1 mes</option>
+                <option value="mes-2">2 meses</option>
+                <option value="mes-3">3 meses</option>
+                <option value="mes-4">4 meses</option>
+                <option value="mes-5">5 meses</option>
+                <option value="mes-6">6 meses</option>
+                <option value="mes-7">7 meses</option>
+                <option value="mes-8">8 meses</option>
+                <option value="mes-9">9 meses</option>
+                <option value="mes-10">10 meses</option>
+                <option value="mes-11">12 meses</option>
+                <option value="anio-1">1 año</option>
+                <option value="anio-2">2 años</option>
+                <option value="anio-3">3 años</option>
+                <option value="anio-4">4 años</option>
+                <option value="anio-5">5 años</option>
+                <option value="anio-6">6 años</option>
+                <option value="anio-7">7 años</option>
+                <option value="anio-8">8 años</option>
+                <option value="anio-9">9 años</option>
+                <option value="anio-10">10 años</option>
+                <option value="anio-11">11 años</option>
+                <option value="anio-12">12 años</option>
+                <option value="anio-13">13 años</option>
+                <option value="anio-14">14 años</option>
+                <option value="anio-15">15 años</option>
             </select>
             <label for="fecha" class="fw-semibold">Fecha</label>
-            <input type="date" name="" id="fecha" class="d-block input-salmon p-1">
+            <input type="date" name="fecha-vacuna" id="fecha-vacuna" class="d-block input-salmon p-1">
          </div>
          <div id="btn-agregar-vacuna" class="d-flex justify-content-end mt-4 me-3"></div>
        </form>
