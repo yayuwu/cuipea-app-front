@@ -2872,6 +2872,10 @@ button.buscador img {
   border: 2px solid #A9D5B6;
   border-radius: 4px;
 }
+.registro-sintomas form .input-sintoma:focus {
+  border: 2px solid #A9D5B6;
+  outline: none;
+}
 
 .consulta-enfermedad .bg-violet {
   background-color: #7A87C2;
@@ -2888,6 +2892,65 @@ button.buscador img {
 .consulta-enfermedad form .input-consulta {
   border: 2px solid #7A87C2;
   border-radius: 4px;
+}
+.consulta-enfermedad form .input-consulta:focus {
+  border: 2px solid #7A87C2;
+  outline: none;
+}
+
+.libreta-vacunacion .bg-pink {
+  background-color: #ED808E;
+  position: relative;
+}
+.libreta-vacunacion .bg-pink img {
+  position: absolute;
+  top: -13px;
+  right: 10px;
+}
+.libreta-vacunacion .table-main-color {
+  background-color: #F2A7B1 !important;
+  color: #28325A;
+  text-align: center;
+  text-transform: uppercase;
+}
+.libreta-vacunacion table .table-main-color {
+  background-color: #F2A7B1 !important;
+  color: #28325A;
+  border: none !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-right: 4px solid white !important;
+}
+.libreta-vacunacion table .first-item {
+  border-top-left-radius: 6px;
+}
+.libreta-vacunacion table .last-item {
+  border-top-right-radius: 6px;
+  border-left: 4px solid white !important;
+  border-right: none !important;
+}
+.libreta-vacunacion table .table-pink {
+  background-color: #FAEBED;
+  text-align: center;
+  font-size: 13px;
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  min-height: 50px;
+}
+.libreta-vacunacion table tbody td:last-child {
+  border-right: none !important;
+}
+.libreta-vacunacion .bg-form-salmon {
+  background-color: #FAEBED;
+}
+.libreta-vacunacion form .input-salmon {
+  border: 2px solid #F2A7B1;
+  border-radius: 4px;
+}
+.libreta-vacunacion form .input-salmon:focus {
+  border: 2px solid #F2A7B1;
+  outline: none;
 }
 
 * {

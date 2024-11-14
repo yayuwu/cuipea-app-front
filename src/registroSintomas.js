@@ -7,8 +7,8 @@ let registros = [
     { title: 'Registro 4', date: '02/02/24'}
 ]
 
-const urlBox = './templates/box.hbs' 
-const urlBtn = './templates/buttonAgregar.hbs'
+const urlBox = '/templates/box.hbs' 
+const urlBtn = '/templates/buttonAgregar.hbs'
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(()=>{
@@ -55,7 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     containerBtnAgregarSintoma.innerHTML = btnHtml
                     const btnRegistro = document.querySelector('.btn-agregar')
                     btnRegistro.classList.add('btn-agregar-green')
-                    btnRegistro.addEventListener('click', () => {
+                    btnRegistro.addEventListener('click', (e) => {
+                        e.preventDefault()
+
                         alert('Formulario enviado')
                     })
                 }

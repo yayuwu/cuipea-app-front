@@ -18,6 +18,10 @@
             border: 2px solid $green-color;
             border-radius: 4px;
         }
+        .input-sintoma:focus {
+             border: 2px solid $green-color;
+             outline: none;
+        }
     }
 
 }

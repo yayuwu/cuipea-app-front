@@ -74,6 +74,18 @@ page('/agregar-consulta', protectRoute, () => {
     loadView('agregarConsultaEnfermedad')
 })
 
+// Rutas libreta vacunación 
+
+page('/vacunas', protectRoute, () => {
+    loadView('libretaVacunacion')
+})
+
+page('/agregar-vacuna', protectRoute, () => {
+    loadView('agregarVacuna')
+})
+
+// Rutas datos clínicos
+
 page('/datos-clinicos/post', protectRoute, () => {
     loadView('formDataClinic')
 })

@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     containerBtnAgregarConsulta.innerHTML = btnHtml
                     const btnConsulta = containerBtnAgregarConsulta.querySelector('.btn-agregar')
                     btnConsulta.classList.add('btn-agregar-violet')
-                    btnConsulta.addEventListener('click', () => {
+                    btnConsulta.addEventListener('click', (e) => {
+                        e.preventDefault()
                         alert('Formulario enviado')
                     })
                 }

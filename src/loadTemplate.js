@@ -1,7 +1,8 @@
 // ! Función que me retorna el template
 const loadTemplate = async (url)=> {
     const res = await fetch(url)
-    return res.text()
+    const template = await res.text()
+    return template
 }
 
 export default loadTemplate
