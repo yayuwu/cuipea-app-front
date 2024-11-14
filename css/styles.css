@@ -2970,4 +2970,9 @@ button.buscador img {
   padding: 0 15px;
 }
 
+.error-message {
+  color: rgb(206, 0, 0);
+  display: none;
+}
+
 /*# sourceMappingURL=styles.css.map */

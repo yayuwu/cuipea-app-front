@@ -1,3 +1,4 @@
+import * as yup from 'yup'
 import loadTemplate from "./loadTemplate"
 
 let consultas = [
@@ -12,6 +13,7 @@ const urlBtn = './templates/buttonAgregar.hbs'
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
+        //Boxes
         loadTemplate(urlBox)
             .then(template => {
                 const boxTemplate = Handlebars.compile(template)
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
             .catch(err => console.log(err))
+        // Botones
         loadTemplate(urlBtn)
             .then(template => {
                 const btnTemplate = Handlebars.compile(template)
@@ -49,12 +52,47 @@ document.addEventListener('DOMContentLoaded', () => {
                     containerBtnAgregarConsulta.innerHTML = btnHtml
                     const btnConsulta = containerBtnAgregarConsulta.querySelector('.btn-agregar')
                     btnConsulta.classList.add('btn-agregar-violet')
-                    btnConsulta.addEventListener('click', (e) => {
-                        e.preventDefault()
-                        alert('Formulario enviado')
-                    })
+                    btnConsulta.type = 'submit'
                 }
                 
             })
+        // Formulario
+        const form = document.getElementById('consulta-form')
+        console.log('Formulario: ', form)
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault()
+
+                const schema = yup.object().shape({
+                    fecha: yup.date().required('Este campo es obligatorio'),
+                    motivo: yup.string().required('Este campo es requerido'),
+                    especialidad: yup.string().required('Este campo es requerido'),
+                    datosProfesional: yup.string().required('Este campo es obligatorio').required(),
+                    observaciones: yup.string()
+                })
+
+                const formData = {
+                    fecha: document.getElementById('fecha-consulta').value,
+                    motivo: document.getElementById('motivo-consulta').value,
+                    especialidad: document.getElementById('especialidad-consulta').value,
+                    datosProfesional: document.getElementById('datos-consulta').value,
+                    observaciones: document.getElementById('observaciones-consulta').value
+                }
+                
+                try {
+                    await schema.validate(formData, { abortEarly: false })
+                    alert('Formulario válido')
+                } catch (errors) {
+                   console.log(errors)
+                   errors.inner.forEach(error => { 
+                        const errorElement = document.getElementById(`${error.path}-consultaError`)
+                        if (errorElement) { 
+                            errorElement.style.display = 'block'
+                        } 
+                    })
+                }
+            })
+        }
     }, 200)
 })
+
