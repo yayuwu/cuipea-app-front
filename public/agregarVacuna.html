@@ -30,8 +30,9 @@
                 <option value="fa">FA</option>
                 <option value="fha">FHA</option>
             </select>
-            <label for="dosis" class="fw-semibold">Dosis</label>
-            <select name="dosis" id="dosis-vacuna" class="d-block mb-3 w-100 input-salmon p-1">
+            <small class="error-message mb-2" id="vacuna-error">* Este campo es obligatorio</small>
+            <label for="dosisVacuna" class="fw-semibold">Dosis</label>
+            <select name="dosisVacuna" id="dosisVacuna" class="d-block mb-3 w-100 input-salmon p-1">
                 <option value="" disabled selected>Elija una opción</option>
                 <option value="dosis-unica">Única dosis</option>
                 <option value="dosis-1">1ª dosis</option>
@@ -40,8 +41,9 @@
                 <option value="refuerzo-1">1ª refuerzo</option>
                 <option value="refuerzo-2">2ª refuerzo</option>
             </select>
-            <label for="edad" class="fw-semibold">Edad</label>
-            <select name="edad" id="edad-vacuna" class="d-block mb-3 w-100 input-salmon p-1">
+            <small class="error-message mb-2" id="dosisVacuna-error">* Este campo es obligatorio</small>
+            <label for="edadVacuna" class="fw-semibold">Edad</label>
+            <select name="edadVacuna" id="edadVacuna" class="d-block mb-3 w-100 input-salmon p-1">
                 <option value="" disabled selected>Elija una opción</option>
                 <option value="recien-nacido">Recién Nacido</option>
                 <option value="mes-1">1 mes</option>
@@ -71,8 +73,10 @@
                 <option value="anio-14">14 años</option>
                 <option value="anio-15">15 años</option>
             </select>
-            <label for="fecha" class="fw-semibold">Fecha</label>
-            <input type="date" name="fecha-vacuna" id="fecha-vacuna" class="d-block input-salmon p-1">
+            <small class="error-message mb-2" id="edadVacuna-error">* Este campo es obligatorio</small> 
+            <label for="fechaVacuna" class="fw-semibold">Fecha</label>
+            <input type="date" name="fechaVacuna" id="fechaVacuna" class="d-block input-salmon p-1 mb-3">
+            <small class="error-message mb-2" id="fechaVacuna-error">* Este campo es obligatorio</small>
          </div>
          <div id="btn-agregar-vacuna" class="d-flex justify-content-end mt-4 me-3"></div>
        </form>

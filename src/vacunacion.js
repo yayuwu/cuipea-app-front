@@ -1,3 +1,4 @@
+import * as yup from 'yup'
 import loadTemplate from './loadTemplate'
 
 let vacunas = [ 
@@ -55,12 +56,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 containerBtnAgregarVacuna.innerHTML = btnHtml
                 const btnVacuna = containerBtnAgregarVacuna.querySelector('.btn-agregar')
                 btnVacuna.classList.add('btn-agregar-salmon')
-                btnVacuna.addEventListener('click', (e) => {
-                    e.preventDefault()
-                    alert('Formulario enviado')
-                })
+                btnVacuna.type = 'submit'
             }
 
-         })
+        })
+        // Envío de datos formulario
+        const form = document.getElementById('vacuna-form')
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault()
+
+                // Schema con yup para manejar las validaciones
+                const schema = yup.object().shape({
+                    vacuna: yup.string().required('Es requerido seleccionar una opción'),
+                    dosisVacuna: yup.string().required('Es requerido seleccionar una opción'),
+                    edadVacuna: yup.string().required('Es requerido seleccionar una opción'),
+                    fechaVacuna: yup.date().required('Es requerido seleccionar una fecha')
+                })
+
+                // Obtenemos los datos del fomrulario
+                const formData = {
+                    vacuna: document.getElementById('vacuna').value,
+                    dosisVacuna: document.getElementById('dosisVacuna').value,
+                    edadVacuna: document.getElementById('edadVacuna').value,
+                    fechaVacuna: document.getElementById('fechaVacuna').value
+                }
+
+                try {
+                    await schema.validate(formData, { abortEarly: false })
+                    console.log('Datos enviados: ', formData)
+                    alert('Formulario enviado')
+                } catch (errors) {
+                    console.log('Ocurrió un error: ', errors)
+                    errors.inner.forEach(error => {
+                        const errorElement = document.getElementById(`${error.path}-error`)
+                        if (errorElement) {
+                            errorElement.style.display = 'block'
+                        }
+                    })
+                }
+            })
+        }
     }, 200)
 })

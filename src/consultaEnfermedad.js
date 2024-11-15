@@ -13,7 +13,7 @@ const urlBtn = './templates/buttonAgregar.hbs'
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
-        //Boxes
+        // Carga de datos Boxes
         loadTemplate(urlBox)
             .then(template => {
                 const boxTemplate = Handlebars.compile(template)
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
             })
-        // Formulario
+        // Envío de datos formulario
         const form = document.getElementById('consulta-form')
         console.log('Formulario: ', form)
         if (form) {
