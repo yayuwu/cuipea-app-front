@@ -1,0 +1,17 @@
+@mixin btnSesion($backgroundColor){
+    background-color: $backgroundColor;
+    color: white;
+    border: 1px solid $backgroundColor;
+    border-radius: 6px;
+    text-transform: uppercase;
+    width: 150px;
+    font-weight: bold;
+}
+
+.btn-sesion-oscuro {
+    @include btnSesion(#27325A)
+}
+
+.btn-sesion-claro {
+    @include btnSesion(#717DA8)
+}

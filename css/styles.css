@@ -2955,6 +2955,60 @@ button.buscador img {
   outline: none;
 }
 
+.btn-sesion-oscuro {
+  background-color: #27325A;
+  color: white;
+  border: 1px solid #27325A;
+  border-radius: 6px;
+  text-transform: uppercase;
+  width: 150px;
+  font-weight: bold;
+}
+
+.btn-sesion-claro {
+  background-color: #717DA8;
+  color: white;
+  border: 1px solid #717DA8;
+  border-radius: 6px;
+  text-transform: uppercase;
+  width: 150px;
+  font-weight: bold;
+}
+
+.green-container {
+  max-width: 400px;
+  background-color: #A9D5B6;
+  border: 3px solid #9FC9AC;
+  border-radius: 10px;
+  padding: 30px;
+}
+.green-container p, .green-container a {
+  font-size: 14px;
+}
+.green-container input, .green-container select {
+  border: 2px solid #9FC9AC;
+  border-radius: 6px;
+  width: 100%;
+}
+.green-container input:focus, .green-container select:focus {
+  outline: none;
+}
+.green-container input[type=number]::-webkit-inner-spin-button,
+.green-container input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.green-container a {
+  color: #28325A;
+}
+.green-container a:hover {
+  text-decoration: none;
+}
+
+.inicio-container {
+  width: 300px !important;
+}
+
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;

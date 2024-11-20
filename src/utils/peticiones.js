@@ -1,3 +1,4 @@
+
 export const postData = async (url, data) => {
     try {
         const options = {
@@ -13,7 +14,7 @@ export const postData = async (url, data) => {
             throw new Error(`Error: ${response.statusText}`)
         }        
 
-        return await response.json()
+        return response
     } catch (error) {
         console.log('Ocurrió un error al enviar los datos')
     }

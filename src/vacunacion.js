@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const getVacunas = await postData(`${import.meta.env.VITE_BACK_URL}/vacunas/getAll`, {userId: '673900031499522c7a4928da'})
 
-            // console.log(getVacunas.vacunas)
+            const vacunasObtenidas = await getVacunas.json()
 
-            const tableHtml = getVacunas.vacunas.map(vacuna => tableTemplate(vacuna)).join('')
+            const tableHtml = vacunasObtenidas.vacunas.map(vacuna => tableTemplate(vacuna)).join('')
             const containerVacunas = document.getElementById('rows-vacunacion')
             if (containerVacunas) {
                 containerVacunas.innerHTML = tableHtml
