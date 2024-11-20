@@ -36,6 +36,7 @@ const checkAuth = () => {
 }
 
 // Rutas 
+
 page('/', () => {
     loadView('home'); 
 })
@@ -82,7 +83,7 @@ page('/registro-exitoso', () => {
 // Rutas control de niño sano
 
 page('/control', () => {
-    if (    !checkAuth()) {
+    if (!checkAuth()) {
         page.redirect('/pagina-no-encontrada')
     } else {
         loadView('controlNinoSano')
@@ -90,7 +91,7 @@ page('/control', () => {
 })
 
 page('/agregar-control', () => {
-    if (    !checkAuth()) {
+    if (!checkAuth()) {
         page.redirect('/pagina-no-encontrada')
     } else {
         loadView('agregarControl')
