@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
             })
+            
         // Envío de datos formulario
         const form = document.getElementById('consulta-form')
         console.log('Formulario: ', form)

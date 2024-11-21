@@ -1,0 +1,15 @@
+@import '../base/colors';
+
+@mixin boxPerfil ($mainColor, $borderColor) {
+    background-color: $mainColor;
+    border: 3px solid $borderColor;
+    &:hover {
+        text-decoration: none;
+        color: $main-color;
+    }
+}
+
+
+.box-perfil-pink {
+    @include boxPerfil($pink-color, $pink-dark-color)
+}

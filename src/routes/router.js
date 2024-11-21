@@ -1,19 +1,5 @@
 import page from 'page';
 
-// Manejo de autenticacion
-const isAuthenticated = () => {
-    return true
-}
-
- // Rutas privadas
- const protectRoute = (ctx, next) => {
-    if (isAuthenticated()) {
-        next()
-    } else {
-        page.redirect('/pagina-no-encontrada')
-    }
- }
-
  // Cargar vista dinámica
  const loadView = async (view) => {
     try {
@@ -79,6 +65,17 @@ page('/registro-exitoso', () => {
         loadView('registroExitoso');
     }
 })
+
+// Ruta perfil
+
+page('/perfil', () => {
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada');
+    } else {
+        loadView('perfil');
+    }
+})
+
 
 // Rutas control de niño sano
 

@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 import loadTemplate from './loadTemplate'
-import { postData } from './utils/peticiones'
+import { postData, post } from './utils/peticiones'
 import Swal from 'sweetalert2'
 
 const urlBtn = '/templates/buttonAgregar.hbs'
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tableTemplate = Handlebars.compile(template);
 
             const userId = JSON.parse(localStorage.getItem('userData')).user.id;
+            const token = JSON.parse(localStorage.getItem('userData')).token;
 
             const currentLocation = window.location.pathname
 
@@ -30,12 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
             async function loadVacunas() {
                 try {
                     // Siempre hacer la petición para obtener vacunas actualizadas
-                    const response = await postData(`${import.meta.env.VITE_BACK_URL}/vacunas/getAll`, { userId })
+                    const response = await post(`${import.meta.env.VITE_BACK_URL}/vacunas/getAll`, { userId }, token)
                     const vacunasPeticion = await response.json()
 
                     // Renderizar las vacunas
                     renderVacunas(vacunasPeticion.vacunas)
                 } catch (error) {
+                    Swal.close()
                     console.error('Error al obtener las vacunas:', error)
                 }
             }

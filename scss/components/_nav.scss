@@ -1,65 +1,55 @@
 /* ---------------------------------------------------------------------------------------------------------------*/
 //Nav
 
-.navbar-nav .nav-link {
-    font-family: "Plus Jakarta Sans", sans-serif;
+@import '../base/colors';
+
+$colors: (
+  $salmon-color,
+  $violet-blue-color,
+  $blue-color,
+  $pink-dark-color,
+  $yellow-color
+);
+
+.navbar-nav {
+  // Asignar colores a los nav-links de los elementos principales
+  @for $i from 1 through length($colors) {
+    li:nth-child(#{$i}) > .nav-link:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 3px; // grosor del subrayado
+      text-decoration-color: nth($colors, $i); // Color según el índice
+    }
+  }
+
+  // Estilo general para los nav-links
+  .nav-link {
     font-weight: bold;
-    color: $main-color;
+    color: $main-color !important;
+    position: relative;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 3px; // grosor del subrayado
+    }
   }
   
-  
-  /* Efecto de hover en los elementos del navbar */
-  .navbar-nav .nav-link:hover {
-    text-decoration: underline;
-    text-decoration-color: #EF8090; 
-    text-decoration-thickness: 3px; /* grosor del subrayado */
+
+  // Colores específicos para el dropdown si es necesario
+  .dropdown-item {
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-decoration-color: #cccccc; // color genérico para todos
+    }
   }
   
-  .navbar-nav .nav-link.ingreso:hover {
-    color: #fff;
-    background-color: #F6C95A;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btn-menu {
+  outline: none !important; // Elimina el borde de foco
+  box-shadow: none !important; // Elimina la sombra del foco
+
+  &:focus, &:active {
+    outline: none !important; // Elimina cualquier contorno al hacer focus o click
+    box-shadow: none !important; // Elimina la sombra al hacer click
   }
-  
-  .navbar-nav .nav-link.ingreso:active {
-  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #f5d177;
-  }
-  
-  /* Efecto de click (active) en los elementos del navbar */
-  .navbar-nav .nav-link:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #EF8090 ;
-  }
-  
-  /* Menú desplegable */
-  /* Estilo base para los elementos del dropdown */
-  
-  .dropdown-menu .dropdown-item {
-    transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-  }
-  
-  .dropdown-menu .dropdown-item:hover {
-    color: #fff; /* Color del texto al pasar el mouse */
-  }
-  
-  /* Estilo de hover para cada ítem específico: */
-  
-  .dropdown-menu .dropdown-item.item-1:hover {
-    background-color: #5DB3C1; 
-  }
-  
-  .dropdown-menu .dropdown-item.item-2:hover {
-    background-color: #F6C95A; 
-  }
-  
-  .dropdown-menu .dropdown-item.item-3:hover {
-    background-color: #A9D5B6; 
-  }
-  
-  .dropdown-menu .dropdown-item.item-4:hover {
-    background-color: #7A87C2; 
-  }
-  
+}
