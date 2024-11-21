@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnos y recordatorios</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/turnos.css">
+</head>
+
+<body>
+    <main>
+        <section>
+
+            <h1>Mis turnos</h1>
+            <h2>Próximo turno:</h2>
+
+            <div class="proximo-turno">
+                <div>
+                    <!-- calendario -->
+                    <img src="imagenes/calen.jpg">
+                    <p style="text-align: center;">Jueves <br> Agosto 2024</p>
+                </div>
+
+                <div>
+                    <table class="detalle-turno">
+                        <tr>
+                            <th>DETALLE DEL TURNO</th>
+                        </tr>
+                        <tr>
+                            <td>Hora:</td>
+                        </tr>
+                        <tr>
+                            <td>Fecha:</td>
+                        </tr>
+                        <tr>
+                            <td>Hospital:</td>
+                        </tr>
+                        <tr>
+                            <td>Especialidad:</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Próximos turnos:</h2>
+            <div>
+                <table class="siguientes-turno">
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Hospital</th>
+                        <th>Especialidad</th>
+                        <th colspan="2">Editar</th>
+                    </tr>
+
+                    <tr>
+                        <td>25/09/2024</td>
+                        <td>09:00</td>
+                        <td>Garrahan</td>
+                        <td>Pediatría</td>
+                        <td><button><i class="fa-regular fa-pen-to-square"></i></button></td>
+                    <td><button><i class="fa-solid fa-delete-left"></i></button></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>30/09/2024</td>
+                        <td>08:30</td>
+                        <td>Garrahan</td>
+                        <td>Pediatría</td>
+                        <td><button><i class="fa-regular fa-pen-to-square"></i></button></td>
+                        <td><button><i class="fa-solid fa-delete-left"></i></button></td>
+
+                    </tr>
+
+                    <tr>
+                        <td>30/09/2024</td>
+                        <td>08:30</td>
+                        <td>Garrahan</td>
+                        <td>Pediatría</td>
+                        <td><button><i class="fa-regular fa-pen-to-square"></i></button></td>
+                        <td><button><i class="fa-solid fa-delete-left"></i></button></td>
+
+                    </tr>
+                </table>
+                <div>
+                    <button class="btn-button"><i class="fa-solid fa-plus"></i>Añadir turno</button>
+        </section>
+
+        <section>
+            <h2>Recordatorios</h2>
+            <button class="btn-button"><i class="fa-solid fa-plus"></i>Añadir recordatorio</button>
+
+        </section>
+    </main>
+</body>
+
+</html>
