@@ -133,6 +133,13 @@ page('/agregar-consulta', () => {
     }
 })
 
+// Rutas consulta estudios
+
+page('/consulta-estudios', () => {
+    loadView('consultaEstudios'); 
+})
+
+
 // Rutas libreta vacunación 
 
 page('/vacunas', () => {
