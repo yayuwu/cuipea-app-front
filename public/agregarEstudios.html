@@ -1,0 +1,33 @@
+<main class="consulta-estudios">
+    <section class="bg-blue mt-4">
+        <h1 class="h3 fw-bold ps-3 py-3">Estudios</h1>
+        <img src="/assets/icons/icon_historia_clinica_blue.svg" alt="icon"></h1>
+    </section>
+    <section  class="p-4 my-4">
+        <p class="fw-bold h5 mb-3">Rellena con los datos del último estudio</p>
+        <form id="estudio-form">
+            <label for="fecha-estudio" class="fw-semibold">Fecha:</label>
+            <input type="date" id="fecha-estudio" name="fecha-estudio" value="2024-07-29" class="d-block mb-3 input-consulta p-1">
+            <small class="error-message" id="fecha-estudioError">* Este campo es obligatorio</small>
+
+            <label for="tipo-estudio" class="fw-semibold">Tipo de estudio:</label>
+            <input type="text" id="tipo-estudio" name="tipo-estudio" class="d-block mb-3 input-consulta p-1">
+            <small class="error-message" id="etipo-consultaError">* Este campo es obligatorio</small>
+
+            <label for="motivo-estudio" class="fw-semibold">Motivo del estudio:</label>
+            <input type="text" id="motivo-estudio" name="motivo-estudio" class="d-block mb-3 input-consulta p-1">
+            <small class="error-message" id="emotivo-consultaError">* Este campo es obligatorio</small>
+
+            <label for="resultado-estudio" class="fw-semibold">Resultado del estudio:</label>
+            <input type="text" id="resultado" name="resultado" class="d-block mb-3 input-consulta p-1">
+
+            <label for="detalle-estudio" class="fw-semibold">Detalle del estudio:</label>
+            <textarea id="detalle-estudio" name="detalle-estudio" class="d-block mb-3 input-consulta p-1"></textarea>
+
+            <label for="archivo-estudio" class="fw-semibold">Archivo del estudio:</label>
+            <input type="file" id="archivo" name="archivo" class="d-block mb-3 input-consulta p-1">
+            <div id="btn-agregar-estudio" class="d-flex justify-content-end mt-4"></div>
+        </form>
+    </section>
+
+</main>
