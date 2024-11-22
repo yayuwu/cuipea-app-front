@@ -1,6 +1,7 @@
 import Swal from "sweetalert2"
 import loadTemplate from "./loadTemplate"
 import { post, postData } from "./utils/peticiones"
+import { logout } from "./utils/logout"
 
 const urlBtnPerfiles = '/templates/btnPerfiles.hbs'
 
@@ -72,5 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log('No se encontraron perfiles.');
                 }
             })
+        const btnCerrarSesion = document.getElementById('cerrar-sesion')
+        if (btnCerrarSesion) {
+            btnCerrarSesion.addEventListener('click', () => {
+                logout()
+            })
+        }
     }, 200);
 });
