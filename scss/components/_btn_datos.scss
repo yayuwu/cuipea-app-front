@@ -1,0 +1,15 @@
+@import '../base/colors';
+
+@mixin btnDatosUsuario($backgroundColor) {
+    border: 1px solid $main-color;
+    background-color: $backgroundColor;
+    font-size: 13px;
+}
+
+.btn-datos-white {
+    @include btnDatosUsuario(white)
+}
+
+.btn-datos-blue {
+    @include btnDatosUsuario($main-color)
+}

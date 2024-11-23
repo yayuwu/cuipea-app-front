@@ -68,11 +68,35 @@ page('/registro-exitoso', () => {
 
 // Ruta perfil
 
+page('/perfiles', () => {
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('perfiles');
+    }
+})
+
 page('/perfil', () => {
     if (!checkAuth()) {
-        page.redirect('/pagina-no-encontrada');
+        page.redirect('/pagina-no-encontrada')
     } else {
-        loadView('perfil');
+        loadView('perfil')
+    }
+})
+
+page('/editar-perfil', () => {
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('editarPerfil')
+    }
+})
+
+page('/editar-datos', () => {
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('editarDatos')
     }
 })
 

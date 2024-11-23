@@ -1,10 +1,33 @@
-<main id="perfil">
-    <h2 class="ps-4 fw-bold text-white py-4 h3 mb-4">Mi perfil</h2>
-    <div class="px-4">
-        <h3 class="h4 fw-semibold mb-3">Tu perfil</h3>
-        <a href="/editar-datos" class="d-flex fw-bold ps-3 pt-3 pb-2 mb-5 h4 btn-editar-datos w-100">Editar mis datos</a>
-        <h3 class="h4 fw-semibold my-3">Tus perfiles</h3>
-        <div id="perfiles-container" class="mb-4"></div>
-        <button id="cerrar-sesion" class="btn-agregar-blue rounded mt-5 my-4">Cerrar sesión</button>
+<main id="miPerfil">
+    <div class="header-perfil"></div>
+    <div class="d-flex justify-content-center my-5 column-gap-2 mx-4">
+        <button class="w-50 fw-bold text-start px-3 py-2 box-perfil-blue" onclick="window.location.href = '/editar-perfil'">Editar datos</button>
+        <button class="w-50 fw-bold text-start px-3 py-2 box-perfil-violet" onclick="window.location.href = '/perfiles'">Cambiar de Perfil</button>
     </div>
+    <div class="container-fluid mb-4">
+        <div class="mx-2"> 
+            <h3 class="h4 fw-bold mb-4">Registrar:</h3>
+            <div class="d-flex gap-1 mb-1">
+                <button class="box-perfil-green flex-grow-1 d-flex p-2 align-items-end">
+                    <img src="assets/icons/icon_monitoreo.svg" alt="" style="width: 80px;" class="pe-2">
+                    <p class="h5 fw-bold text-wrap-custom pt-3">MONI TOREO</p>
+                </button>
+                <button onclick="window.location.href = '/vacunas'"  class="box-perfil-salmon flex-grow-1 d-flex p-2 align-items-end">
+                    <img src="assets/icons/icon_vacunación.svg" alt="" style="width: 60px;" class="pe-2">
+                    <p class="h5 fw-bold text-wrap-custom">VACU NACIÓN</p>
+                </button>
+            </div>
+            <div class="d-flex gap-1">
+                <button class="box-perfil-yellow flex-grow-1 d-flex p-2 align-items-end">
+                    <img src="assets/icons/icon_historia_clinica_yellow.svg" alt="" style="width: 60px;" class="pe-2">
+                    <p class="h5 fw-bold text-wrap-custom">HISTORIA CLÍNICA</p>
+                </button>
+                <button class="box-perfil-pink flex-grow-1 d-flex p-2 align-items-end">
+                    <img src="assets/icons/icon_turnos.svg" alt="" style="width: 70px;" class="pe-2">
+                    <p class="h5 fw-bold text-wrap-custom">TUR NOS</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    
 </main>

@@ -46,14 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tableHtml = vacunas.map(vacuna => tableTemplate(vacuna)).join('');
                 const containerVacunas = document.getElementById('rows-vacunacion');
                 if (containerVacunas) {
-                    Swal.close()
                     containerVacunas.innerHTML = tableHtml;
+                    Swal.close()
                 }
             }
 
             // Cargar las vacunas al inicio
-            loadVacunas();
-
+            await loadVacunas();
          })
         // Botones
         loadTemplate(urlBtn)

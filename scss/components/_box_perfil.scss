@@ -9,7 +9,36 @@
     }
 }
 
+@mixin headerPerfil ($color){
+    background-color: $pink-color;
+}
 
 .box-perfil-pink {
-    @include boxPerfil($pink-color, $pink-dark-color)
+    @include boxPerfil($pink-color, $pink-dark-color);
+}
+
+.box-perfil-green {
+    @include boxPerfil($green-color, #9FC9AC);
+}
+
+.box-perfil-salmon {
+    @include boxPerfil(#ED808E, #DF6F7D);
+}
+
+.box-perfil-yellow {
+    @include boxPerfil($yellow-color, #EFB833)
+}
+
+.box-perfil-violet {
+    @include boxPerfil($violet-blue-color, #737DB1);
+    font-size: 24px;
+}
+
+.box-perfil-blue {
+    @include boxPerfil($blue-color, #419BAA);
+    font-size: 24px;
+}
+
+.bg-pink-perfil {
+    @include headerPerfil($pink-color)
 }

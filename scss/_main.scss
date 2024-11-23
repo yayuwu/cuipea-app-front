@@ -16,6 +16,7 @@
 @import 'pages/libreta_vacunacion';
 @import 'pages/registro_sesion';
 @import 'pages/perfil';
+@import 'pages/editar_datos';
 
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -41,4 +42,10 @@
 
 .swal2-icon.swal2-warning .swal2-icon-content {
   color: #f8bb86 !important; 
+}
+
+.text-wrap-custom {
+  word-wrap: break-word; /* Permite que las palabras largas se rompan */
+  word-break: break-word; /* Rompe palabras en lugares apropiados */
+  color: $main-color;
 }

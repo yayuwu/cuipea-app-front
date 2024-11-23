@@ -8,6 +8,8 @@ import './registroSintomas.js'
 import './consultaEnfermedad.js'
 import './vacunacion.js'
 import './perfil.js'
+import './editarDatos.js'
+import './editarPerfil.js'
 // import './clinicData.js'
 // import './postClinicData.js'
 // import './home/carouselInfo.js'
@@ -21,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const userData = localStorage.getItem('userData')
     const btnPerfil = document.getElementById('btn-perfil');
     const linkIngreso = document.getElementById('ingreso-link')
-    console.log(linkIngreso)
+    // console.log(linkIngreso)
 
     if(userData) {
         linkIngreso.style.display = 'none'
         btnPerfil.addEventListener('click', () => {
-            window.location.href = '/perfil'
+            window.location.href = '/perfiles'
         })
         
     } else {

@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         confirmButtonText: 'Ok',
                     }).then(() => {
                         // Redirigir al inicio
-                        window.location.href = '/perfil' // Cambia la URL a donde quieres redirigir
+                        window.location.href = '/perfiles' // Cambia la URL a donde quieres redirigir
                     })
                 } catch (errors) {
                     console.log(errors)
