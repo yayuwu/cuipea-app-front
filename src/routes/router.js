@@ -100,6 +100,17 @@ page('/editar-datos', () => {
     }
 })
 
+// Historial clínico
+
+
+page('/historial', () => {
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('historial')
+    }
+})
+
 
 // Rutas control de niño sano
 

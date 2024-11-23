@@ -31,12 +31,10 @@
 
 .box-perfil-violet {
     @include boxPerfil($violet-blue-color, #737DB1);
-    font-size: 24px;
 }
 
 .box-perfil-blue {
     @include boxPerfil($blue-color, #419BAA);
-    font-size: 24px;
 }
 
 .bg-pink-perfil {

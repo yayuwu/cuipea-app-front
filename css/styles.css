@@ -2978,7 +2978,6 @@ button.buscador img {
 .box-perfil-violet {
   background-color: #7A87C2;
   border: 3px solid #737DB1;
-  font-size: 24px;
 }
 .box-perfil-violet:hover {
   text-decoration: none;
@@ -2988,7 +2987,6 @@ button.buscador img {
 .box-perfil-blue {
   background-color: #5DB3C1;
   border: 3px solid #419BAA;
-  font-size: 24px;
 }
 .box-perfil-blue:hover {
   text-decoration: none;
@@ -3013,6 +3011,10 @@ button.buscador img {
 
 .max-registrar {
   max-width: 400px;
+}
+
+.fs-btn-perfil {
+  font-size: 24px;
 }
 
 .btn-datos-white {
@@ -3042,6 +3044,39 @@ button.buscador img {
   height: 28px;
   border: 2px solid #28325A;
   border-radius: 5px;
+}
+
+#historial .bg-yellow {
+  background-color: #F6C95A;
+  position: relative;
+}
+#historial .bg-yellow img {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+#historial .grid-historial {
+  display: grid;
+  grid-template-rows: 120px 120px 76px;
+  grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "btn1 btn1 btn2 btn2 btn2" "btn3 btn3 btn3 btn4 btn4" "btn5 btn5 btn5 btn5 btn5";
+  max-width: 500px;
+}
+#historial .grid-historial .btn-1 {
+  grid-area: btn1;
+}
+#historial .grid-historial .btn-2 {
+  grid-area: btn2;
+}
+#historial .grid-historial .btn-3 {
+  grid-area: btn3;
+}
+#historial .grid-historial .btn-4 {
+  grid-area: btn4;
+}
+#historial .grid-historial .btn-5 {
+  grid-area: btn5;
 }
 
 * {

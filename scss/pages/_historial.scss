@@ -1,0 +1,40 @@
+@import '../base/colors';
+
+#historial {
+    .bg-yellow {
+        background-color: $yellow-color;
+        position: relative;
+        img {
+            position: absolute;
+            top: -30px;
+            right: 30px;
+        }
+    }
+    .grid-historial {
+        display: grid;
+        grid-template-rows: 120px 120px 76px;
+        grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr;
+        gap: 5px;
+        grid-template-areas:
+        "btn1 btn1 btn2 btn2 btn2"
+        "btn3 btn3 btn3 btn4 btn4"
+        "btn5 btn5 btn5 btn5 btn5";
+        max-width: 500px;
+        
+        .btn-1 {
+            grid-area: btn1;
+        }
+        .btn-2 {
+            grid-area: btn2;
+        }
+        .btn-3 {
+            grid-area: btn3;
+        }
+        .btn-4 {
+            grid-area: btn4;
+        }
+        .btn-5 {
+            grid-area: btn5;
+        }
+    }
+}
