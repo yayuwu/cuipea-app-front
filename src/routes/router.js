@@ -145,6 +145,11 @@ page('/atencion-guardia', () => {
     loadView('consultaGuardias'); 
 })
 
+// Ruta NOSOTROS MISION Y VISION
+
+page('/nosotros', () => {
+    loadView('nosotrosCuipea'); 
+})
 
 
 // Rutas libreta vacunación 
