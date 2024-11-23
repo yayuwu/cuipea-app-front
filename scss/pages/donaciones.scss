@@ -1,16 +1,6 @@
 @import '../base/colors';
 
-.btn-donaciones{
-    height: 100px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 8px;
-}
-
-.btn btn-donacion1{
+.btn-donacion1{
     background-color: $violet-blue-color;
+    color: #fff;
 }
-.btn-donacion2{
-    background-color:$salmon-color;
-}
-
