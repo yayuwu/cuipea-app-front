@@ -3009,6 +3009,27 @@ button.buscador img {
   width: 300px !important;
 }
 
+.consulta-estudios .bg-blue {
+  background-color: #5DB3C1;
+  position: relative;
+}
+.consulta-estudios .bg-blue img {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+.consulta-estudios .bg-grey {
+  background-color: #F4F4F4;
+}
+.consulta-estudios form .input-consulta {
+  border: 2px solid #5DB3C1;
+  border-radius: 4px;
+}
+.consulta-estudios form .input-consulta:focus {
+  border: 2px solid #5DB3C1;
+  outline: none;
+}
+
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;

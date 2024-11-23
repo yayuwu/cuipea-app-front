@@ -1,7 +1,7 @@
 import * as yup from 'yup'
 import loadTemplate from "./loadTemplate"
 
-let consultas = [
+let estudios = [
     { title: 'Estudio 1', date: '29/07/24'},
     { title: 'Estudio 2', date: '29/07/24'},
     { title: 'Estudio 3', date: '01/08/24'},
@@ -17,17 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
         loadTemplate(urlBox)
             .then(template => {
                 const boxTemplate = Handlebars.compile(template)
-                const boxHtml = consultas.map(consulta => boxTemplate(consulta)).join('')
+                const boxHtml = consultas.map(estudios => boxTemplate(estudios)).join('')
 
-                const containerBoxes = document.getElementById('consulta-estudios')
+                const estudiosBoxes = document.getElementById('estudios-container')
 
-                if(containerBoxes){
-                    containerBoxes.innerHTML = boxHtml
+                if(estudiosBoxes){
+                    estudiosBoxes.innerHTML = boxHtml
                     const boxes = document.querySelectorAll('.box-container')
                     boxes.forEach(box => box.classList.add('blue-box'))
                 }
             })
             .catch(err => console.log(err))
+
         // Botones
         loadTemplate(urlBtn)
             .then(template => {
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'guardia'
                 }
                 const btnHtml = btnTemplate(data)
-                const containerBtn = document.getElementById('btn-consultas-estudios')
+                const containerBtn = document.getElementById('btn-estudios')
                 const containerBtnAgregarConsulta = document.getElementById('btn-agregar-estudio')
 
                 if (containerBtn) {
@@ -48,11 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                 }
 
-                if (containerBtnAgregarConsulta) {
-                    containerBtnAgregarConsulta.innerHTML = btnHtml
-                    const btnConsulta = containerBtnAgregarConsulta.querySelector('.btn-agregar')
-                    btnConsulta.classList.add('.btn-agregar-blue')
-                    btnConsulta.type = 'submit'
+                if (containerBtnAgregarEstudio) {
+                    containerBtnAgregarEstudio.innerHTML = btnHtml
+                    const btnEstudio = containerBtnAgregarEstudio.querySelector('.btn-agregar')
+                    btnEstudio.classList.add('.btn-agregar-blue')
+                    btnEstudio.type = 'submit'
                 }
                 
             })
@@ -94,4 +95,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 200)
 })
-

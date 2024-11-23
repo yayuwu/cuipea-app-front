@@ -10,13 +10,16 @@
             right: 30px;
         }
     }
+    .bg-grey {
+        background-color: #F4F4F4;
+    }
     form {
         .input-consulta {
-            border: 2px solid $violet-blue-color;
+            border: 2px solid $blue-color;
             border-radius: 4px;
         }
         .input-consulta:focus {
-             border: 2px solid $violet-blue-color;
+             border: 2px solid $blue-color;
              outline: none;
         }
     }

@@ -139,6 +139,12 @@ page('/consulta-estudios', () => {
     loadView('consultaEstudios'); 
 })
 
+// Ruta de la sección de donaciones
+
+page('/donaciones', () => {
+    loadView('donar'); 
+})
+
 
 // Rutas libreta vacunación 
 
