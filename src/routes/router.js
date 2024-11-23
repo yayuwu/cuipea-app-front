@@ -139,6 +139,13 @@ page('/consulta-estudios', () => {
     loadView('consultaEstudios'); 
 })
 
+// Rutas consulta guardia
+
+page('/atencion-guardia', () => {
+    loadView('consultaGuardias'); 
+})
+
+
 
 // Rutas libreta vacunación 
 
