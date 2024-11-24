@@ -4,7 +4,7 @@ import page from 'page';
  const loadView = async (view) => {
     try {
         document.getElementById("content").innerHTML = " ";
-        const response = await fetch(`./${view}.html`);
+        const response = await fetch(`./views/${view}.html`);
         if (response.ok) {
             const html = await response.text();
             document.getElementById("content").innerHTML = html;
@@ -36,7 +36,7 @@ page('/foro', () => {
 
 page('/ingreso-sesion', () => {
     if (checkAuth()) {
-        page.redirect('/pagina-no-encontrada');
+        page.redirect('/perfiles');
     } else {
         loadView('ingresoSesion');
     }
