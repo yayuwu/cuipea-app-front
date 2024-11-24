@@ -3142,3 +3142,20 @@ button.buscador img {
 }
 
 /* fin donaciones estilo */
+
+.lact-msg{
+  color: #419BAA;
+}
+
+.btn-lactancia {
+  background-color: #28325A;
+  color: #fff;
+  border-radius: 12px;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.lactancia1{
+  justify-content: center !important;
+  margin-left: 25px;
+}
