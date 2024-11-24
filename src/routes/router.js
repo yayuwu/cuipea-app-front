@@ -31,6 +31,10 @@ page('/foro', () => {
     loadView('foro_1');
 })
 
+page('/info', () => {
+    loadView('informacion')
+})
+
 
 // Ruta login y regsitro
 
