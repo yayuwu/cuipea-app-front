@@ -56,9 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
             })
+            
         // Envío de datos formulario
         const form = document.getElementById('consulta-form')
-        console.log('Formulario: ', form)
+        // console.log('Formulario: ', form)
         if (form) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault()

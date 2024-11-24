@@ -1,0 +1,24 @@
+@import '../base/colors';
+@import '../components/box_perfil';
+
+#perfil {
+    h2 {
+        background-color: $main-color;
+    }
+    .btn-editar-datos {
+        background-color: $green-color;
+        border: 3px solid #9FC9AC;
+        &:hover {
+            text-decoration: none;
+            color: $main-color;
+        }
+    }
+}
+
+.max-registrar {
+    max-width: 400px;
+}
+
+.fs-btn-perfil {
+    font-size: 24px;
+}

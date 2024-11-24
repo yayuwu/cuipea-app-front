@@ -1,6 +1,7 @@
 import * as yup from 'yup'
 import loadTemplate from './loadTemplate'
-import { postData } from './utils/peticiones'
+import { postData, post } from './utils/peticiones'
+import Swal from 'sweetalert2'
 
 const urlBtn = '/templates/buttonAgregar.hbs'
 const urlTable = '/templates/tableRowsVacunacion.hbs'
@@ -10,19 +11,48 @@ document.addEventListener('DOMContentLoaded', () => {
         // Carga de datos en la tabla 
         loadTemplate(urlTable)
          .then(async (template) => {
-            const tableTemplate = Handlebars.compile(template)
+            const tableTemplate = Handlebars.compile(template);
 
-            // Obtener todas las vacunas
+            const userId = JSON.parse(localStorage.getItem('userData')).user.id;
+            const token = JSON.parse(localStorage.getItem('userData')).token;
 
-            const getVacunas = await postData(`${import.meta.env.VITE_BACK_URL}/vacunas/getAll`, {userId: '673900031499522c7a4928da'})
+            const currentLocation = window.location.pathname
 
-            const vacunasObtenidas = await getVacunas.json()
-
-            const tableHtml = vacunasObtenidas.vacunas.map(vacuna => tableTemplate(vacuna)).join('')
-            const containerVacunas = document.getElementById('rows-vacunacion')
-            if (containerVacunas) {
-                containerVacunas.innerHTML = tableHtml
+            if (currentLocation === '/vacunas') {
+                Swal.fire({
+                    title: 'Cargando...',
+                    allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                    didOpen: () => {
+                        Swal.showLoading() // Activa el spinner de carga
+                    },
+                })
             }
+
+            async function loadVacunas() {
+                try {
+                    // Siempre hacer la petición para obtener vacunas actualizadas
+                    const response = await post(`${import.meta.env.VITE_BACK_URL}/vacunas/getAll`, { userId }, token)
+                    const vacunasPeticion = await response.json()
+
+                    // Renderizar las vacunas
+                    renderVacunas(vacunasPeticion.vacunas)
+                } catch (error) {
+                    Swal.close()
+                    console.error('Error al obtener las vacunas:', error)
+                }
+            }
+
+            function renderVacunas(vacunas) {
+                const tableHtml = vacunas.map(vacuna => tableTemplate(vacuna)).join('');
+                const containerVacunas = document.getElementById('rows-vacunacion');
+                if (containerVacunas) {
+                    containerVacunas.innerHTML = tableHtml;
+                    Swal.close()
+                }
+            }
+
+            // Cargar las vacunas al inicio
+            await loadVacunas();
          })
         // Botones
         loadTemplate(urlBtn)
@@ -61,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault()
 
+                const userId = JSON.parse(localStorage.getItem('userData'))
+
                 // Schema con yup para manejar las validaciones
                 const schema = yup.object().shape({
                     vacuna: yup.string().required('Es requerido seleccionar una opción'),
@@ -75,19 +107,49 @@ document.addEventListener('DOMContentLoaded', () => {
                     dosisVacuna: document.getElementById('dosisVacuna').value,
                     edadVacuna: document.getElementById('edadVacuna').value,
                     dateVacuna: document.getElementById('dateVacuna').value,
-                    userId: '673900031499522c7a4928da',
+                    userId: userId.user.id,
                 }
 
                 try {
                     await schema.validate(formData, { abortEarly: false })
                     console.log('Datos enviados: ', formData)
+                    
+                    Swal.fire({
+                        title: 'Cargando...',
+                        text: 'Por favor, espere mientras procesamos su solicitud.',
+                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        didOpen: () => {
+                            Swal.showLoading() // Activa el spinner de carga
+                        },
+                    })
                     const response = await postData(`${import.meta.env.VITE_BACK_URL}/vacunas/crear`, formData)
     
                     if (response) {
-                        alert('Formulario enviado correctamente');
+                        Swal.close()
+                        Swal.fire({
+                            title: "Vacuna subida",
+                            text: "¿Quieres agregar otra vacuna?",
+                            icon: "success",
+                            showDenyButton: true,
+                            confirmButtonText: "Si",
+                            denyButtonText: `No`
+                          }).then(result => {
+                            if(result.isConfirmed){
+                                Swal.close()
+                            } else {
+                                window.location.href = '/vacunas'
+                            }
+                          })
                     } else {
-                        alert('Ocurrió un error al enviar los datos');
+                        Swal.close()
+                        Swal.fire({
+                            title: "Error al subir vacuna",
+                            text: "Intentelo de nuevo más tarde",
+                            icon: "error",
+                            button: 'Ok'
+                        })
                     }
+
                 } catch (errors) {
                     console.log('Ocurrió un error: ', errors)
                     errors.inner.forEach(error => {

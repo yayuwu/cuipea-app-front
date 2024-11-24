@@ -1,0 +1,23 @@
+@import '../base/colors';
+@import '../components/btn_datos';
+
+#editarDatos {
+    h2 {
+        background-color: $green-color;
+    }
+    .input-editar-datos {
+        width: 140px;
+        height: 28px;
+        border: 2px solid $main-color;
+        border-radius: 5px;
+    }
+}
+
+#editaPerfil {
+    .input-editar-datos {
+        width: 140px;
+        height: 28px;
+        border: 2px solid $main-color;
+        border-radius: 5px;
+    }
+}

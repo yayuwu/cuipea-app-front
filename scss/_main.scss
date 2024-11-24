@@ -15,7 +15,13 @@
 @import 'pages/consulta_enfermedad';
 @import 'pages/libreta_vacunacion';
 @import 'pages/registro_sesion';
+
 @import 'pages/conEstudios';
+
+@import 'pages/perfil';
+@import 'pages/editar_datos';
+@import 'pages/historial';
+
 
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -37,4 +43,14 @@
 .error-message {
   color: rgb(206, 0, 0);
   display: none;
+}
+
+.swal2-icon.swal2-warning .swal2-icon-content {
+  color: #f8bb86 !important; 
+}
+
+.text-wrap-custom {
+  word-wrap: break-word; /* Permite que las palabras largas se rompan */
+  word-break: break-word; /* Rompe palabras en lugares apropiados */
+  color: $main-color;
 }

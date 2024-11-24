@@ -142,63 +142,53 @@
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
-.navbar-nav .nav-link {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: bold;
-  color: #28325A;
+.navbar-nav li:nth-child(1) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F2A7B1;
 }
-
-/* Efecto de hover en los elementos del navbar */
+.navbar-nav li:nth-child(2) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #7A87C2;
+}
+.navbar-nav li:nth-child(3) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #5DB3C1;
+}
+.navbar-nav li:nth-child(4) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #DEABCA;
+}
+.navbar-nav li:nth-child(5) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F6C95A;
+}
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #28325A !important;
+  position: relative;
+}
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: #EF8090;
-  text-decoration-thickness: 3px; /* grosor del subrayado */
+  text-decoration-thickness: 3px;
+}
+.navbar-nav .dropdown-item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #cccccc;
 }
 
-.navbar-nav .nav-link.ingreso:hover {
-  color: #fff;
-  background-color: #F6C95A;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#btn-menu {
+  outline: none !important;
+  box-shadow: none !important;
 }
-
-.navbar-nav .nav-link.ingreso:active {
-  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #f5d177;
-}
-
-/* Efecto de click (active) en los elementos del navbar */
-.navbar-nav .nav-link:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #EF8090;
-}
-
-/* Menú desplegable */
-/* Estilo base para los elementos del dropdown */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-}
-
-.dropdown-menu .dropdown-item:hover {
-  color: #fff; /* Color del texto al pasar el mouse */
-}
-
-/* Estilo de hover para cada ítem específico: */
-.dropdown-menu .dropdown-item.item-1:hover {
-  background-color: #5DB3C1;
-}
-
-.dropdown-menu .dropdown-item.item-2:hover {
-  background-color: #F6C95A;
-}
-
-.dropdown-menu .dropdown-item.item-3:hover {
-  background-color: #A9D5B6;
-}
-
-.dropdown-menu .dropdown-item.item-4:hover {
-  background-color: #7A87C2;
+#btn-menu:focus, #btn-menu:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .subtitle {
@@ -402,6 +392,33 @@
 .btn-donar:active {
   box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
   color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+#grid-cuipea {
+  display: grid;
+  grid-template-rows: 150px 70px 70px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
+}
+#grid-cuipea .box-1 {
+  grid-area: box1;
+}
+#grid-cuipea .box-2 {
+  grid-area: box2;
+}
+#grid-cuipea .box-3 {
+  grid-area: box3;
+}
+#grid-cuipea .box-4 {
+  grid-area: box4;
+}
+#grid-cuipea .box-5 {
+  grid-area: box5;
+}
+#grid-cuipea .box-6 {
+  grid-area: box6;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
@@ -638,63 +655,53 @@ footer .footer-bottom p a {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
-.navbar-nav .nav-link {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: bold;
-  color: #28325A;
+.navbar-nav li:nth-child(1) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F2A7B1;
 }
-
-/* Efecto de hover en los elementos del navbar */
+.navbar-nav li:nth-child(2) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #7A87C2;
+}
+.navbar-nav li:nth-child(3) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #5DB3C1;
+}
+.navbar-nav li:nth-child(4) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #DEABCA;
+}
+.navbar-nav li:nth-child(5) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F6C95A;
+}
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #28325A !important;
+  position: relative;
+}
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: #EF8090;
-  text-decoration-thickness: 3px; /* grosor del subrayado */
+  text-decoration-thickness: 3px;
+}
+.navbar-nav .dropdown-item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #cccccc;
 }
 
-.navbar-nav .nav-link.ingreso:hover {
-  color: #fff;
-  background-color: #F6C95A;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#btn-menu {
+  outline: none !important;
+  box-shadow: none !important;
 }
-
-.navbar-nav .nav-link.ingreso:active {
-  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #f5d177;
-}
-
-/* Efecto de click (active) en los elementos del navbar */
-.navbar-nav .nav-link:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #EF8090;
-}
-
-/* Menú desplegable */
-/* Estilo base para los elementos del dropdown */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-}
-
-.dropdown-menu .dropdown-item:hover {
-  color: #fff; /* Color del texto al pasar el mouse */
-}
-
-/* Estilo de hover para cada ítem específico: */
-.dropdown-menu .dropdown-item.item-1:hover {
-  background-color: #5DB3C1;
-}
-
-.dropdown-menu .dropdown-item.item-2:hover {
-  background-color: #F6C95A;
-}
-
-.dropdown-menu .dropdown-item.item-3:hover {
-  background-color: #A9D5B6;
-}
-
-.dropdown-menu .dropdown-item.item-4:hover {
-  background-color: #7A87C2;
+#btn-menu:focus, #btn-menu:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .card_foro {
@@ -837,63 +844,53 @@ footer .footer-bottom p a {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
-.navbar-nav .nav-link {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: bold;
-  color: #28325A;
+.navbar-nav li:nth-child(1) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F2A7B1;
 }
-
-/* Efecto de hover en los elementos del navbar */
+.navbar-nav li:nth-child(2) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #7A87C2;
+}
+.navbar-nav li:nth-child(3) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #5DB3C1;
+}
+.navbar-nav li:nth-child(4) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #DEABCA;
+}
+.navbar-nav li:nth-child(5) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F6C95A;
+}
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #28325A !important;
+  position: relative;
+}
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: #EF8090;
-  text-decoration-thickness: 3px; /* grosor del subrayado */
+  text-decoration-thickness: 3px;
+}
+.navbar-nav .dropdown-item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #cccccc;
 }
 
-.navbar-nav .nav-link.ingreso:hover {
-  color: #fff;
-  background-color: #F6C95A;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#btn-menu {
+  outline: none !important;
+  box-shadow: none !important;
 }
-
-.navbar-nav .nav-link.ingreso:active {
-  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #f5d177;
-}
-
-/* Efecto de click (active) en los elementos del navbar */
-.navbar-nav .nav-link:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #EF8090;
-}
-
-/* Menú desplegable */
-/* Estilo base para los elementos del dropdown */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-}
-
-.dropdown-menu .dropdown-item:hover {
-  color: #fff; /* Color del texto al pasar el mouse */
-}
-
-/* Estilo de hover para cada ítem específico: */
-.dropdown-menu .dropdown-item.item-1:hover {
-  background-color: #5DB3C1;
-}
-
-.dropdown-menu .dropdown-item.item-2:hover {
-  background-color: #F6C95A;
-}
-
-.dropdown-menu .dropdown-item.item-3:hover {
-  background-color: #A9D5B6;
-}
-
-.dropdown-menu .dropdown-item.item-4:hover {
-  background-color: #7A87C2;
+#btn-menu:focus, #btn-menu:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .subtitle {
@@ -1097,6 +1094,33 @@ footer .footer-bottom p a {
 .btn-donar:active {
   box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
   color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+#grid-cuipea {
+  display: grid;
+  grid-template-rows: 150px 70px 70px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
+}
+#grid-cuipea .box-1 {
+  grid-area: box1;
+}
+#grid-cuipea .box-2 {
+  grid-area: box2;
+}
+#grid-cuipea .box-3 {
+  grid-area: box3;
+}
+#grid-cuipea .box-4 {
+  grid-area: box4;
+}
+#grid-cuipea .box-5 {
+  grid-area: box5;
+}
+#grid-cuipea .box-6 {
+  grid-area: box6;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
@@ -1701,63 +1725,53 @@ section.carousel {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
-.navbar-nav .nav-link {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: bold;
-  color: #28325A;
+.navbar-nav li:nth-child(1) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F2A7B1;
 }
-
-/* Efecto de hover en los elementos del navbar */
+.navbar-nav li:nth-child(2) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #7A87C2;
+}
+.navbar-nav li:nth-child(3) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #5DB3C1;
+}
+.navbar-nav li:nth-child(4) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #DEABCA;
+}
+.navbar-nav li:nth-child(5) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F6C95A;
+}
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #28325A !important;
+  position: relative;
+}
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: #EF8090;
-  text-decoration-thickness: 3px; /* grosor del subrayado */
+  text-decoration-thickness: 3px;
+}
+.navbar-nav .dropdown-item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #cccccc;
 }
 
-.navbar-nav .nav-link.ingreso:hover {
-  color: #fff;
-  background-color: #F6C95A;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#btn-menu {
+  outline: none !important;
+  box-shadow: none !important;
 }
-
-.navbar-nav .nav-link.ingreso:active {
-  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #f5d177;
-}
-
-/* Efecto de click (active) en los elementos del navbar */
-.navbar-nav .nav-link:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #EF8090;
-}
-
-/* Menú desplegable */
-/* Estilo base para los elementos del dropdown */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-}
-
-.dropdown-menu .dropdown-item:hover {
-  color: #fff; /* Color del texto al pasar el mouse */
-}
-
-/* Estilo de hover para cada ítem específico: */
-.dropdown-menu .dropdown-item.item-1:hover {
-  background-color: #5DB3C1;
-}
-
-.dropdown-menu .dropdown-item.item-2:hover {
-  background-color: #F6C95A;
-}
-
-.dropdown-menu .dropdown-item.item-3:hover {
-  background-color: #A9D5B6;
-}
-
-.dropdown-menu .dropdown-item.item-4:hover {
-  background-color: #7A87C2;
+#btn-menu:focus, #btn-menu:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .header-data-clinic {
@@ -1802,63 +1816,53 @@ section.carousel {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
-.navbar-nav .nav-link {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: bold;
-  color: #28325A;
+.navbar-nav li:nth-child(1) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F2A7B1;
 }
-
-/* Efecto de hover en los elementos del navbar */
+.navbar-nav li:nth-child(2) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #7A87C2;
+}
+.navbar-nav li:nth-child(3) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #5DB3C1;
+}
+.navbar-nav li:nth-child(4) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #DEABCA;
+}
+.navbar-nav li:nth-child(5) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F6C95A;
+}
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #28325A !important;
+  position: relative;
+}
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: #EF8090;
-  text-decoration-thickness: 3px; /* grosor del subrayado */
+  text-decoration-thickness: 3px;
+}
+.navbar-nav .dropdown-item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #cccccc;
 }
 
-.navbar-nav .nav-link.ingreso:hover {
-  color: #fff;
-  background-color: #F6C95A;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#btn-menu {
+  outline: none !important;
+  box-shadow: none !important;
 }
-
-.navbar-nav .nav-link.ingreso:active {
-  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #f5d177;
-}
-
-/* Efecto de click (active) en los elementos del navbar */
-.navbar-nav .nav-link:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #EF8090;
-}
-
-/* Menú desplegable */
-/* Estilo base para los elementos del dropdown */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-}
-
-.dropdown-menu .dropdown-item:hover {
-  color: #fff; /* Color del texto al pasar el mouse */
-}
-
-/* Estilo de hover para cada ítem específico: */
-.dropdown-menu .dropdown-item.item-1:hover {
-  background-color: #5DB3C1;
-}
-
-.dropdown-menu .dropdown-item.item-2:hover {
-  background-color: #F6C95A;
-}
-
-.dropdown-menu .dropdown-item.item-3:hover {
-  background-color: #A9D5B6;
-}
-
-.dropdown-menu .dropdown-item.item-4:hover {
-  background-color: #7A87C2;
+#btn-menu:focus, #btn-menu:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 #h1-form-data-clinic {
@@ -1979,63 +1983,53 @@ section.carousel {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
-.navbar-nav .nav-link {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: bold;
-  color: #28325A;
+.navbar-nav li:nth-child(1) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F2A7B1;
 }
-
-/* Efecto de hover en los elementos del navbar */
+.navbar-nav li:nth-child(2) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #7A87C2;
+}
+.navbar-nav li:nth-child(3) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #5DB3C1;
+}
+.navbar-nav li:nth-child(4) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #DEABCA;
+}
+.navbar-nav li:nth-child(5) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F6C95A;
+}
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #28325A !important;
+  position: relative;
+}
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: #EF8090;
-  text-decoration-thickness: 3px; /* grosor del subrayado */
+  text-decoration-thickness: 3px;
+}
+.navbar-nav .dropdown-item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #cccccc;
 }
 
-.navbar-nav .nav-link.ingreso:hover {
-  color: #fff;
-  background-color: #F6C95A;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#btn-menu {
+  outline: none !important;
+  box-shadow: none !important;
 }
-
-.navbar-nav .nav-link.ingreso:active {
-  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #f5d177;
-}
-
-/* Efecto de click (active) en los elementos del navbar */
-.navbar-nav .nav-link:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #EF8090;
-}
-
-/* Menú desplegable */
-/* Estilo base para los elementos del dropdown */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-}
-
-.dropdown-menu .dropdown-item:hover {
-  color: #fff; /* Color del texto al pasar el mouse */
-}
-
-/* Estilo de hover para cada ítem específico: */
-.dropdown-menu .dropdown-item.item-1:hover {
-  background-color: #5DB3C1;
-}
-
-.dropdown-menu .dropdown-item.item-2:hover {
-  background-color: #F6C95A;
-}
-
-.dropdown-menu .dropdown-item.item-3:hover {
-  background-color: #A9D5B6;
-}
-
-.dropdown-menu .dropdown-item.item-4:hover {
-  background-color: #7A87C2;
+#btn-menu:focus, #btn-menu:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .card_foro {
@@ -2178,63 +2172,53 @@ section.carousel {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
-.navbar-nav .nav-link {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: bold;
-  color: #28325A;
+.navbar-nav li:nth-child(1) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F2A7B1;
 }
-
-/* Efecto de hover en los elementos del navbar */
+.navbar-nav li:nth-child(2) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #7A87C2;
+}
+.navbar-nav li:nth-child(3) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #5DB3C1;
+}
+.navbar-nav li:nth-child(4) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #DEABCA;
+}
+.navbar-nav li:nth-child(5) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #F6C95A;
+}
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #28325A !important;
+  position: relative;
+}
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: #EF8090;
-  text-decoration-thickness: 3px; /* grosor del subrayado */
+  text-decoration-thickness: 3px;
+}
+.navbar-nav .dropdown-item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #cccccc;
 }
 
-.navbar-nav .nav-link.ingreso:hover {
-  color: #fff;
-  background-color: #F6C95A;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#btn-menu {
+  outline: none !important;
+  box-shadow: none !important;
 }
-
-.navbar-nav .nav-link.ingreso:active {
-  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
-  background-color: #f5d177;
-}
-
-/* Efecto de click (active) en los elementos del navbar */
-.navbar-nav .nav-link:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #EF8090;
-}
-
-/* Menú desplegable */
-/* Estilo base para los elementos del dropdown */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
-}
-
-.dropdown-menu .dropdown-item:hover {
-  color: #fff; /* Color del texto al pasar el mouse */
-}
-
-/* Estilo de hover para cada ítem específico: */
-.dropdown-menu .dropdown-item.item-1:hover {
-  background-color: #5DB3C1;
-}
-
-.dropdown-menu .dropdown-item.item-2:hover {
-  background-color: #F6C95A;
-}
-
-.dropdown-menu .dropdown-item.item-3:hover {
-  background-color: #A9D5B6;
-}
-
-.dropdown-menu .dropdown-item.item-4:hover {
-  background-color: #7A87C2;
+#btn-menu:focus, #btn-menu:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .subtitle {
@@ -2438,6 +2422,33 @@ section.carousel {
 .btn-donar:active {
   box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
   color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+#grid-cuipea {
+  display: grid;
+  grid-template-rows: 150px 70px 70px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
+}
+#grid-cuipea .box-1 {
+  grid-area: box1;
+}
+#grid-cuipea .box-2 {
+  grid-area: box2;
+}
+#grid-cuipea .box-3 {
+  grid-area: box3;
+}
+#grid-cuipea .box-4 {
+  grid-area: box4;
+}
+#grid-cuipea .box-5 {
+  grid-area: box5;
+}
+#grid-cuipea .box-6 {
+  grid-area: box6;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
@@ -3009,15 +3020,131 @@ button.buscador img {
   width: 300px !important;
 }
 
+
 .consulta-estudios .bg-blue {
   background-color: #5DB3C1;
   position: relative;
 }
 .consulta-estudios .bg-blue img {
+=======
+.box-perfil-pink {
+  background-color: #EEC5DD;
+  border: 3px solid #DEABCA;
+}
+.box-perfil-pink:hover {
+  text-decoration: none;
+  color: #28325A;
+}
+
+.box-perfil-green {
+  background-color: #A9D5B6;
+  border: 3px solid #9FC9AC;
+}
+.box-perfil-green:hover {
+  text-decoration: none;
+  color: #28325A;
+}
+
+.box-perfil-salmon {
+  background-color: #ED808E;
+  border: 3px solid #DF6F7D;
+}
+.box-perfil-salmon:hover {
+  text-decoration: none;
+  color: #28325A;
+}
+
+.box-perfil-yellow {
+  background-color: #F6C95A;
+  border: 3px solid #EFB833;
+}
+.box-perfil-yellow:hover {
+  text-decoration: none;
+  color: #28325A;
+}
+
+.box-perfil-violet {
+  background-color: #7A87C2;
+  border: 3px solid #737DB1;
+}
+.box-perfil-violet:hover {
+  text-decoration: none;
+  color: #28325A;
+}
+
+.box-perfil-blue {
+  background-color: #5DB3C1;
+  border: 3px solid #419BAA;
+}
+.box-perfil-blue:hover {
+  text-decoration: none;
+  color: #28325A;
+}
+
+.bg-pink-perfil {
+  background-color: #EEC5DD;
+}
+
+#perfil h2 {
+  background-color: #28325A;
+}
+#perfil .btn-editar-datos {
+  background-color: #A9D5B6;
+  border: 3px solid #9FC9AC;
+}
+#perfil .btn-editar-datos:hover {
+  text-decoration: none;
+  color: #28325A;
+}
+
+.max-registrar {
+  max-width: 400px;
+}
+
+.fs-btn-perfil {
+  font-size: 24px;
+}
+
+.btn-datos-white {
+  border: 1px solid #28325A;
+  background-color: white;
+  font-size: 13px;
+}
+
+.btn-datos-blue {
+  border: 1px solid #28325A;
+  background-color: #28325A;
+  font-size: 13px;
+}
+
+#editarDatos h2 {
+  background-color: #A9D5B6;
+}
+#editarDatos .input-editar-datos {
+  width: 140px;
+  height: 28px;
+  border: 2px solid #28325A;
+  border-radius: 5px;
+}
+
+#editaPerfil .input-editar-datos {
+  width: 140px;
+  height: 28px;
+  border: 2px solid #28325A;
+  border-radius: 5px;
+}
+
+#historial .bg-yellow {
+  background-color: #F6C95A;
+  position: relative;
+}
+#historial .bg-yellow img {
+
   position: absolute;
   top: -30px;
   right: 30px;
 }
+
 .consulta-estudios .bg-grey {
   background-color: #F4F4F4;
 }
@@ -3028,6 +3155,30 @@ button.buscador img {
 .consulta-estudios form .input-consulta:focus {
   border: 2px solid #5DB3C1;
   outline: none;
+
+#historial .grid-historial {
+  display: grid;
+  grid-template-rows: 120px 120px 76px;
+  grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "btn1 btn1 btn2 btn2 btn2" "btn3 btn3 btn3 btn4 btn4" "btn5 btn5 btn5 btn5 btn5";
+  max-width: 500px;
+}
+#historial .grid-historial .btn-1 {
+  grid-area: btn1;
+}
+#historial .grid-historial .btn-2 {
+  grid-area: btn2;
+}
+#historial .grid-historial .btn-3 {
+  grid-area: btn3;
+}
+#historial .grid-historial .btn-4 {
+  grid-area: btn4;
+}
+#historial .grid-historial .btn-5 {
+  grid-area: btn5;
+
 }
 
 * {
@@ -3050,6 +3201,16 @@ button.buscador img {
 .error-message {
   color: rgb(206, 0, 0);
   display: none;
+}
+
+.swal2-icon.swal2-warning .swal2-icon-content {
+  color: #f8bb86 !important;
+}
+
+.text-wrap-custom {
+  word-wrap: break-word; /* Permite que las palabras largas se rompan */
+  word-break: break-word; /* Rompe palabras en lugares apropiados */
+  color: #28325A;
 }
 
 /*# sourceMappingURL=styles.css.map */
