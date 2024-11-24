@@ -3056,6 +3056,12 @@ button.buscador img {
 
 /* donaciones estilo */
 
+.donar-img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .donacion1{
   max-width: 100%;
 }
