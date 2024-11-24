@@ -7,9 +7,13 @@ import './controlNinoSano.js'
 import './registroSintomas.js'
 import './consultaEnfermedad.js'
 import './vacunacion.js'
+
+import './consultaEstudios.js'
+
 import './perfil.js'
 import './editarDatos.js'
 import './editarPerfil.js'
+
 // import './clinicData.js'
 // import './postClinicData.js'
 // import './home/carouselInfo.js'
