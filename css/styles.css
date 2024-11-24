@@ -3053,3 +3053,36 @@ button.buscador img {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+/* donaciones estilo */
+
+.btn-donacion1 {
+  background-color: #7A87C2;
+  font-size: 1.2rem;
+  color: #28325A;
+}
+.btn-donacion2{
+  background-color: #F2A7B1;
+  font-size: 1.2rem;
+  color: #28325A;
+}
+.btn-donacion3{
+  background-color: #A9D5B6;
+  font-size: 1.2rem;
+  color: #28325A;
+}
+.btn-donacion4{
+  background-color: #F6C95A;
+  font-size: 1.2rem;
+  color: #28325A;
+}
+.btn-donacion5{
+  background-color: #5DB3C1;
+  font-size: 1.2rem;
+  color: #28325A;
+}
+.btn-donacion6{
+  background-color: #DEABCA;
+  font-size: 1.2rem;
+  color: #28325A;
+}
