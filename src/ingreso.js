@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         },
                     })
                     console.log(formData)
-                    const response = await postData(`${import.meta.env.VITE_BACK_URL}/login'`, formData)
+                    const response = await postData(`${import.meta.env.VITE_BACK_URL}/login`, formData)
 
                     if (!response) {
                         Swal.close()
@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           })
                         throw new Error('Ocurrió un error al iniciar sesión')
                     }
+
                     console.log(response)
 
                     const data = await response.json()
@@ -60,8 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         confirmButtonText: 'Ok',
                     }).then(() => {
                         // Redirigir al inicio
-                        window.location.href = '/' // Cambia la URL a donde quieres redirigir
+                        window.location.href = '/perfiles' // Cambia la URL a donde quieres redirigir
                     })
+
                 } catch (errors) {
                     console.log(errors)
                     const errorElements = document.querySelectorAll('small[id$="-error"]')
