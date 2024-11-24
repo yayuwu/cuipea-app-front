@@ -395,6 +395,33 @@
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
+#grid-cuipea {
+  display: grid;
+  grid-template-rows: 150px 70px 70px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
+}
+#grid-cuipea .box-1 {
+  grid-area: box1;
+}
+#grid-cuipea .box-2 {
+  grid-area: box2;
+}
+#grid-cuipea .box-3 {
+  grid-area: box3;
+}
+#grid-cuipea .box-4 {
+  grid-area: box4;
+}
+#grid-cuipea .box-5 {
+  grid-area: box5;
+}
+#grid-cuipea .box-6 {
+  grid-area: box6;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
 /* Seccion informacion */
 #info {
   padding: 30px 30px;
@@ -1067,6 +1094,33 @@ footer .footer-bottom p a {
 .btn-donar:active {
   box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
   color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+#grid-cuipea {
+  display: grid;
+  grid-template-rows: 150px 70px 70px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
+}
+#grid-cuipea .box-1 {
+  grid-area: box1;
+}
+#grid-cuipea .box-2 {
+  grid-area: box2;
+}
+#grid-cuipea .box-3 {
+  grid-area: box3;
+}
+#grid-cuipea .box-4 {
+  grid-area: box4;
+}
+#grid-cuipea .box-5 {
+  grid-area: box5;
+}
+#grid-cuipea .box-6 {
+  grid-area: box6;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
@@ -2368,6 +2422,33 @@ section.carousel {
 .btn-donar:active {
   box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
   color: #28325A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+#grid-cuipea {
+  display: grid;
+  grid-template-rows: 150px 70px 70px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
+}
+#grid-cuipea .box-1 {
+  grid-area: box1;
+}
+#grid-cuipea .box-2 {
+  grid-area: box2;
+}
+#grid-cuipea .box-3 {
+  grid-area: box3;
+}
+#grid-cuipea .box-4 {
+  grid-area: box4;
+}
+#grid-cuipea .box-5 {
+  grid-area: box5;
+}
+#grid-cuipea .box-6 {
+  grid-area: box6;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
