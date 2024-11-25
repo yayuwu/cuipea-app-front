@@ -7,7 +7,7 @@
 
 // Estilos para los h2
 .subtitle {
-    font-size: 30px;
+    font-size: 40px;
     @include breakpoint(sm){
         font-size: 40px;
     }
@@ -25,7 +25,7 @@
 
 // SECCIÓN FORO
 #foro {
-    margin-left: 12px;
+    // margin-left: 12px;
     h2 {
         font-weight: 700;
         color: $pink-dark-color;
@@ -322,7 +322,7 @@
 /* carrousel */
 
 #informacion-landing {
-  max-width: 50%;
+  max-width: 250px;
   padding: 10px;
 }
 
@@ -340,13 +340,8 @@
 .tarjeta {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 3px 2px 5px #5db4c1ad;
   margin-bottom: 15px;
   border-color: #5DB3C1;
-}
-
-.tarjeta:hover{
-  filter: brightness(110%);
 }
 
 
@@ -359,32 +354,33 @@
 .tarjeta-body {
   font-weight: bold;
   background-color: #5DB3C1;
+  min-height: 170px;
   color: #fff;
-  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
   padding: 15px;
-  text-align: center;
+  text-align: start;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .tarjeta-body p {
-  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
-  color: #fff;
+    font-size: 10px;
+    color: $main-color;
+    font-weight: 600;
+    padding-bottom: 10px;
 }
 
 /*Boton ver mas*/
 .btn-landing-info {
   background-color: #27325A;
   color: white;
-  padding: 5px;
+  padding: 5px 23px 5px 23px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+  font-size: 10px;
 }
 
 .btn-landing-info:hover {
-  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
   text-decoration: none;
   background-color: #fff;
   color: $main-color;
@@ -414,6 +410,12 @@
 }
 
 /* Responsive de toda la seccion */
+
+@media (min-width: 720px) {
+  #informacion-landing {
+    min-width: 550px;
+  }
+}
 
 @media (max-width: 768px) {
   #info {

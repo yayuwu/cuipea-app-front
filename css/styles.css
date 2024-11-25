@@ -197,7 +197,7 @@
 }
 
 .subtitle {
-  font-size: 30px;
+  font-size: 40px;
 }
 @media (min-width: 576px) {
   .subtitle {
@@ -216,9 +216,6 @@
   }
 }
 
-#foro {
-  margin-left: 12px;
-}
 #foro h2 {
   font-weight: 700;
   color: #DEABCA;
@@ -486,7 +483,7 @@
 
 /* carrousel */
 #informacion-landing {
-  max-width: 50%;
+  max-width: 250px;
   padding: 10px;
 }
 
@@ -504,13 +501,8 @@
 .tarjeta {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 3px 2px 5px rgba(93, 180, 193, 0.6784313725);
   margin-bottom: 15px;
   border-color: #5DB3C1;
-}
-
-.tarjeta:hover {
-  filter: brightness(110%);
 }
 
 .tarjeta-img {
@@ -522,32 +514,33 @@
 .tarjeta-body {
   font-weight: bold;
   background-color: #5DB3C1;
+  min-height: 170px;
   color: #fff;
-  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
   padding: 15px;
-  text-align: center;
+  text-align: start;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .tarjeta-body p {
-  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
-  color: #fff;
+  font-size: 10px;
+  color: #28325A;
+  font-weight: 600;
+  padding-bottom: 10px;
 }
 
 /*Boton ver mas*/
 .btn-landing-info {
   background-color: #27325A;
   color: white;
-  padding: 5px;
+  padding: 5px 23px 5px 23px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+  font-size: 10px;
 }
 
 .btn-landing-info:hover {
-  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
   text-decoration: none;
   background-color: #fff;
   color: #28325A;
@@ -575,6 +568,11 @@
 }
 
 /* Responsive de toda la seccion */
+@media (min-width: 720px) {
+  #informacion-landing {
+    min-width: 550px;
+  }
+}
 @media (max-width: 768px) {
   #info {
     flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
@@ -940,7 +938,7 @@ footer .footer-bottom p {
 }
 
 .subtitle {
-  font-size: 30px;
+  font-size: 40px;
 }
 @media (min-width: 576px) {
   .subtitle {
@@ -959,9 +957,6 @@ footer .footer-bottom p {
   }
 }
 
-#foro {
-  margin-left: 12px;
-}
 #foro h2 {
   font-weight: 700;
   color: #DEABCA;
@@ -1229,7 +1224,7 @@ footer .footer-bottom p {
 
 /* carrousel */
 #informacion-landing {
-  max-width: 50%;
+  max-width: 250px;
   padding: 10px;
 }
 
@@ -1247,13 +1242,8 @@ footer .footer-bottom p {
 .tarjeta {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 3px 2px 5px rgba(93, 180, 193, 0.6784313725);
   margin-bottom: 15px;
   border-color: #5DB3C1;
-}
-
-.tarjeta:hover {
-  filter: brightness(110%);
 }
 
 .tarjeta-img {
@@ -1265,32 +1255,33 @@ footer .footer-bottom p {
 .tarjeta-body {
   font-weight: bold;
   background-color: #5DB3C1;
+  min-height: 170px;
   color: #fff;
-  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
   padding: 15px;
-  text-align: center;
+  text-align: start;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .tarjeta-body p {
-  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
-  color: #fff;
+  font-size: 10px;
+  color: #28325A;
+  font-weight: 600;
+  padding-bottom: 10px;
 }
 
 /*Boton ver mas*/
 .btn-landing-info {
   background-color: #27325A;
   color: white;
-  padding: 5px;
+  padding: 5px 23px 5px 23px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+  font-size: 10px;
 }
 
 .btn-landing-info:hover {
-  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
   text-decoration: none;
   background-color: #fff;
   color: #28325A;
@@ -1318,6 +1309,11 @@ footer .footer-bottom p {
 }
 
 /* Responsive de toda la seccion */
+@media (min-width: 720px) {
+  #informacion-landing {
+    min-width: 550px;
+  }
+}
 @media (max-width: 768px) {
   #info {
     flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
@@ -1433,7 +1429,7 @@ footer .footer-bottom p {
   margin: 0;
 }
 
-.subtitle.info, .info, .p {
+.subtitle.info, .info {
   padding-left: 15px;
 }
 
@@ -2319,7 +2315,7 @@ section.carousel {
 }
 
 .subtitle {
-  font-size: 30px;
+  font-size: 40px;
 }
 @media (min-width: 576px) {
   .subtitle {
@@ -2338,9 +2334,6 @@ section.carousel {
   }
 }
 
-#foro {
-  margin-left: 12px;
-}
 #foro h2 {
   font-weight: 700;
   color: #DEABCA;
@@ -2608,7 +2601,7 @@ section.carousel {
 
 /* carrousel */
 #informacion-landing {
-  max-width: 50%;
+  max-width: 250px;
   padding: 10px;
 }
 
@@ -2626,13 +2619,8 @@ section.carousel {
 .tarjeta {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 3px 2px 5px rgba(93, 180, 193, 0.6784313725);
   margin-bottom: 15px;
   border-color: #5DB3C1;
-}
-
-.tarjeta:hover {
-  filter: brightness(110%);
 }
 
 .tarjeta-img {
@@ -2644,32 +2632,33 @@ section.carousel {
 .tarjeta-body {
   font-weight: bold;
   background-color: #5DB3C1;
+  min-height: 170px;
   color: #fff;
-  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.342);
   padding: 15px;
-  text-align: center;
+  text-align: start;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .tarjeta-body p {
-  text-shadow: 2px 2px 5px rgba(15, 15, 15, 0.5);
-  color: #fff;
+  font-size: 10px;
+  color: #28325A;
+  font-weight: 600;
+  padding-bottom: 10px;
 }
 
 /*Boton ver mas*/
 .btn-landing-info {
   background-color: #27325A;
   color: white;
-  padding: 5px;
+  padding: 5px 23px 5px 23px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+  font-size: 10px;
 }
 
 .btn-landing-info:hover {
-  box-shadow: 0 6px 10px rgba(255, 252, 252, 0.877);
   text-decoration: none;
   background-color: #fff;
   color: #28325A;
@@ -2697,6 +2686,11 @@ section.carousel {
 }
 
 /* Responsive de toda la seccion */
+@media (min-width: 720px) {
+  #informacion-landing {
+    min-width: 550px;
+  }
+}
 @media (max-width: 768px) {
   #info {
     flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
