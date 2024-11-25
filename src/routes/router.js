@@ -145,6 +145,10 @@ page('/atencion-guardia', () => {
     loadView('consultaGuardias'); 
 })
 
+page('/agregar-guardia', () => {
+    loadView('agregarGuardias'); 
+})
+
 
 
 // Rutas libreta vacunación 

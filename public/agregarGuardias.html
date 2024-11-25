@@ -1,0 +1,27 @@
+<main class="consulta-guardias">
+    <section class="bg-green mt-4">
+        <h1 class="h3 fw-bold ps-3 py-3">Guardias</h1>
+        <img src="/assets/icons/icon_historia_clinica_green.svg" alt="icon"></h1>
+    </section>
+    <section  class="p-4 my-2 bg-grey">
+        <p class="fw-bold h5 mb-3">Rellena con los datos de la última visita</p>
+        <form id="guardia-form">
+            <label for="fecha-guardia" class="fw-semibold">Fecha:</label>
+            <input type="date" id="fecha-guardia" name="fecha-guardia" value="2024-07-29" class="d-block mb-3 input-guardia p-1">
+            <small class="error-message" id="fecha-guardiaError">* Este campo es obligatorio</small>
+
+            <label for="motivo-guardia" class="fw-semibold">Motivo de la guardia:</label>
+            <input type="text" id="motivo-guardia" name="motivo-guardia" class="d-block mb-3 input-guardia2 p-1">
+            <small class="error-message" id="emotivo-guardiaError">* Este campo es obligatorio</small>
+
+            <label for="profesional-guardia" class="fw-semibold">Nombre y apellido del profesional médico</label>
+            <textarea id="profesional-guardia" name="profesional-guardia" class="d-block mb-3 p-1"></textarea>
+
+            <label for="observaciones-guardia" class="fw-semibold">Observaciones</label>
+            <textarea id="observaciones-guardia" name="observaciones-guardia" class="d-block mb-3 p-1"></textarea>
+            <div id="btn-agregar-guardia" class="d-flex justify-content-end mt-4"></div>
+
+        </form>
+    </section>
+
+</main>
