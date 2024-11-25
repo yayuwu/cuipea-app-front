@@ -167,6 +167,11 @@
   text-decoration-thickness: 3px;
   text-decoration-color: #F6C95A;
 }
+.navbar-nav li:nth-child(6) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #A9D5B6;
+}
 .navbar-nav .nav-link {
   font-weight: bold;
   color: #28325A !important;
@@ -685,6 +690,11 @@ footer .footer-bottom p {
   text-decoration-thickness: 3px;
   text-decoration-color: #F6C95A;
 }
+.navbar-nav li:nth-child(6) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #A9D5B6;
+}
 .navbar-nav .nav-link {
   font-weight: bold;
   color: #28325A !important;
@@ -873,6 +883,11 @@ footer .footer-bottom p {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-decoration-color: #F6C95A;
+}
+.navbar-nav li:nth-child(6) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #A9D5B6;
 }
 .navbar-nav .nav-link {
   font-weight: bold;
@@ -1760,6 +1775,11 @@ section.carousel {
   text-decoration-thickness: 3px;
   text-decoration-color: #F6C95A;
 }
+.navbar-nav li:nth-child(6) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #A9D5B6;
+}
 .navbar-nav .nav-link {
   font-weight: bold;
   color: #28325A !important;
@@ -1850,6 +1870,11 @@ section.carousel {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-decoration-color: #F6C95A;
+}
+.navbar-nav li:nth-child(6) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #A9D5B6;
 }
 .navbar-nav .nav-link {
   font-weight: bold;
@@ -2017,6 +2042,11 @@ section.carousel {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-decoration-color: #F6C95A;
+}
+.navbar-nav li:nth-child(6) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #A9D5B6;
 }
 .navbar-nav .nav-link {
   font-weight: bold;
@@ -2206,6 +2236,11 @@ section.carousel {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-decoration-color: #F6C95A;
+}
+.navbar-nav li:nth-child(6) > .nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #A9D5B6;
 }
 .navbar-nav .nav-link {
   font-weight: bold;
@@ -3298,6 +3333,16 @@ button.buscador img {
   grid-area: btn5;
 }
 
+.btn-linkedin {
+  background-color: #B2DAE1;
+  border: 1px solid #B2DAE1;
+  text-decoration: none !important;
+}
+
+#alegria .box-equipo {
+  max-width: 200px;
+}
+
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;
@@ -3328,6 +3373,10 @@ button.buscador img {
   word-wrap: break-word; /* Permite que las palabras largas se rompan */
   word-break: break-word; /* Rompe palabras en lugares apropiados */
   color: #28325A;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

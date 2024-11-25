@@ -16,12 +16,11 @@
 @import 'pages/libreta_vacunacion';
 @import 'pages/registro_sesion';
 @import 'pages/donaciones';
-
 @import 'pages/conEstudios';
-
 @import 'pages/perfil';
 @import 'pages/editar_datos';
 @import 'pages/historial';
+@import 'pages/alegria';
 
 
 * {
@@ -54,4 +53,8 @@
   word-wrap: break-word; /* Permite que las palabras largas se rompan */
   word-break: break-word; /* Rompe palabras en lugares apropiados */
   color: $main-color;
+}
+
+p {
+  margin-bottom: 0;
 }

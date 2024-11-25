@@ -35,6 +35,10 @@ page('/info', () => {
     loadView('informacion')
 })
 
+page('/nosotras', () => {
+    loadView('nosotras')
+})
+
 
 // Ruta login y regsitro
 
