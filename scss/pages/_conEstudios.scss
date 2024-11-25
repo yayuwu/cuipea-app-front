@@ -14,3 +14,9 @@
         background-color: #F4F4F4;
     }
 }
+
+input[type="text"], input[type="date"], .input-consulta {
+    border: 2px solid $blue-color;
+    border-radius: 4px;
+    width: 100%;
+}
