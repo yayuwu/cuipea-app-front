@@ -1,5 +1,6 @@
 import * as yup from 'yup'
 import loadTemplate from "./loadTemplate"
+import Swal from 'sweetalert2'
 
 let consultas = [
     { title: 'Consulta 1', date: '12/04/24'},
@@ -19,12 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 const boxTemplate = Handlebars.compile(template)
                 const boxHtml = consultas.map(consulta => boxTemplate(consulta)).join('')
 
+                const currentLocation = window.location.pathname
+
+                if (currentLocation === '/consulta-enfermedad') {
+                    Swal.fire({
+                        title: 'Cargando...',
+                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        didOpen: () => {
+                            Swal.showLoading() // Activa el spinner de carga
+                        },
+                    })
+                }
+
                 const containerBoxes = document.getElementById('consulta-boxes-container')
 
                 if(containerBoxes){
                     containerBoxes.innerHTML = boxHtml
                     const boxes = document.querySelectorAll('.box-container')
                     boxes.forEach(box => box.classList.add('violet-box'))
+                    Swal.close()
                 }
             })
             .catch(err => console.log(err))

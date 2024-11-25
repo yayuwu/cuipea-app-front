@@ -1,4 +1,5 @@
 import loadTemplate from './loadTemplate'
+import Swal from 'sweetalert2'
 
 let controlesNinoSano = [ 
     { edad: '2 meses', fecha: '2024-01-14', peso: 6.5, talla: 60, pc: 40, ta: '90/60', observaciones: 'Vacunación y seguimiento del desarrollo' }, 
@@ -18,9 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(template => {
                 const tableTemplate = Handlebars.compile(template)
                 const tableHtml = controlesNinoSano.map(control => tableTemplate(control)).join('')
+                const currentLocation = window.location.pathname
+
+                if (currentLocation === '/Control') {
+                    Swal.fire({
+                        title: 'Cargando...',
+                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        didOpen: () => {
+                            Swal.showLoading() // Activa el spinner de carga
+                        },
+                    })
+                }
                 const containerTableBody = document.getElementById('rows-control')
                 if (containerTableBody) {
                     containerTableBody.innerHTML = tableHtml
+                    Swal.close()
                 }
             })
         // Botones
