@@ -3415,6 +3415,68 @@ button.buscador img {
   max-width: 200px;
 }
 
+#turnos .bg-pink {
+  background-color: #EEC5DD;
+  position: relative;
+}
+#turnos .bg-pink img {
+  width: 80px;
+  position: absolute;
+  top: -34px;
+  right: 30px;
+}
+#turnos .calendar {
+  width: 100px;
+}
+#turnos .calendar p {
+  left: 32px;
+  top: 50px;
+}
+#turnos .detalles-turno {
+  max-height: 130px;
+  background-color: #EFD6E5;
+}
+#turnos .detalles-turno h3 {
+  background-color: #EEC5DD;
+}
+#turnos .detalles-turno p, #turnos .detalles-turno h3 {
+  font-size: 12px;
+}
+#turnos .recordatorios-detalles {
+  top: 66px;
+  left: 12px;
+}
+#turnos .recordatorios-detalles p, #turnos .recordatorios-detalles h3 {
+  font-size: 12px;
+}
+#turnos .paper-img {
+  width: 160px;
+}
+#turnos .table-turnos {
+  font-size: 8px;
+}
+#turnos .table-turnos th, #turnos .table-turnos td {
+  color: #28325A;
+}
+#turnos .table-turnos .bg-pink-row {
+  background-color: #DEABCA;
+}
+#turnos .table-turnos .bg-lg-pink-row {
+  background-color: #FAEBED;
+}
+#turnos .table-turnos .bg-pink-row,
+#turnos .table-turnos .bg-lg-pink-row {
+  border: 5px solid white;
+}
+#turnos .table-turnos .btn-turnos {
+  background-color: #FAEBED;
+  border: 1px solid #FAEBED;
+}
+
+.lg-pink-bg {
+  background-color: #FCF7FA;
+}
+
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;
