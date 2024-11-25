@@ -24,34 +24,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
         // Botones
-        loadTemplate(urlButtonAgregar)
-            .then(template => {
-                const buttonTemplate = Handlebars.compile(template)
-                const dataBtn = { text: 'control' }
-                const btnHtml = buttonTemplate(dataBtn)
+        // loadTemplate(urlButtonAgregar)
+        //     .then(template => {
+        //         const buttonTemplate = Handlebars.compile(template)
+        //         const dataBtn = { text: 'control' }
+        //         const btnHtml = buttonTemplate(dataBtn)
 
-                const containerRedirect = document.querySelector('.btn-nino-sano')
-                if (containerRedirect) {
-                    containerRedirect.innerHTML = btnHtml
-                    const btnAgregarRedirect = containerRedirect.querySelector('.btn-agregar');
-                    btnAgregarRedirect.classList.add('btn-agregar-pink')
-                    btnAgregarRedirect.addEventListener('click', () => {
-                        window.location.href = '/agregar-control'
-                    });
-                }
+        //         const containerRedirect = document.querySelector('.btn-nino-sano')
+        //         if (containerRedirect) {
+        //             containerRedirect.innerHTML = btnHtml
+        //             const btnAgregarRedirect = containerRedirect.querySelector('.btn-agregar');
+        //             btnAgregarRedirect.classList.add('btn-agregar-pink')
+        //             btnAgregarRedirect.addEventListener('click', () => {
+        //                 window.location.href = '/agregar-control'
+        //             });
+        //         }
 
-                const containerOnClick = document.querySelector('#btn-agregar-control')
-                if (containerOnClick) {
-                    containerOnClick.innerHTML = btnHtml
-                    const btnAgregarOnClick = containerOnClick.querySelector('.btn-agregar');
-                    btnAgregarOnClick.classList.add('btn-agregar-pink')
-                    btnAgregarOnClick.addEventListener('click', (e) => {
-                        e.preventDefault()
+        //         const containerOnClick = document.querySelector('#btn-agregar-control')
+        //         if (containerOnClick) {
+        //             containerOnClick.innerHTML = btnHtml
+        //             const btnAgregarOnClick = containerOnClick.querySelector('.btn-agregar');
+        //             btnAgregarOnClick.classList.add('btn-agregar-pink')
+        //             btnAgregarOnClick.addEventListener('click', (e) => {
+        //                 e.preventDefault()
 
-                        alert('Formulario enviado')
-                    });
-                }
-            })
-            .catch(error => console.error('Error al cargar el template:', error))
+        //                 alert('Formulario enviado')
+        //             });
+        //         }
+        //     })
+        //     .catch(error => console.error('Error al cargar el template:', error))
     }, 200)
 })

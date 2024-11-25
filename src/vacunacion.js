@@ -55,36 +55,36 @@ document.addEventListener('DOMContentLoaded', () => {
             await loadVacunas();
          })
         // Botones
-        loadTemplate(urlBtn)
-         .then(template => {
-            const btnTemplate = Handlebars.compile(template)
-            const data = {
-                text: 'vacuna'
-            }
-            const btnHtml = btnTemplate(data)
-            // console.log(btnHtml)
+        // loadTemplate(urlBtn)
+        //  .then(template => {
+        //     const btnTemplate = Handlebars.compile(template)
+        //     const data = {
+        //         text: 'vacuna'
+        //     }
+        //     const btnHtml = btnTemplate(data)
+        //     // console.log(btnHtml)
 
-            const containerBtn = document.getElementById('btn-vacuna')
-            // console.log(containerBtn)
-            const containerBtnAgregarVacuna = document.getElementById('btn-agregar-vacuna')
+        //     const containerBtn = document.getElementById('btn-vacuna')
+        //     // console.log(containerBtn)
+        //     const containerBtnAgregarVacuna = document.getElementById('btn-agregar-vacuna')
 
-            if (containerBtn) {
-                containerBtn.innerHTML = btnHtml
-                const btnVacuna = containerBtn.querySelector('.btn-agregar')
-                btnVacuna.classList.add('btn-agregar-salmon')
-                btnVacuna.addEventListener('click', () => {
-                    window.location.href = '/agregar-vacuna'
-                })
-            }
+        //     if (containerBtn) {
+        //         containerBtn.innerHTML = btnHtml
+        //         const btnVacuna = containerBtn.querySelector('.btn-agregar')
+        //         btnVacuna.classList.add('btn-agregar-salmon')
+        //         btnVacuna.addEventListener('click', () => {
+        //             window.location.href = '/agregar-vacuna'
+        //         })
+        //     }
 
-            if (containerBtnAgregarVacuna) {
-                containerBtnAgregarVacuna.innerHTML = btnHtml
-                const btnVacuna = containerBtnAgregarVacuna.querySelector('.btn-agregar')
-                btnVacuna.classList.add('btn-agregar-salmon')
-                btnVacuna.type = 'submit'
-            }
+        //     if (containerBtnAgregarVacuna) {
+        //         containerBtnAgregarVacuna.innerHTML = btnHtml
+        //         const btnVacuna = containerBtnAgregarVacuna.querySelector('.btn-agregar')
+        //         btnVacuna.classList.add('btn-agregar-salmon')
+        //         btnVacuna.type = 'submit'
+        //     }
 
-        })
+        // })
         // Envío de datos formulario
         const form = document.getElementById('vacuna-form')
         if (form) {
@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             denyButtonText: `No`
                           }).then(result => {
                             if(result.isConfirmed){
+                                form.reset()
                                 Swal.close()
                             } else {
                                 window.location.href = '/vacunas'
