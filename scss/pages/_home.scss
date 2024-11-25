@@ -500,16 +500,15 @@
       .footer-bottom {
         text-align: center;
         font-size: 12px;
+        a {
+          color: #fff;
+          text-decoration: underline;
+        }
     
         p {
           color: #fff;
-          margin: 5px ;
           padding: 10px 0 10px;
-    
-          a {
-            color: #fff;
-            text-decoration: underline;
-          }
+          margin: 0;
         }
       }
     }

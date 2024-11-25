@@ -644,14 +644,14 @@ footer .footer-bottom {
   text-align: center;
   font-size: 12px;
 }
-footer .footer-bottom p {
-  color: #fff;
-  margin: 5px;
-  padding: 10px 0 10px;
-}
-footer .footer-bottom p a {
+footer .footer-bottom a {
   color: #fff;
   text-decoration: underline;
+}
+footer .footer-bottom p {
+  color: #fff;
+  padding: 10px 0 10px;
+  margin: 0;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------*/
@@ -1346,14 +1346,14 @@ footer .footer-bottom {
   text-align: center;
   font-size: 12px;
 }
-footer .footer-bottom p {
-  color: #fff;
-  margin: 5px;
-  padding: 10px 0 10px;
-}
-footer .footer-bottom p a {
+footer .footer-bottom a {
   color: #fff;
   text-decoration: underline;
+}
+footer .footer-bottom p {
+  color: #fff;
+  padding: 10px 0 10px;
+  margin: 0;
 }
 
 .subtitle.info, .info, .p {
@@ -2674,14 +2674,14 @@ footer .footer-bottom {
   text-align: center;
   font-size: 12px;
 }
-footer .footer-bottom p {
-  color: #fff;
-  margin: 5px;
-  padding: 10px 0 10px;
-}
-footer .footer-bottom p a {
+footer .footer-bottom a {
   color: #fff;
   text-decoration: underline;
+}
+footer .footer-bottom p {
+  color: #fff;
+  padding: 10px 0 10px;
+  margin: 0;
 }
 
 /*Estilos del boton y la barra de busqueda */
