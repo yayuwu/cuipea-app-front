@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
                 if(containerBoxes) {
                     containerBoxes.innerHTML = boxHtml
-                    Swal.close()
                     const boxes = containerBoxes.querySelectorAll('.box-container')
                     boxes.forEach(box => {
                         box.classList.add('green-box')
                     })
+                    Swal.close()
                 }
 
             })
@@ -75,6 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         window.location.href = '/agregar-sintoma'
                     })
                     Swal.close()
+                }
+
+                if (currentLocation === '/agregar-sintoma') {
+                    Swal.fire({
+                        title: 'Cargando...',
+                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        didOpen: () => {
+                            Swal.showLoading() // Activa el spinner de carga
+                        },
+                    })
                 }
 
                 // Cargo el botón para subir el formulario
