@@ -145,9 +145,11 @@ page('/donaciones', () => {
     loadView('donar'); 
 })
 
-// Ruta de información: Lactancia
+
 
 // Ruta de la sección de donaciones
+
+// Ruta de información: Lactancia
 
 page('/lactancia', () => {
     loadView('lactancia'); 
