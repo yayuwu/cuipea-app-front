@@ -1,4 +1,5 @@
 import loadTemplate from './loadTemplate.js'
+import Swal from 'sweetalert2'
 
 let registros = [
     { title: 'Registro 1', date: '12/04/24'},
@@ -19,8 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 const boxHtml = registros.map(registro => boxTemplate(registro)).join('')
                 const containerBoxes = document.getElementById('registroBoxesContainer')
 
+                const currentLocation = window.location.pathname
+
+                if (currentLocation === '/registro-sintomas') {
+                    Swal.fire({
+                        title: 'Cargando...',
+                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        didOpen: () => {
+                            Swal.showLoading() // Activa el spinner de carga
+                        },
+                    })
+                }
+    
                 if(containerBoxes) {
                     containerBoxes.innerHTML = boxHtml
+                    Swal.close()
                     const boxes = containerBoxes.querySelectorAll('.box-container')
                     boxes.forEach(box => {
                         box.classList.add('green-box')
@@ -40,6 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 const containerBtn = document.getElementById('btn-registro-sintomas')
                 const containerBtnAgregarSintoma = document.getElementById('agregar-sintoma-btn')
 
+                const currentLocation = window.location.pathname
+
+                if (currentLocation === '/registro-sintomas') {
+                    Swal.fire({
+                        title: 'Cargando...',
+                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        didOpen: () => {
+                            Swal.showLoading() // Activa el spinner de carga
+                        },
+                    })
+                }
+
                 // Cargo el botón para redireccionar
                 if(containerBtn){
                     containerBtn.innerHTML = btnHtml
@@ -48,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btnRegistro.addEventListener('click', () => {
                         window.location.href = '/agregar-sintoma'
                     })
+                    Swal.close()
                 }
 
                 // Cargo el botón para subir el formulario
@@ -57,9 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     btnRegistro.classList.add('btn-agregar-green')
                     btnRegistro.addEventListener('click', (e) => {
                         e.preventDefault()
-
+                        
                         alert('Formulario enviado')
                     })
+                    Swal.close()
                 }
             })
             .catch(err => console.log(err))

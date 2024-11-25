@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                     console.log(formData)
                     const response = await postData(`${import.meta.env.VITE_BACK_URL}/login`, formData)
+                    console.log(response)
 
                     if (!response) {
                         Swal.close()
