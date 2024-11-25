@@ -10,14 +10,7 @@
             right: 30px;
         }
     }
-    form {
-        .input-consulta {
-            border: 2px solid $violet-blue-color;
-            border-radius: 4px;
-        }
-        .input-consulta:focus {
-             border: 2px solid $violet-blue-color;
-             outline: none;
-        }
+    .bg-grey {
+        background-color: #F4F4F4;
     }
 }

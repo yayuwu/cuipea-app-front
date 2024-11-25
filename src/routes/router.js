@@ -139,6 +139,10 @@ page('/consulta-estudios', () => {
     loadView('consultaEstudios'); 
 })
 
+page('/agregar-estudios', () => {
+    loadView('agregarEstudios'); 
+})
+
 
 // Rutas libreta vacunación 
 
