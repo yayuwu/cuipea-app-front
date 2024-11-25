@@ -111,6 +111,34 @@
     }
   }
 
+  @media (min-width: 520px) {
+    #nosotros > div {
+      flex-wrap: nowrap !important;
+      flex-direction: row-reverse;
+      h2 {
+        font-size: 40px !important;
+      }
+      p {
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  @media (min-width: 920px) {
+    #nosotros > div {
+      padding: 0 40px 0 40px;
+      h2 {
+        font-size: 50px !important;
+      }
+      p {
+        font-size: 22px !important;
+      }
+    }
+    .responsive-mockup {
+      width: 50% !important;
+    }
+  }
+
 
   /* ---------------------------------------------------------------------------------------------------------------*/
   // Donaciones

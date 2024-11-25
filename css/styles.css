@@ -297,6 +297,32 @@
   font-size: 33px;
 }
 
+@media (min-width: 520px) {
+  #nosotros > div {
+    flex-wrap: nowrap !important;
+    flex-direction: row-reverse;
+  }
+  #nosotros > div h2 {
+    font-size: 40px !important;
+  }
+  #nosotros > div p {
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 920px) {
+  #nosotros > div {
+    padding: 0 40px 0 40px;
+  }
+  #nosotros > div h2 {
+    font-size: 50px !important;
+  }
+  #nosotros > div p {
+    font-size: 22px !important;
+  }
+  .responsive-mockup {
+    width: 50% !important;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 #donaciones {
   padding: 70px 0px 90px 0;
@@ -1014,6 +1040,32 @@ footer .footer-bottom p {
   font-size: 33px;
 }
 
+@media (min-width: 520px) {
+  #nosotros > div {
+    flex-wrap: nowrap !important;
+    flex-direction: row-reverse;
+  }
+  #nosotros > div h2 {
+    font-size: 40px !important;
+  }
+  #nosotros > div p {
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 920px) {
+  #nosotros > div {
+    padding: 0 40px 0 40px;
+  }
+  #nosotros > div h2 {
+    font-size: 50px !important;
+  }
+  #nosotros > div p {
+    font-size: 22px !important;
+  }
+  .responsive-mockup {
+    width: 50% !important;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 #donaciones {
   padding: 70px 0px 90px 0;
@@ -2367,6 +2419,32 @@ section.carousel {
   font-size: 33px;
 }
 
+@media (min-width: 520px) {
+  #nosotros > div {
+    flex-wrap: nowrap !important;
+    flex-direction: row-reverse;
+  }
+  #nosotros > div h2 {
+    font-size: 40px !important;
+  }
+  #nosotros > div p {
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 920px) {
+  #nosotros > div {
+    padding: 0 40px 0 40px;
+  }
+  #nosotros > div h2 {
+    font-size: 50px !important;
+  }
+  #nosotros > div p {
+    font-size: 22px !important;
+  }
+  .responsive-mockup {
+    width: 50% !important;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 #donaciones {
   padding: 70px 0px 90px 0;
