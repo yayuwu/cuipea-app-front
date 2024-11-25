@@ -1,5 +1,6 @@
 import * as yup from 'yup'
 import loadTemplate from "./loadTemplate"
+import Swal from 'sweetalert2'
 
 let estudios = [
     { title: 'Estudio 1', date: '29/07/24'},
@@ -19,46 +20,60 @@ document.addEventListener('DOMContentLoaded', () => {
                 const boxTemplate = Handlebars.compile(template)
                 const boxHtml = estudios.map(estudios => boxTemplate(estudios)).join('')
 
+                const currentLocation = window.location.pathname
+
+                if (currentLocation === '/consulta-estudios') {
+                    Swal.fire({
+                        title: 'Cargando...',
+                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        didOpen: () => {
+                            Swal.showLoading() // Activa el spinner de carga
+                        },
+                    })
+                }
+
                 const containerBoxes = document.getElementById('consultaEstudiosContainer')
 
                 if(containerBoxes){
                     containerBoxes.innerHTML = boxHtml
                     const boxes = document.querySelectorAll('.box-container')
                     boxes.forEach(box => box.classList.add('blue-box'))
+                    Swal.close()
                 }
             })
             .catch(err => console.log(err))
-        // Botones
-        loadTemplate(urlBtn)
-            .then(template => {
-                const btnTemplate = Handlebars.compile(template)
-                const data = {
-                    text: 'estudio'
-                }
-                const btnHtml = btnTemplate(data)
-                const containerBtn = document.getElementById('btn-consultas-estudios')
-                const containerBtnAgregarConsulta = document.getElementById('btn-agregar-estudio')
+        // // Botones
+        // loadTemplate(urlBtn)
+        //     .then(template => {
+        //         const btnTemplate = Handlebars.compile(template)
+        //         const data = {
+        //             text: 'consulta'
+        //         }
+        //         const btnHtml = btnTemplate(data)
+        //         const containerBtn = document.getElementById('btn-consultas-enfermedad')
+        //         const containerBtnAgregarConsulta = document.getElementById('btn-agregar-consulta')
 
-                if (containerBtn) {
-                    containerBtn.innerHTML = btnHtml
-                    const btnConsulta = containerBtn.querySelector('.btn-agregar')
-                    btnConsulta.classList.add('btn-agregar-blue')
-                    btnConsulta.addEventListener('click', () => {
-                        window.location.href = '/agregar-estudios'
-                    })
-                }
+        //         if (containerBtn) {
+        //             containerBtn.innerHTML = btnHtml
+        //             const btnConsulta = containerBtn.querySelector('.btn-agregar')
+        //             btnConsulta.classList.add('btn-agregar-violet')
+        //             btnConsulta.addEventListener('click', () => {
+        //                 window.location.href = '/agregar-consulta'
+        //             })
+        //         }
 
-                if (containerBtnAgregarConsulta) {
-                    containerBtnAgregarConsulta.innerHTML = btnHtml
-                    const btnConsulta = containerBtnAgregarConsulta.querySelector('.btn-agregar')
-                    btnConsulta.classList.add('btn-agregar-blue')
-                    btnConsulta.type = 'submit'
-                }
+        //         if (containerBtnAgregarConsulta) {
+        //             containerBtnAgregarConsulta.innerHTML = btnHtml
+        //             const btnConsulta = containerBtnAgregarConsulta.querySelector('.btn-agregar')
+        //             btnConsulta.classList.add('btn-agregar-violet')
+        //             btnConsulta.type = 'submit'
+        //         }
                 
-            })
+        //     })
+            
         // Envío de datos formulario
         const form = document.getElementById('estudio-form')
-        console.log('Formulario: ', form)
+        // console.log('Formulario: ', form)
         if (form) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault()
