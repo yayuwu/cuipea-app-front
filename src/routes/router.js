@@ -133,6 +133,8 @@ page('/agregar-consulta', () => {
     }
 })
 
+
+
 // Rutas consulta estudios
 
 page('/consulta-estudios', () => {
