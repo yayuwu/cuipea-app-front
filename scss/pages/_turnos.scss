@@ -1,0 +1,66 @@
+@import '../base/colors';
+
+#turnos {
+    .bg-pink {
+        background-color: $pink-color;
+        position: relative;
+        img {
+            width: 80px;
+            position: absolute;
+            top: -34px;
+            right: 30px;
+        }
+    }
+    .calendar {
+        width: 100px;
+        p{
+            left: 32px;
+            top: 50px;
+        }
+    }
+    .detalles-turno {
+        max-height: 130px;
+        background-color: #EFD6E5;
+        h3 {
+            background-color: $pink-color;
+        }
+        p, h3 {
+            font-size: 12px;
+        }
+    }
+    .recordatorios-detalles {
+        top: 66px;
+        left: 12px;
+        p, h3 {
+            font-size: 12px;
+        }
+    }
+    .paper-img {
+        width: 160px;
+    }
+    .table-turnos {
+        font-size: 8px;
+        th, td {
+            color: $main-color;
+        }
+        .bg-pink-row {
+            background-color: #DEABCA;
+        }
+        .bg-lg-pink-row {
+            background-color: #FAEBED;
+        }
+        .bg-pink-row, 
+        .bg-lg-pink-row {
+            border: 5px solid white;
+        }
+
+        .btn-turnos {
+            background-color: #FAEBED;
+            border: 1px solid #FAEBED;
+        }
+    }
+}
+
+.lg-pink-bg {
+    background-color: #FCF7FA;
+}

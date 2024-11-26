@@ -119,6 +119,18 @@ page('/historial', () => {
     }
 })
 
+// Rutas turnos
+
+page('/turnos', () => {
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('turnos')
+    }
+})
+
+
+
 
 // Rutas control de niño sano
 
