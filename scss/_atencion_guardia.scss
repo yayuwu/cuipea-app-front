@@ -1,0 +1,13 @@
+
+
+.consulta-guardias{
+    .bg-green {
+        background-color: $green-color;
+        position: relative;
+        img {
+            position: absolute;
+            top: -30px;
+            right: 30px;
+        }
+    }
+}

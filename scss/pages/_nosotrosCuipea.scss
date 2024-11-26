@@ -1,0 +1,96 @@
+@import '../base/colors';
+
+.medico-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.m-img {
+    width: 100%;
+}
+
+.abt-cuipea {
+    text-align: left;
+    padding: 20px 0;
+    font-size: 8px;
+}
+
+.abt-cuipea h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.abt-cuipea p {
+    font-size: 12px;
+}
+
+
+.mision-vision {
+    display: grid;
+    gap: 20px;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.mision {
+    background-color: #EEC4DE;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.vision {
+    background-color: #D9D9D9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.mision p, .vision p{
+    font-size: 12px;
+}
+
+.mision h2, .vision h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.team {
+    padding: 20px 0;
+    text-align: left;
+}
+
+.team h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* .team-foto {
+    display: grid;
+    text-align: center;
+    font-weight: bold;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    gap: 10px;
+}
+
+.box-foto1, .box-foto2, .box-foto3  {
+    padding: 40px;
+}
+
+.box-foto1 {
+    grid-column: 1/8;
+    background-color: #A8D3B5;
+   
+}
+
+.box-foto2 {
+    grid-column: 1/4;
+    background-color: #ECC3DC;
+}
+
+.box-foto3 {
+    grid-column: 4/8;
+    background-color: #EFBA43;
+} */

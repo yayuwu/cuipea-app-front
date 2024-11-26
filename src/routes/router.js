@@ -174,10 +174,24 @@ page('/agregar-consulta', () => {
     }
 })
 
+
+
 // Rutas consulta estudios
 
 page('/consulta-estudios', () => {
     loadView('consultaEstudios'); 
+})
+
+// Rutas consulta guardia
+
+page('/atencion-guardia', () => {
+    loadView('consultaGuardias'); 
+})
+
+// Ruta NOSOTROS MISION Y VISION
+
+page('/nosotros', () => {
+    loadView('nosotrosCuipea'); 
 })
 
 // Ruta de la sección de donaciones
