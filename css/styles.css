@@ -3009,6 +3009,16 @@ button.buscador img {
   width: 300px !important;
 }
 
+.medico-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.m-img {
+  width: 100%;
+}
+
 .abt-cuipea {
   text-align: left;
   padding: 20px 0;
