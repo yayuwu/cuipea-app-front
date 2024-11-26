@@ -1,0 +1,57 @@
+@import '../base/colors';
+
+.nino-sano {
+    .bg-pink {
+        background-color: $pink-color;
+        position: relative;
+        img {
+            position: absolute;
+            top: -30px;
+            right: 30px;
+        }
+    }
+    table {
+        .table-main-color {
+            background-color: $pink-color !important;
+            color: $main-color;
+            border: none !important;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 13px;
+            border-right: 4px solid white !important;
+        }
+        .first-item {
+            border-top-left-radius: 6px;
+        }
+        .last-item {
+            border-top-right-radius: 6px;
+            border-left: 4px solid white !important;
+            border-right: none !important;
+        }
+        .table-grey {
+            background-color: rgb(228, 228, 228);
+            text-align: center;
+            font-size: 13px;
+            border-right: 4px solid white;
+            border-top: 4px solid white;
+            min-height: 50px;
+            color: $main-color;
+        }
+        tbody td:last-child {
+            border-right: none !important;
+        }
+    }  
+    .bg-form-nino-sano {
+        background-color: #FBF4F8;
+    }
+    form {
+        .input-nino-sano {
+           border: 2px solid $pink-color;
+           border-radius: 4px;
+        }
+        .input-nino-sano:focus {
+            border: 2px solid $pink-color;
+            outline: none;
+        }
+    }
+}     

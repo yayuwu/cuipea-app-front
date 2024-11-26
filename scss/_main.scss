@@ -3,11 +3,27 @@
 @import 'base/colors';
 @import 'base/typography';
 @import 'pages/home';
+@import 'pages/seccion_informacion';
 @import 'components/box';
 @import 'components/btn_agregar';
 @import 'pages/data_clinic';
 @import 'pages/form_data_clinic';
 @import 'pages/login';
+@import 'pages/foro';
+@import 'pages/page_not_found';
+@import 'pages/control_health_kid';
+@import 'pages/registro_sintomas';
+@import 'pages/consulta_enfermedad';
+@import 'pages/libreta_vacunacion';
+@import 'pages/registro_sesion';
+@import 'pages/donaciones';
+@import 'pages/conEstudios';
+@import 'pages/perfil';
+@import 'pages/editar_datos';
+@import 'pages/historial';
+@import 'pages/alegria';
+@import 'pages/turnos';
+
 
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -24,4 +40,23 @@
 #header,
 #footer {
   padding: 0 15px;
+}
+
+.error-message {
+  color: rgb(206, 0, 0);
+  display: none;
+}
+
+.swal2-icon.swal2-warning .swal2-icon-content {
+  color: #f8bb86 !important; 
+}
+
+.text-wrap-custom {
+  word-wrap: break-word; /* Permite que las palabras largas se rompan */
+  word-break: break-word; /* Rompe palabras en lugares apropiados */
+  color: $main-color;
+}
+
+p {
+  margin-bottom: 0;
 }

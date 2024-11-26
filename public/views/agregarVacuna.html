@@ -1,0 +1,88 @@
+<main class="libreta-vacunacion">
+    <section class="bg-pink mt-4">
+        <h1 class="h3 fw-bold ps-3 py-3">Libreta de vacunación</h1>
+        <img src="/assets/icons/icon_vacunación.svg" alt="icon">
+    </section>
+    <section  class="my-4">
+       <form id="vacuna-form">
+         <div class="bg-form-salmon p-3">
+            <label for="vacuna" class="fw-semibold">Vacuna</label>
+            <select name="vacuna" id="vacuna" class="d-block mb-3 w-100 input-salmon p-1">
+                <option value="" disabled selected>Elija una opción</option>
+                <option value="BCG">BCG</option>
+                <option value="Hepatitis B">Hepatitis B</option>
+                <option value="Neumococo">Neumococo</option>
+                <option value="DTP-HB-Hib">DTP-HB-Hib</option>
+                <option value="IPV">IPV</option>
+                <option value="OPV">OPV</option>
+                <option value="Rotavirus">Rotavirus</option>
+                <option value="Meningococo">Meningococo</option>
+                <option value="Antigripal">Antigripal</option>
+                <option value="Hepatitis A">Hepatitis A</option>
+                <option value="SRP">SRP</option>
+                <option value="Varicela">Varicela</option>
+                <option value="DTP-Hib">DTP-Hib</option>
+                <option value="DTP">DTP</option>
+                <option value="dtpa">dTpa</option>
+                <option value="VPH">VPH</option>
+                <option value="dT">dT</option>
+                <option value="SR">SR</option>
+                <option value="FA">FA</option>
+                <option value="FHA">FHA</option>
+            </select>
+            <small class="error-message mb-2" id="vacuna-error">* Este campo es obligatorio</small>
+            <label for="dosisVacuna" class="fw-semibold">Dosis</label>
+            <select name="dosisVacuna" id="dosisVacuna" class="d-block mb-3 w-100 input-salmon p-1">
+                <option value="" disabled selected>Elija una opción</option>
+                <option value="Única dosis">Única dosis</option>
+                <option value="1ª dosis">1ª dosis</option>
+                <option value="2ª dosis">2ª dosis</option>
+                <option value="3ª dosis">3ª dosis</option>
+                <option value="1ª refuerzo">1ª refuerzo</option>
+                <option value="2ª refuerzo">2ª refuerzo</option>
+            </select>
+            <small class="error-message mb-2" id="dosisVacuna-error">* Este campo es obligatorio</small>
+            <label for="edadVacuna" class="fw-semibold">Edad</label>
+            <select name="edadVacuna" id="edadVacuna" class="d-block mb-3 w-100 input-salmon p-1">
+                <option value="" disabled selected>Elija una opción</option>
+                <option value="Recién nacido">Recién Nacido</option>
+                <option value="1 mes">1 mes</option>
+                <option value="2 meses">2 meses</option>
+                <option value="3 meses">3 meses</option>
+                <option value="4 meses">4 meses</option>
+                <option value="5 meses">5 meses</option>
+                <option value="6 meses">6 meses</option>
+                <option value="7 meses">7 meses</option>
+                <option value="8 meses">8 meses</option>
+                <option value="9 meses">9 meses</option>
+                <option value="10 meses">10 meses</option>
+                <option value="11 meses">12 meses</option>
+                <option value="1 años">1 año</option>
+                <option value="2 años">2 años</option>
+                <option value="3 años">3 años</option>
+                <option value="4 años">4 años</option>
+                <option value="5 años">5 años</option>
+                <option value="6 años">6 años</option>
+                <option value="7 años">7 años</option>
+                <option value="8 años">8 años</option>
+                <option value="9 años">9 años</option>
+                <option value="10 años">10 años</option>
+                <option value="11 años">11 años</option>
+                <option value="12 años">12 años</option>
+                <option value="13 años">13 años</option>
+                <option value="14 años">14 años</option>
+                <option value="15 años">15 años</option>
+            </select>
+            <small class="error-message mb-2" id="edadVacuna-error">* Este campo es obligatorio</small> 
+            <label for="dateVacuna" class="fw-semibold">Fecha</label>
+            <input type="date" name="fechaVacuna" id="dateVacuna" class="d-block input-salmon p-1 mb-3">
+            <small class="error-message mb-2" id="dateVacuna-error">* Este campo es obligatorio</small>
+         </div>
+         <div id="btn-agregar-vacuna" class="d-flex justify-content-end mt-4 me-3">
+            <button class="btn-agregar btn-agregar-salmon" type="submit">
+                <img src="/assets/img/general/plus_img.svg" alt="agregar">Añadir vacuna
+            </button>
+         </div>
+       </form>
+    </section>
+</main>

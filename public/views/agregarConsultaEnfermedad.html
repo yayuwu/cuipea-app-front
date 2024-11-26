@@ -1,0 +1,40 @@
+<main class="consulta-enfermedad">
+    <section class="bg-violet mt-4">
+        <h1 class="h3 fw-bold ps-3 py-3">Consulta por <span class="d-flex d-sm-inline">enfermedad</span></h1>
+        <img src="/assets/icons/icon_historia_clinica_violet.svg" alt="icon">
+    </section>
+    <section  class="p-4 my-4 bg-grey">
+       <p class="fw-bold h5 mb-3">Rellena con los datos de la última consulta</p>
+       <form id="consulta-form">
+        <div class="form-group">
+            <label for="fecha-consulta" class="fw-semibold">Fecha</label>
+            <input type="date" name="fecha-consulta" id="fecha-consulta" class="d-block mb-3 input-consulta p-1">
+            <small class="error-message" id="fecha-consultaError">* Este campo es obligatorio</small>
+        </div>
+        <div class="form-group">
+            <label for="motivo-consulta" class="fw-semibold">Motivo de la consulta</label>
+            <textarea name="motivo-consulta" id="motivo-consulta" class="d-block mb-3 w-100 input-consulta"></textarea>
+            <small class="error-message" id="motivo-consultaError">* Este campo es obligatorio</small>
+        </div>
+        <div class="form-group">
+            <label for="especialidad-consulta" class="fw-semibold">Especialidad médica</label>
+            <textarea name="especialidad-consulta" id="especialidad-consulta" class="d-block mb-3 w-100 input-consulta"></textarea>
+            <small class="error-message" id="especialidad-consultaError">* Este campo es obligatorio</small>
+        </div>
+        <div class="form-group">
+            <label for="datos-consulta" class="fw-semibold">Nombre y apellido del profesional médico</label>
+            <textarea name="datos-consulta" id="datos-consulta" class="d-block mb-3 w-100 input-consulta"></textarea>
+            <small class="error-message" id="datos-consultaError">* Este campo es obligatorio</small>
+        </div>
+        <div class="form-group">
+            <label for="observaciones-consulta" class="fw-semibold">Observaciones</label>
+            <textarea name="observaciones-consulta" id="observaciones-consulta" class="d-block mb-3 w-100 input-consulta"></textarea>
+        </div>
+            <div id="btn-agregar-consulta" class="d-flex justify-content-end mt-4">
+                <button class="btn-agregar btn-agregar-violet" type="submit">
+                    <img src="/assets/img/general/plus_img.svg" alt="agregar">Añadir consulta
+                </button>
+            </div>
+       </form>
+    </section>
+</main>

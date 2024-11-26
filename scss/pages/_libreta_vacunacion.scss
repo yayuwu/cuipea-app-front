@@ -1,0 +1,63 @@
+@import '../base/colors';
+
+.libreta-vacunacion {
+    .bg-pink {
+        background-color: #ED808E;
+        position: relative;
+        img {   
+            position: absolute;
+            top: -13px;
+            right: 10px;
+        }
+    }
+    .table-main-color {
+        background-color: $salmon-color !important;
+        color: $main-color;
+        text-align: center;
+        text-transform: uppercase;
+    } 
+    table {
+        .table-main-color {
+            background-color: $salmon-color !important;
+            color: $main-color ;
+            border: none !important;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 13px;
+            border-right: 4px solid white !important;
+        }
+        .first-item {
+            border-top-left-radius: 6px;
+        }
+        .last-item {
+            border-top-right-radius: 6px;
+            border-left: 4px solid white !important;
+            border-right: none !important;
+        }
+        .table-pink {
+            background-color: #FAEBED;
+            text-align: center;
+            font-size: 13px;
+            border-right: 4px solid white;
+            border-top: 4px solid white;
+            min-height: 50px;
+            color: $main-color ;
+        }
+        tbody td:last-child {
+            border-right: none !important;
+        }
+    }  
+    .bg-form-salmon {
+        background-color: #FAEBED;
+    }
+    form {
+        .input-salmon {
+           border: 2px solid $salmon-color;
+           border-radius: 4px;
+        }
+        .input-salmon:focus {
+            border: 2px solid $salmon-color;
+            outline: none;
+        }
+    }
+}

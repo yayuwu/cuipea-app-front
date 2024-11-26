@@ -1,0 +1,36 @@
+@import '../base/colors';
+@import '../components/btn_sesion';
+
+.green-container {
+    max-width: 400px;
+    background-color: $green-color;
+    border: 3px solid #9FC9AC;
+    border-radius: 10px;
+    padding: 30px;
+    p, a {
+        font-size: 14px;
+    }
+    input, select {
+        border: 2px solid #9FC9AC;
+        border-radius: 6px;
+        width: 100%;
+    }
+    input:focus, select:focus {
+        outline: none;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+    a {
+        color: $main-color;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.inicio-container {
+    width: 300px !important;
+}

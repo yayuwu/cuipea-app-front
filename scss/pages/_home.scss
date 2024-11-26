@@ -7,7 +7,7 @@
 
 // Estilos para los h2
 .subtitle {
-    font-size: 30px;
+    font-size: 40px;
     @include breakpoint(sm){
         font-size: 40px;
     }
@@ -25,7 +25,7 @@
 
 // SECCIÓN FORO
 #foro {
-    margin-left: 12px;
+    // margin-left: 12px;
     h2 {
         font-weight: 700;
         color: $pink-dark-color;
@@ -103,6 +103,43 @@
         font-size: 1.2rem;
     }
   }
+
+  #nosotros {
+    h2 {
+      color: #ED808E;
+      font-size: 40px;
+    }
+  }
+
+  @media (min-width: 520px) {
+    #nosotros > div {
+      flex-wrap: nowrap !important;
+      flex-direction: row-reverse;
+      h2 {
+        font-size: 40px !important;
+      }
+      p {
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  @media (min-width: 920px) {
+    #nosotros > div {
+      padding: 0 40px 0 40px;
+      h2 {
+        font-size: 50px !important;
+      }
+      p {
+        font-size: 22px !important;
+      }
+    }
+    .responsive-mockup {
+      width: 50% !important;
+    }
+  }
+
+
   /* ---------------------------------------------------------------------------------------------------------------*/
   // Donaciones
   
@@ -162,6 +199,7 @@
     margin-top: 10px;
   }
   
+ 
   
   .donaciones-box {
     display: flex;
@@ -170,7 +208,7 @@
     /* align-items: center;
     text-align: center; */
   }
-  
+
   .donaciones-box h2 {
     color: $violet-blue-color;
     font-weight: bold;
@@ -200,58 +238,201 @@
    
   }
   
+  /* le agrego efectitos de hover y active a donaciones*/
+
+  .donation-box:hover{
+    filter: brightness(110%);
+    box-shadow: 0 6px 10px $violet-blue-color;
+  }
+  .btn-donar:hover {
+    box-shadow: 0 6px 10px $violet-blue-color;
+    font-size: larger;
+    }
+  
+  .btn-donar:active {
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.815);
+    color: $main-color;
+    }
+
+
+  /* ---------------------------------------------------------------------------------------------------------------*/
+  // Encontrar en CUIPEA
+
+  #grid-cuipea {
+    display: grid;
+    grid-template-rows: 150px 70px 70px;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 5px;
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box3 box4 box5"
+    "box3 box4 box6"
+    ;
+
+    .box-1 {
+     grid-area: box1; 
+    }
+    .box-2 {
+      grid-area: box2; 
+     }
+     .box-3 {
+      grid-area: box3; 
+     }
+     .box-4 {
+      grid-area: box4; 
+     }
+     .box-5 {
+      grid-area: box5; 
+     }
+     .box-6 {
+      grid-area: box6; 
+     }
+  }
+
+
   /* ---------------------------------------------------------------------------------------------------------------*/
   // Carrousel Informacion
   
+/* Seccion informacion */
+#info {
+  padding: 30px 30px;
+  width: 100%;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  flex-wrap: wrap;
+}
+
+/*Textos de la seccion */
+.encabezado-info {
+  margin: 0 15px 0 10px;
+  h2 {
+    color: $blue-color;
+    font-weight: bolder;
+  }
+  p {
+    color: $main-color;
+  }
+}
+
+.encabezado-info {
+  text-align: start; 
+}
+
+/* carrousel */
+
+#informacion-landing {
+  max-width: 250px;
+  padding: 10px;
+}
+
+.encabezado-info, 
+#informacion-landing {
+  flex: 1; /* los dos elementos del mismo ancho disponible */
+  margin: 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
+}
+
+.carousel-inner img {
+  width: 100%; 
+  height: auto;
+}
+
+.tarjeta {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-color: #5DB3C1;
+}
+
+
+.tarjeta-img {
+  width: 100%;
+  height: auto;
+}
+
+/*texto dentro de cada tarjeta*/
+.tarjeta-body {
+  font-weight: bold;
+  background-color: #5DB3C1;
+  min-height: 170px;
+  color: #fff;
+  padding: 15px;
+  text-align: start;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tarjeta-body p {
+    font-size: 10px;
+    color: $main-color;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+/*Boton ver mas*/
+.btn-landing-info {
+  background-color: #27325A;
+  color: white;
+  padding: 5px 23px 5px 23px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.btn-landing-info:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: $main-color;
+  // font-size: larger;
+  }
+
+.btn-landing-info:active {
+  box-shadow: 0 6px 10px rgba(253, 249, 249, 0.877);
+  background-color: #56a9b646;
+  }
+
+
+.carousel-inner.landing {
+  padding: 8px;
+}
+
+.carousel-inner.landing .carousel-item {
+  transition: transform 0.3s ease;
+}
+
+// botones flecha ubicacion
+.carousel-control-prev.landing {
+  left: -10%;
+}
+.carousel-control-next.landing {
+  right: -10%;
+}
+
+/* Responsive de toda la seccion */
+
+@media (min-width: 720px) {
+  #informacion-landing {
+    min-width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
   #info {
-    padding: 30px 30px;
-    width: 100%;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column; /* Coloca la información y el carrusel en una sola columna */
   }
-  
-  .encabezado-info {
-    margin: 0 15px 0 10px;
-    h2 {
-      color: $blue-color;
-      font-weight: bolder;
-    }
-    p {
-      color: $main-color;
-    }
+  .encabezado-info, #informacion-landing {
+    flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+    margin: 10px 0; /* Añade un poco de margen superior e inferior */
   }
-  
-  @media (min-width: 768px) {
-    #info {
-      flex-direction: row; /* Coloca los elementos en fila */
-      justify-content: center; /* Centra los elementos en la fila */
-    }
-  
-    .encabezado-info, 
-    #carousel-informacion {
-      flex: 1; /* los dos elementos del mismo ancho disponible */
-      margin: 0 100px 0 50px; /* Espacio entre el encabezado y el carrusel (100) */
-    }
-    
-    #carousel-informacion {
-      max-width: 100%; 
-    }
+  .noseve {
+    display: none;
   }
-  
-  .encabezado-info {
-    text-align: start; 
+  .tarjeta-text {
+    display: none;
   }
-  
-  .carousel-inner img {
-    width: 100%; 
-    height: auto;
-  }
-  
-  .carousel-control-prev, 
-  .carousel-control-next {
-    margin-top: 10px; /* Ajusta el margen de los botones */
-  }
+}
+
   
   /* ---------------------------------------------------------------------------------------------------------------*/
   // Footer
@@ -312,6 +493,7 @@
         }
     
         h4 {
+          color: #fff;
           font-size: 16px;
           margin-top: 20px;
           margin-bottom: 10px;
@@ -345,6 +527,7 @@
         span {
           color: $main-color;
           font-size: 14px;
+          font-weight: bold;
     
           a {
             color: $main-color;
@@ -356,18 +539,17 @@
       .footer-bottom {
         text-align: center;
         font-size: 12px;
+        a {
+          color: #fff;
+          text-decoration: underline;
+        }
     
         p {
-          margin: 5px ;
+          color: #fff;
           padding: 10px 0 10px;
-    
-          a {
-            color: #ffff;
-            text-decoration: underline;
-          }
+          margin: 0;
         }
       }
     }
-  
   
   
