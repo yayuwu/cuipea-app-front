@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (currentLocation === '/consulta-estudios') {
                     Swal.fire({
                         title: 'Cargando...',
-                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        allowOutsideClick: false,
                         didOpen: () => {
-                            Swal.showLoading() // Activa el spinner de carga
+                            Swal.showLoading() 
                         },
                     })
                 }
@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
         // Envío de datos formulario
         const form = document.getElementById('estudio-form')
-        // console.log('Formulario: ', form)
         if (form) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault()
