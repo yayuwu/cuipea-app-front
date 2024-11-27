@@ -220,6 +220,16 @@ page('/donaciones', () => {
     loadView('donar'); 
 })
 
+// Ruta de información: Lactancia
+
+page('/lactancia', () => {
+    loadView('lactancia'); 
+})
+
+page('/pasos-lactancia', () => {
+    loadView('pasosAlmacenar'); 
+})
+
 
 // Rutas libreta vacunación 
 
