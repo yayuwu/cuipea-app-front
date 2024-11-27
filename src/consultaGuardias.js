@@ -14,7 +14,6 @@ const urlBtn = './templates/buttonAgregar.hbs'
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
-        // Carga de datos Boxes
         loadTemplate(urlBox)
             .then(template => {
                 const boxTemplate = Handlebars.compile(template)
@@ -25,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (currentLocation === '/atencion-guardia') {
                     Swal.fire({
                         title: 'Cargando...',
-                        allowOutsideClick: false, // Evita que se cierre al hacer clic fuera
+                        allowOutsideClick: false, 
                         didOpen: () => {
-                            Swal.showLoading() // Activa el spinner de carga
+                            Swal.showLoading() 
                         },
                     })
                 }
@@ -42,38 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
             .catch(err => console.log(err))
-        // // Botones
-        // loadTemplate(urlBtn)
-        //     .then(template => {
-        //         const btnTemplate = Handlebars.compile(template)
-        //         const data = {
-        //             text: 'consulta'
-        //         }
-        //         const btnHtml = btnTemplate(data)
-        //         const containerBtn = document.getElementById('btn-consultas-enfermedad')
-        //         const containerBtnAgregarConsulta = document.getElementById('btn-agregar-consulta')
-
-        //         if (containerBtn) {
-        //             containerBtn.innerHTML = btnHtml
-        //             const btnConsulta = containerBtn.querySelector('.btn-agregar')
-        //             btnConsulta.classList.add('btn-agregar-violet')
-        //             btnConsulta.addEventListener('click', () => {
-        //                 window.location.href = '/agregar-consulta'
-        //             })
-        //         }
-
-        //         if (containerBtnAgregarConsulta) {
-        //             containerBtnAgregarConsulta.innerHTML = btnHtml
-        //             const btnConsulta = containerBtnAgregarConsulta.querySelector('.btn-agregar')
-        //             btnConsulta.classList.add('btn-agregar-violet')
-        //             btnConsulta.type = 'submit'
-        //         }
-                
-        //     })
+    
             
-        // Envío de datos formulario
         const form = document.getElementById('guardia-form')
-        // console.log('Formulario: ', form)
+
         if (form) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault()
