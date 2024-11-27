@@ -433,10 +433,14 @@
   grid-template-rows: 150px 70px 70px;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 5px;
+  max-width: 600px;
   grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
 }
 #grid-cuipea .box-1 {
   grid-area: box1;
+}
+#grid-cuipea .box-1 img {
+  width: 69px;
 }
 #grid-cuipea .box-2 {
   grid-area: box2;
@@ -444,16 +448,77 @@
 #grid-cuipea .box-3 {
   grid-area: box3;
 }
+#grid-cuipea .box-3 img {
+  width: 50px;
+}
 #grid-cuipea .box-4 {
   grid-area: box4;
+}
+#grid-cuipea .box-4 img {
+  width: 60px;
 }
 #grid-cuipea .box-5 {
   grid-area: box5;
 }
+#grid-cuipea .box-5 img {
+  width: 40px;
+}
 #grid-cuipea .box-6 {
   grid-area: box6;
 }
+#grid-cuipea .box-6 img {
+  width: 40px;
+}
 
+@media (min-width: 400px) {
+  #grid-cuipea {
+    grid-template-rows: 160px 80px 80px;
+  }
+  #grid-cuipea .box-3,
+  #grid-cuipea .box-4,
+  #grid-cuipea .box-5,
+  #grid-cuipea .box-6 {
+    font-size: 19px;
+  }
+  #grid-cuipea .box-3 img,
+  #grid-cuipea .box-4 img,
+  #grid-cuipea .box-5 img,
+  #grid-cuipea .box-6 img {
+    width: 55px;
+  }
+  #grid-cuipea .box-1 {
+    font-size: 30px;
+  }
+  #grid-cuipea .box-1 img {
+    width: 89px;
+  }
+  #grid-cuipea .box-2 {
+    font-size: 20px;
+  }
+  #grid-cuipea .box-2 img {
+    width: 55px;
+  }
+}
+@media (min-width: 500px) {
+  #grid-cuipea {
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    max-width: 1000px;
+    grid-template-areas: "box1 box2" "box3 box4" "box5 box6";
+  }
+  .box-1,
+  .box-2,
+  .box-3,
+  .box-4,
+  .box-5,
+  .box-6 {
+    font-size: 25px !important;
+  }
+  #encontrar_en_cuipea h2 {
+    font-size: 40px;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 /* Seccion informacion */
 #info {
@@ -592,6 +657,9 @@
 footer {
   background-color: #28325A;
   color: white;
+}
+footer h4 {
+  padding-left: 0;
 }
 footer .footer-content {
   display: flex;
@@ -1174,10 +1242,14 @@ footer .footer-bottom p {
   grid-template-rows: 150px 70px 70px;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 5px;
+  max-width: 600px;
   grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
 }
 #grid-cuipea .box-1 {
   grid-area: box1;
+}
+#grid-cuipea .box-1 img {
+  width: 69px;
 }
 #grid-cuipea .box-2 {
   grid-area: box2;
@@ -1185,16 +1257,77 @@ footer .footer-bottom p {
 #grid-cuipea .box-3 {
   grid-area: box3;
 }
+#grid-cuipea .box-3 img {
+  width: 50px;
+}
 #grid-cuipea .box-4 {
   grid-area: box4;
+}
+#grid-cuipea .box-4 img {
+  width: 60px;
 }
 #grid-cuipea .box-5 {
   grid-area: box5;
 }
+#grid-cuipea .box-5 img {
+  width: 40px;
+}
 #grid-cuipea .box-6 {
   grid-area: box6;
 }
+#grid-cuipea .box-6 img {
+  width: 40px;
+}
 
+@media (min-width: 400px) {
+  #grid-cuipea {
+    grid-template-rows: 160px 80px 80px;
+  }
+  #grid-cuipea .box-3,
+  #grid-cuipea .box-4,
+  #grid-cuipea .box-5,
+  #grid-cuipea .box-6 {
+    font-size: 19px;
+  }
+  #grid-cuipea .box-3 img,
+  #grid-cuipea .box-4 img,
+  #grid-cuipea .box-5 img,
+  #grid-cuipea .box-6 img {
+    width: 55px;
+  }
+  #grid-cuipea .box-1 {
+    font-size: 30px;
+  }
+  #grid-cuipea .box-1 img {
+    width: 89px;
+  }
+  #grid-cuipea .box-2 {
+    font-size: 20px;
+  }
+  #grid-cuipea .box-2 img {
+    width: 55px;
+  }
+}
+@media (min-width: 500px) {
+  #grid-cuipea {
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    max-width: 1000px;
+    grid-template-areas: "box1 box2" "box3 box4" "box5 box6";
+  }
+  .box-1,
+  .box-2,
+  .box-3,
+  .box-4,
+  .box-5,
+  .box-6 {
+    font-size: 25px !important;
+  }
+  #encontrar_en_cuipea h2 {
+    font-size: 40px;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 /* Seccion informacion */
 #info {
@@ -1333,6 +1466,9 @@ footer .footer-bottom p {
 footer {
   background-color: #28325A;
   color: white;
+}
+footer h4 {
+  padding-left: 0;
 }
 footer .footer-content {
   display: flex;
@@ -2551,10 +2687,14 @@ section.carousel {
   grid-template-rows: 150px 70px 70px;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 5px;
+  max-width: 600px;
   grid-template-areas: "box1 box1 box2" "box3 box4 box5" "box3 box4 box6";
 }
 #grid-cuipea .box-1 {
   grid-area: box1;
+}
+#grid-cuipea .box-1 img {
+  width: 69px;
 }
 #grid-cuipea .box-2 {
   grid-area: box2;
@@ -2562,16 +2702,77 @@ section.carousel {
 #grid-cuipea .box-3 {
   grid-area: box3;
 }
+#grid-cuipea .box-3 img {
+  width: 50px;
+}
 #grid-cuipea .box-4 {
   grid-area: box4;
+}
+#grid-cuipea .box-4 img {
+  width: 60px;
 }
 #grid-cuipea .box-5 {
   grid-area: box5;
 }
+#grid-cuipea .box-5 img {
+  width: 40px;
+}
 #grid-cuipea .box-6 {
   grid-area: box6;
 }
+#grid-cuipea .box-6 img {
+  width: 40px;
+}
 
+@media (min-width: 400px) {
+  #grid-cuipea {
+    grid-template-rows: 160px 80px 80px;
+  }
+  #grid-cuipea .box-3,
+  #grid-cuipea .box-4,
+  #grid-cuipea .box-5,
+  #grid-cuipea .box-6 {
+    font-size: 19px;
+  }
+  #grid-cuipea .box-3 img,
+  #grid-cuipea .box-4 img,
+  #grid-cuipea .box-5 img,
+  #grid-cuipea .box-6 img {
+    width: 55px;
+  }
+  #grid-cuipea .box-1 {
+    font-size: 30px;
+  }
+  #grid-cuipea .box-1 img {
+    width: 89px;
+  }
+  #grid-cuipea .box-2 {
+    font-size: 20px;
+  }
+  #grid-cuipea .box-2 img {
+    width: 55px;
+  }
+}
+@media (min-width: 500px) {
+  #grid-cuipea {
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    max-width: 1000px;
+    grid-template-areas: "box1 box2" "box3 box4" "box5 box6";
+  }
+  .box-1,
+  .box-2,
+  .box-3,
+  .box-4,
+  .box-5,
+  .box-6 {
+    font-size: 25px !important;
+  }
+  #encontrar_en_cuipea h2 {
+    font-size: 40px;
+  }
+}
 /* ---------------------------------------------------------------------------------------------------------------*/
 /* Seccion informacion */
 #info {
@@ -2710,6 +2911,9 @@ section.carousel {
 footer {
   background-color: #28325A;
   color: white;
+}
+footer h4 {
+  padding-left: 0;
 }
 footer .footer-content {
   display: flex;

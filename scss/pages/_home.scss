@@ -263,6 +263,7 @@
     grid-template-rows: 150px 70px 70px;
     grid-template-columns: 1.5fr 1fr 1fr;
     gap: 5px;
+    max-width: 600px;
     grid-template-areas: 
     "box1 box1 box2"
     "box3 box4 box5"
@@ -271,22 +272,92 @@
 
     .box-1 {
      grid-area: box1; 
+     img {
+      width: 69px;
+     }
     }
     .box-2 {
       grid-area: box2; 
      }
      .box-3 {
       grid-area: box3; 
+      img {
+        width: 50px;
+      }
      }
      .box-4 {
       grid-area: box4; 
+      img {
+        width: 60px;
+      }
      }
      .box-5 {
-      grid-area: box5; 
+      grid-area: box5;
+      img {
+        width: 40px;
+      } 
+
      }
      .box-6 {
-      grid-area: box6; 
+      grid-area: box6;
+      img {
+        width: 40px;
+      } 
+
      }
+  }
+
+  @media (min-width: 400px) {
+    #grid-cuipea {
+      grid-template-rows: 160px 80px 80px;
+      .box-3,
+      .box-4,
+      .box-5,
+      .box-6 {
+        font-size: 19px;
+        img {
+          width: 55px;
+        }
+      }
+      .box-1 {
+        font-size: 30px;
+        img {
+          width: 89px;
+        }
+      }
+      .box-2 {
+        font-size: 20px;
+        img {
+          width: 55px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 500px) {
+    #grid-cuipea {
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    max-width: 1000px;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box4"
+    "box5 box6"
+    }
+    .box-1,
+    .box-2,
+    .box-3,
+    .box-4,
+    .box-5,
+    .box-6 {
+      font-size: 25px !important;
+    }
+    #encontrar_en_cuipea {
+      h2 {
+        font-size: 40px;
+      }
+    }
   }
 
 
@@ -441,6 +512,10 @@
   footer {
       background-color: $main-color;
       color: #ffff;
+
+      h4 {
+        padding-left: 0;
+      }
           
       .footer-content {
         display: flex;
