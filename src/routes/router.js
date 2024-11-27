@@ -204,6 +204,10 @@ page('/atencion-guardia', () => {
     loadView('consultaGuardias'); 
 })
 
+page('/agregar-guardia', () => {
+    loadView('agregarGuardias'); 
+})
+
 // Ruta NOSOTROS MISION Y VISION
 
 page('/nosotros', () => {

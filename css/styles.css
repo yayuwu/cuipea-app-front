@@ -3358,24 +3358,21 @@ button.buscador img {
 .consulta-estudios .bg-grey {
   background-color: #F4F4F4;
 }
-
-input[type=text], input[type=date], .input-consulta {
+.consulta-estudios .bg-grey {
+  background-color: #F4F4F4;
+}
+.consulta-estudios form .input-consulta {
+  border: 2px solid #5DB3C1;
+  border-radius: 4px;
+}
+.consulta-estudios form .input-consulta:focus {
+  border: 2px solid #5DB3C1;
+  outline: none;
+}
+.consulta-estudios form input[type=text], .consulta-estudios form input[type=date], .consulta-estudios form .input-consulta {
   border: 2px solid #5DB3C1;
   border-radius: 4px;
   width: 100%;
-}
-
-.bg-grey {
-  background-color: #F4F4F4;
-}
-
-form .input-consulta {
-  border: 2px solid #5DB3C1;
-  border-radius: 4px;
-}
-form .input-consulta:focus {
-  border: 2px solid #5DB3C1;
-  outline: none;
 }
 
 .medico-img {
@@ -3778,6 +3775,28 @@ form .input-consulta:focus {
 
 .lg-pink-bg {
   background-color: #FCF7FA;
+}
+
+.consulta-guardias .bg-green {
+  background-color: #A9D5B6;
+  position: relative;
+}
+.consulta-guardias .bg-green img {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+
+textarea {
+  border: 2px solid #A9D5B6;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.input-guardia, .input-guardia2 {
+  border: 2px solid #A9D5B6 !important;
+  border-radius: 4px;
+  width: 100%;
 }
 
 * {
