@@ -1,5 +1,7 @@
 import * as yup from 'yup'
 import loadTemplate from "./loadTemplate"
+import Swal from 'sweetalert2'
+
 
 let estudios = [
     { title: 'Estudio 1', date: '29/07/24'},
@@ -11,55 +13,40 @@ let estudios = [
 const urlBox = './templates/box.hbs' 
 const urlBtn = './templates/buttonAgregar.hbs'
 
+
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         // Carga de datos Boxes
         loadTemplate(urlBox)
             .then(template => {
                 const boxTemplate = Handlebars.compile(template)
-                const boxHtml = consultas.map(estudios => boxTemplate(estudios)).join('')
+                const boxHtml = estudios.map(estudios => boxTemplate(estudios)).join('')
 
-                const estudiosBoxes = document.getElementById('estudios-container')
+                const currentLocation = window.location.pathname
 
-                if(estudiosBoxes){
+                if (currentLocation === '/consulta-estudios') {
+                    Swal.fire({
+                        title: 'Cargando...',
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        },
+                    })
+                }
+
+                const estudiosBoxes = document.getElementById('consultaEstudiosContainer')
+                
+                if (estudiosBoxes) {
                     estudiosBoxes.innerHTML = boxHtml
                     const boxes = document.querySelectorAll('.box-container')
                     boxes.forEach(box => box.classList.add('blue-box'))
+                    Swal.close()
                 }
             })
             .catch(err => console.log(err))
 
-        // Botones
-        loadTemplate(urlBtn)
-            .then(template => {
-                const btnTemplate = Handlebars.compile(template)
-                const data = {
-                    text: 'guardia'
-                }
-                const btnHtml = btnTemplate(data)
-                const containerBtn = document.getElementById('btn-estudios')
-                const containerBtnAgregarConsulta = document.getElementById('btn-agregar-estudio')
-
-                if (containerBtn) {
-                    containerBtn.innerHTML = btnHtml
-                    const btnConsulta = containerBtn.querySelector('.btn-agregar')
-                    btnConsulta.classList.add('btn-agregar-blue')
-                    btnConsulta.addEventListener('click', () => {
-                        window.location.href = '/agregar-estudio'
-                    })
-                }
-
-                if (containerBtnAgregarEstudio) {
-                    containerBtnAgregarEstudio.innerHTML = btnHtml
-                    const btnEstudio = containerBtnAgregarEstudio.querySelector('.btn-agregar')
-                    btnEstudio.classList.add('.btn-agregar-blue')
-                    btnEstudio.type = 'submit'
-                }
-                
-            })
         // Envío de datos formulario
         const form = document.getElementById('estudio-form')
-        console.log('Formulario: ', form)
         if (form) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault()
@@ -78,20 +65,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     detalle: document.getElementById('detalle-estudio').value,
                     archivo: document.getElementById('archivo-estudio').value
                 }
-                
+
                 try {
                     await schema.validate(formData, { abortEarly: false })
                     alert('Formulario válido')
                 } catch (errors) {
-                   console.log(errors)
-                   errors.inner.forEach(error => { 
+                    console.log(errors)
+                    errors.inner.forEach(error => {
                         const errorElement = document.getElementById(`${error.path}-consultaError`)
-                        if (errorElement) { 
+                        if (errorElement) {
                             errorElement.style.display = 'block'
-                        } 
+                        }
                     })
                 }
             })
         }
     }, 200)
-})
+}) 
