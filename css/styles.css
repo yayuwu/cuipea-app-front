@@ -3346,6 +3346,35 @@ button.buscador img {
   width: 300px !important;
 }
 
+.consulta-estudios .bg-blue {
+  background-color: #5DB3C1;
+  position: relative;
+}
+.consulta-estudios .bg-blue img {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+.consulta-estudios .bg-grey {
+  background-color: #F4F4F4;
+}
+.consulta-estudios .bg-grey {
+  background-color: #F4F4F4;
+}
+.consulta-estudios form .input-consulta {
+  border: 2px solid #5DB3C1;
+  border-radius: 4px;
+}
+.consulta-estudios form .input-consulta:focus {
+  border: 2px solid #5DB3C1;
+  outline: none;
+}
+.consulta-estudios form input[type=text], .consulta-estudios form input[type=date], .consulta-estudios form .input-consulta {
+  border: 2px solid #5DB3C1;
+  border-radius: 4px;
+  width: 100%;
+}
+
 .medico-img {
   width: 100%;
   height: auto;
@@ -3534,27 +3563,6 @@ button.buscador img {
   background-color: #ECC3DC !important;
   border: 5px solid #DEABCA;
   opacity: 1 !important;
-}
-
-.consulta-estudios .bg-blue {
-  background-color: #5DB3C1;
-  position: relative;
-}
-.consulta-estudios .bg-blue img {
-  position: absolute;
-  top: -30px;
-  right: 30px;
-}
-.consulta-estudios .bg-grey {
-  background-color: #F4F4F4;
-}
-.consulta-estudios form .input-consulta {
-  border: 2px solid #5DB3C1;
-  border-radius: 4px;
-}
-.consulta-estudios form .input-consulta:focus {
-  border: 2px solid #5DB3C1;
-  outline: none;
 }
 
 .box-perfil-pink {
@@ -3767,6 +3775,59 @@ button.buscador img {
 
 .lg-pink-bg {
   background-color: #FCF7FA;
+}
+
+.consulta-guardias .bg-green {
+  background-color: #A9D5B6;
+  position: relative;
+}
+.consulta-guardias .bg-green img {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+
+textarea {
+  border: 2px solid #A9D5B6;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.input-guardia, .input-guardia2 {
+  border: 2px solid #A9D5B6 !important;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.lact-msg {
+  color: #419BAA;
+}
+
+.btn-lactancia {
+  background-color: #28325A;
+  border-radius: 12px;
+  border: none;
+  padding: 10px 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.no-hover-color:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.lact-img, .mujer-lact {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.imag-lact {
+  width: 100%;
 }
 
 * {

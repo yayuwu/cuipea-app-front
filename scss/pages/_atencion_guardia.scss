@@ -1,4 +1,4 @@
-
+@import '../base/colors';
 
 .consulta-guardias{
     .bg-green {
@@ -10,4 +10,15 @@
             right: 30px;
         }
     }
+}
+textarea{
+    border: 2px solid $green-color; 
+    border-radius: 4px;
+    width: 100%;
+}
+
+.input-guardia, .input-guardia2{
+    border: 2px solid $green-color !important;
+    border-radius: 4px;
+    width: 100%;
 }

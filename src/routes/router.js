@@ -191,14 +191,37 @@ page('/agregar-consulta', () => {
 // Rutas consulta estudios
 
 page('/consulta-estudios', () => {
-    loadView('consultaEstudios'); 
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('consultaEstudios')
+    }
+})
+page('/agregar-estudios', () => {
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('agregarEstudios')
+    }
 })
 
 // Rutas consulta guardia
 
 page('/atencion-guardia', () => {
-    loadView('consultaGuardias'); 
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('consultaGuardias')
+    }
 })
+page('/agregar-guardia', () => {
+    if (!checkAuth()) {
+        page.redirect('/pagina-no-encontrada')
+    } else {
+        loadView('agregarGuardias')
+    }
+})
+
 
 // Ruta NOSOTROS MISION Y VISION
 
@@ -210,6 +233,16 @@ page('/nosotros', () => {
 
 page('/donaciones', () => {
     loadView('donar'); 
+})
+
+// Ruta de información: Lactancia
+
+page('/lactancia', () => {
+    loadView('lactancia'); 
+})
+
+page('/pasos-lactancia', () => {
+    loadView('pasosAlmacenar'); 
 })
 
 
